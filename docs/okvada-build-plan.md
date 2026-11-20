@@ -73,7 +73,8 @@ Figma больше не источник правды для верстки: м�
 - [ ] Safari / Firefox / реальный iPhone — прогон всех страниц.
 - [ ] Свести `.reveal`, шрифты и изображения к единым правилам (размеры, lazy).
 
-### Этап 1.5 — Vite и репозиторий (1 день)
+### Этап 1.5 — Vite и репозиторий (1 день) — СДЕЛАНО локально 20 Nov, не отправлено в origin
+Репозиторий: git@github.com:marienkovatetiana-source/okvada.git (ветка main). Vite собирает все 10 страниц, пути относительные (`base: './'`), `index.html` стал полным документом, скрипты — `type="module"`. Не проверено: Safari/Firefox, работа `dist/` на реальном хостинге.
 Решено 20 Nov: сборка Vite (multi-page, без фреймворков), публикация в git-репозиторий. Код остаётся чистым HTML/CSS/JS, Vite только собирает.
 - [ ] `git init`, `.gitignore` (node_modules, dist, .shots), первый коммит как есть; подключить репозиторий (создаёт дизайнер).
 - [ ] `package.json` + `vite.config.js`: `build.rollupOptions.input` — все 10 html; `publicDir` для `assets/`.
