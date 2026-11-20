@@ -390,6 +390,25 @@
   }
 }
 
+/* Tablet: About — фото слева, цифры и текст справа */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .about__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    grid-template-areas: "photo stats" "photo aside";
+    column-gap: var(--space-lg);
+    row-gap: var(--space-lg);
+    align-items: start;
+  }
+  .about__stats { grid-area: stats; }
+  .about__photo { grid-area: photo; }
+  .about__aside { grid-area: aside; align-self: end; }
+  .about__photo img { height: 520px; border-radius: var(--radius-xl); }
+  .stats { display: flex; flex-direction: column; }
+  .stat { flex-direction: row; align-items: center; gap: var(--space-md); padding-block: 14px; }
+  .stat__num { width: 120px; flex-shrink: 0; }
+}
+
 /* ---------- Client stories (cases) ---------- */
 
 .cases__head {
@@ -1125,6 +1144,22 @@
   .service-row__photo {
     height: 320px;
   }
+}
+
+/* Tablet: What we carry — заголовок | текст, ряд: название сверху, фото | текст */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .services__head { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+  .services__aside { width: 240px; }
+  .service-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    grid-template-areas: "title title" "photo text";
+    gap: var(--space-lg);
+    padding-block: var(--space-xl);
+  }
+  .service-row__title { grid-area: title; flex-direction: row; align-items: baseline; gap: var(--space-md); }
+  .service-row__photo { grid-area: photo; height: 280px; border-radius: var(--radius-xl); }
+  .service-row__text { grid-area: text; justify-content: space-between; }
 }
 
 @media screen and (min-width: 1200px) {
