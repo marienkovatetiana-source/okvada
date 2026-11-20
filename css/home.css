@@ -303,6 +303,10 @@
 /* ---------- About editorial ---------- */
 
 .about__head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
   margin-bottom: var(--section-heading);
 }
 
@@ -1572,10 +1576,8 @@
   gap: var(--space-lg);
 }
 
-/* Mobile: Pill outline на всю ширину (Figma 161:187) */
 .careers__cta {
-  align-self: stretch;
-  justify-content: space-between;
+  align-self: flex-start;
 }
 
 @media screen and (min-width: 768px) {
