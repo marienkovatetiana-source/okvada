@@ -196,15 +196,17 @@
 
 @media screen and (min-width: 1200px) {
   .hero {
+    max-width: 1440px;
+    margin-inline: auto;
     height: 980px;
   }
 
   .hero__stage {
     top: 96px;
     left: auto;
-    /* фото тянется до правого края окна */
-    right: min(0px, calc((1440px - 100vw) / 2));
-    width: max(61.11%, calc(880px + (100vw - 1440px) / 2));
+    /* шире 1440 hero не растягивается */
+    right: 0;
+    width: 61.11%;
     height: 884px;
   }
 
