@@ -175,6 +175,8 @@ function saveConsent(value) {
 
 function openCookieSettings() {
   cookieSettings.classList.add('is-open');
+  // В макете баннер под окном настроек скрыт
+  if (cookieBanner) cookieBanner.classList.add('is-behind');
   lockPage(true);
   if (analyticsBox) analyticsBox.checked = readConsent() === 'analytics';
   cookieSettings.querySelector('[data-cookie-settings-close]').focus();
@@ -182,6 +184,7 @@ function openCookieSettings() {
 
 function closeCookieSettings() {
   cookieSettings.classList.remove('is-open');
+  if (cookieBanner) cookieBanner.classList.remove('is-behind');
   lockPage(false);
 }
 

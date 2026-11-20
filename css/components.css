@@ -954,6 +954,11 @@ button.arrow-circle::after {
   transition: transform 450ms var(--ease), visibility 450ms;
 }
 
+.cookie-banner.is-behind {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .cookie-banner.is-open {
   transform: none;
   visibility: visible;
@@ -1232,7 +1237,7 @@ button.arrow-circle::after {
   }
 
   .consent-row .checkbox {
-    width: 100px;
+    width: 112px;
     flex-shrink: 0;
   }
 
