@@ -1,0 +1,742 @@
+/* =========================================================
+   Services — секции страницы
+   Figma: 04 · UI → Services · Desktop 1440 (100:6376) / Mobile 375 (100:6388)
+   Mobile-first: base 375 → 768 (tablet) → 1200 (desktop)
+   ========================================================= */
+
+/* Отступы секций Services: 48 mobile / 96 desktop */
+.svc-section {
+  padding-block: var(--space-2xl);
+}
+
+.svc-section[id] {
+  scroll-margin-top: var(--header-h);
+}
+
+@media screen and (min-width: 1200px) {
+  .svc-section {
+    padding-block: var(--space-4xl);
+  }
+}
+
+/* =========================================================
+   Page hero
+   ========================================================= */
+
+.svc-hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-lg);
+}
+
+.svc-hero__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.svc-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.svc-hero__title span {
+  display: block;
+}
+
+.svc-hero__stage {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.svc-hero__stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Растушёвка фото в фон слева и сверху */
+.svc-hero__stage::before,
+.svc-hero__stage::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.svc-hero__stage::before {
+  inset: 0 auto 0 0;
+  width: 80px;
+  background-image: linear-gradient(to right, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+}
+
+.svc-hero__stage::after {
+  inset: 0 0 auto 0;
+  height: 70px;
+  background-image: linear-gradient(to bottom, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+}
+
+.svc-hero__chip {
+  position: absolute;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  z-index: 1;
+}
+
+/* Оглавление страницы: 01–05 */
+
+.svc-index {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border-line);
+}
+
+.svc-index__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--color-border-line);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: color var(--duration) var(--ease);
+}
+
+.svc-index__link:hover {
+  color: var(--color-accent-text);
+}
+
+@media screen and (min-width: 768px) {
+  .svc-hero__stage {
+    height: 360px;
+  }
+
+  .svc-index {
+    flex-direction: row;
+  }
+
+  .svc-index__link {
+    flex: 1 1 0;
+    border-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .svc-hero__inner {
+    gap: 40px;
+    padding-top: var(--space-4xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .svc-hero__main {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .svc-hero__copy {
+    flex-shrink: 0;
+    width: 568px;
+    gap: var(--space-lg);
+  }
+
+  .svc-hero__stage {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 440px;
+  }
+
+  .svc-hero__stage::before {
+    width: 200px;
+  }
+
+  .svc-hero__stage::after {
+    height: 120px;
+  }
+}
+
+/* =========================================================
+   Глава услуги (FTL, Groupage, Trailer):
+   заголовок | фото | текст + таблица + ссылка
+   ========================================================= */
+
+.svc-chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.svc-chapter__photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.svc-chapter__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Таблица характеристик */
+
+.specs {
+  width: 100%;
+}
+
+.specs__row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-block: 10px;
+  border-top: 1px solid var(--color-border-line);
+}
+
+.specs__row dt {
+  color: var(--color-text-secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .svc-chapter__photo {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .svc-chapter {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+
+  .svc-chapter__title {
+    flex-shrink: 0;
+    width: 272px;
+  }
+
+  .svc-chapter__photo {
+    flex-shrink: 0;
+    width: 568px;
+    border-radius: var(--radius-xl);
+  }
+
+  .svc-chapter__text {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+/* =========================================================
+   03 · Fleet — тёмная секция
+   ========================================================= */
+
+.svc-fleet {
+  padding-top: var(--space-xl);
+  background-color: var(--color-bg-inverse-strong);
+  color: var(--color-text-on-inverse-soft);
+}
+
+.svc-fleet .eyebrow,
+.svc-fleet__lead,
+.svc-stats dd {
+  color: var(--color-text-on-inverse-muted);
+}
+
+.svc-fleet .section-title__line--indent {
+  color: var(--color-accent-on-inverse);
+}
+
+.svc-fleet__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.svc-fleet__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.svc-fleet__photo {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.svc-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg) 0;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border-on-inverse);
+}
+
+.svc-stats__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.svc-stats__value {
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .svc-fleet__photo {
+    height: 400px;
+  }
+
+  .svc-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .svc-fleet {
+    padding-top: var(--space-3xl);
+  }
+
+  .svc-fleet__head {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: var(--space-3xl);
+  }
+
+  .svc-fleet__head .section-title {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .svc-fleet__lead {
+    flex-shrink: 0;
+    width: 420px;
+  }
+
+  .svc-fleet__photo {
+    height: 520px;
+    border-radius: var(--radius-xl);
+  }
+}
+
+/* =========================================================
+   Safety & tracking
+   ========================================================= */
+
+.svc-safety {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.svc-safety__photo {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.svc-safety__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-card {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding: var(--space-md) 20px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-canvas);
+  box-shadow: var(--shadow-chip);
+  white-space: nowrap;
+}
+
+.status-card__top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-text-secondary);
+}
+
+/* Зелёная точка «в пути, по графику» */
+.status-card__top::before {
+  content: "";
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-status-on-time);
+}
+
+.svc-safety__chips {
+  position: absolute;
+  left: var(--space-md);
+  bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xs);
+}
+
+/* Mobile: только первая плашка, как в Figma */
+.svc-safety__chips .chip + .chip {
+  display: none;
+}
+
+.svc-points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.svc-points__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-line);
+}
+
+@media screen and (min-width: 768px) {
+  .svc-safety__chips {
+    flex-direction: row;
+  }
+
+  .svc-safety__chips .chip + .chip {
+    display: inline-flex;
+  }
+
+  .svc-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .svc-safety {
+    gap: var(--space-2xl);
+  }
+
+  .svc-safety__photo {
+    height: 520px;
+    border-radius: var(--radius-xl);
+  }
+
+  .status-card {
+    top: var(--space-xl);
+    left: var(--space-xl);
+  }
+
+  .svc-safety__chips {
+    left: var(--space-xl);
+    bottom: var(--space-xl);
+  }
+
+  .svc-points {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =========================================================
+   04 · Transit times: карта коридора + таблица
+   ========================================================= */
+
+.svc-transit {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.svc-transit__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.svc-transit__title,
+.svc-transit__title .section-title {
+  gap: var(--space-sm);
+}
+
+/* Карта: координаты точек и подписей — из Figma (inline style) */
+
+.corridor {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-canvas);
+}
+
+.corridor img {
+  position: absolute;
+  max-width: none;
+}
+
+.corridor__city {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Mobile-карта 343×240, сцена по центру */
+.corridor--mobile {
+  height: 240px;
+}
+
+.corridor--mobile .corridor__stage {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 343px;
+  height: 240px;
+  margin-left: -171.5px;
+}
+
+.corridor--mobile .corridor__grid {
+  left: 6px;
+  top: 6px;
+}
+
+.corridor--mobile .corridor__line {
+  left: 111.86px;
+  top: 42.11px;
+}
+
+/* Desktop-карта 560×480 */
+.corridor--desktop {
+  display: none;
+  flex-shrink: 0;
+  width: 560px;
+  height: 480px;
+  border-radius: var(--radius-xl);
+}
+
+.corridor--desktop .corridor__grid {
+  left: 7px;
+  top: 7px;
+}
+
+.corridor--desktop .corridor__line {
+  left: 99.25px;
+  top: 71.4px;
+}
+
+/* Лид и сноска — только с tablet */
+.svc-transit__lead,
+.svc-transit__note {
+  display: none;
+}
+
+/* Таблица. Mobile: строки «маршрут — срок», без км и шапки */
+
+.transit-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transit-table thead,
+.transit-table__km {
+  display: none;
+}
+
+.transit-table tbody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.transit-table tr {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-block: var(--space-sm);
+  border-bottom: 1px solid var(--color-border-line);
+}
+
+/* Mobile: 5-й маршрут скрыт, как в Figma (после правила tr, иначе перебьёт) */
+.transit-table .transit-table__extra {
+  display: none;
+}
+
+.transit-table td {
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.transit-table__days {
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .svc-transit {
+    gap: var(--space-2xl);
+  }
+
+  .svc-transit__body {
+    gap: var(--space-lg);
+  }
+
+  .svc-transit__title,
+  .svc-transit__title .section-title {
+    gap: var(--space-md);
+  }
+
+  .corridor--mobile {
+    display: none;
+  }
+
+  .corridor--desktop {
+    display: block;
+  }
+
+  .svc-transit__lead,
+  .svc-transit__note {
+    display: block;
+  }
+
+  /* Обычная таблица в карточке */
+  .transit-table {
+    overflow: hidden;
+    border: 1px solid var(--color-border-line);
+    border-radius: var(--radius-xl);
+    background-color: var(--color-bg-surface);
+  }
+
+  .transit-table thead {
+    display: table-header-group;
+    background-color: var(--color-bg-canvas);
+  }
+
+  .transit-table tbody {
+    display: table-row-group;
+  }
+
+  .transit-table tr {
+    display: table-row;
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .transit-table tbody tr {
+    border-top: 1px solid var(--color-border-line);
+  }
+
+  .transit-table__km {
+    display: table-cell;
+  }
+
+  .transit-table .transit-table__extra {
+    display: table-row;
+  }
+
+  .transit-table th,
+  .transit-table td {
+    width: 33.333%;
+    padding: var(--space-md) var(--space-lg);
+    vertical-align: top;
+  }
+
+  .transit-table th {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    color: var(--color-text-secondary);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .svc-transit {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-3xl);
+  }
+
+  .svc-transit__body {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+/* =========================================================
+   05 · FAQ
+   ========================================================= */
+
+.svc-faq {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.svc-faq__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.sales-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-line);
+}
+
+.sales-contact a {
+  transition: color var(--duration) var(--ease);
+}
+
+.sales-contact a:hover {
+  color: var(--color-accent-text);
+}
+
+.faq__show-all {
+  min-height: 44px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: pre;
+  color: var(--color-accent-text);
+}
+
+.faq__show-all:hover {
+  color: var(--color-text-primary);
+}
+
+@media screen and (min-width: 1200px) {
+  .svc-faq {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-3xl);
+  }
+
+  .svc-faq__intro {
+    flex-shrink: 0;
+    width: 360px;
+  }
+
+  .faq {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}

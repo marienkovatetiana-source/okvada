@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About — Okvada</title>
+<meta name="description" content="UAB Okvada — road freight company with head office in Kaunas and a service point in Rhauderfehn. 60+ own Mercedes-Benz trucks, 106 people, routes across Europe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/about.css">
+</head>
+<body class="page-about">
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Okvada — home">
+      <img class="logo__img" src="assets/img/logo-alt-swirl.svg" alt="Okvada" width="668" height="160">
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link is-active" href="about.html" aria-current="page">About</a>
+      <a class="nav__link" href="services.html">Services</a>
+      <a class="nav__link" href="careers.html">Careers</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="lang" data-lang>
+        <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" data-lang-btn>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-globe"></use></svg>
+          <span data-lang-current>EN</span>
+          <svg class="icon icon--chevron" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu" role="menu" data-lang-menu>
+          <button class="lang-menu__item" type="button" role="menuitemradio" aria-checked="true" data-lang-option="EN">
+            <span class="lang-menu__code">EN</span>
+            <span class="lang-menu__name">English</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+          </button>
+          <button class="lang-menu__item" type="button" role="menuitemradio" aria-checked="false" data-lang-option="DE">
+            <span class="lang-menu__code">DE</span>
+            <span class="lang-menu__name">Deutsch</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+          </button>
+        </div>
+      </div>
+
+      <a class="header__phone" href="tel:+37000000000">+370 000 00000</a>
+
+      <a class="pill pill--outline header__cta" href="contact.html">
+        Contact us
+        <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      </a>
+
+      <a class="icon-btn icon-btn--bordered header__call" href="tel:+37000000000" aria-label="Call Okvada">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"></use></svg>
+      </a>
+      <button class="icon-btn header__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-open>
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= PAGE HERO (Figma 100:6417 / 100:6426) ================= -->
+<section class="page-hero about-hero bg-canvas" aria-labelledby="about-title">
+  <div class="container about-hero__inner">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html">Home</a></li>
+        <li class="breadcrumbs__item" aria-current="page">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg>
+          About
+        </li>
+      </ol>
+    </nav>
+
+    <div class="about-hero__main">
+      <div class="about-hero__copy reveal">
+        <p class="eyebrow">About us</p>
+        <h1 class="about-hero__title t-display-72" id="about-title">
+          <span>Run by people</span>
+          <span>who know</span>
+          <span class="text-secondary">these roads.</span>
+        </h1>
+        <p class="t-body-l text-secondary">Okvada is a road freight company with head office in Kaunas and a service point in Rhauderfehn. Our team has worked European routes for more than a decade.</p>
+      </div>
+
+      <div class="about-hero__stage reveal reveal--delay-1">
+        <img src="assets/img/about-team.jpg" alt="Okvada team in the Kaunas office" width="1040" height="585" fetchpriority="high">
+        <span class="chip chip--navy about-hero__chip">Kaunas · Rhauderfehn</span>
+      </div>
+    </div>
+
+    <dl class="about-hero__stats">
+      <div class="about-hero__stat"><dt class="t-h2">10+</dt><dd class="t-body-s text-secondary">years on European roads</dd></div>
+      <div class="about-hero__stat"><dt class="t-h2">106</dt><dd class="t-body-s text-secondary">people in the team</dd></div>
+      <div class="about-hero__stat"><dt class="t-h2">60+</dt><dd class="t-body-s text-secondary">own Mercedes-Benz trucks</dd></div>
+      <div class="about-hero__stat"><dt class="t-h2">EU</dt><dd class="t-body-s text-secondary">routes across Europe</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= HOW WE WORK (100:6418 / 100:6427) ================= -->
+<section class="section bg-canvas" aria-labelledby="work-title">
+  <div class="container">
+    <div class="about-head reveal">
+      <div class="section-title">
+        <p class="eyebrow">How we work</p>
+        <h2 class="section-title section-title--tight t-h2" id="work-title">
+          <span class="section-title__line">Four promises</span>
+          <span class="section-title__line section-title__line--indent">we keep on every load.</span>
+        </h2>
+      </div>
+      <p class="about-head__aside t-body-m text-secondary">The same four rules for a single pallet or a weekly full-load lane.</p>
+    </div>
+
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step__num t-display-72">01</span>
+        <h3 class="t-h4">Modern own fleet</h3>
+        <p class="t-body-m text-secondary">60+ Mercedes-Benz EURO 6 curtainsiders, maintained at our own service point.</p>
+      </li>
+      <li class="step reveal reveal--delay-1">
+        <span class="step__num t-display-72">02</span>
+        <h3 class="t-h4">One manager per client</h3>
+        <p class="t-body-m text-secondary">The person who quotes your load is the one who follows it.</p>
+      </li>
+      <li class="step reveal reveal--delay-2">
+        <span class="step__num t-display-72">03</span>
+        <h3 class="t-h4">Clear prices</h3>
+        <p class="t-body-m text-secondary">A quote you can compare, without surcharges added later.</p>
+      </li>
+      <li class="step reveal reveal--delay-3">
+        <span class="step__num t-display-72">04</span>
+        <h3 class="t-h4">We call first</h3>
+        <p class="t-body-m text-secondary">If anything changes on the road, you hear it from us.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= STORY — тёмный блок страницы (246:1809 / 246:2143) ================= -->
+<section data-dark class="section story" aria-labelledby="story-title">
+  <div class="container">
+    <div class="about-head reveal">
+      <div class="section-title">
+        <p class="eyebrow">Our story</p>
+        <h2 class="section-title t-h2" id="story-title">
+          <span class="section-title__line">From 3 trucks</span>
+          <span class="section-title__line section-title__line--indent">to 60+.</span>
+        </h2>
+      </div>
+      <p class="about-head__aside t-body-m">Founded by people who drove these lanes themselves. Growth came from clients who stayed.</p>
+    </div>
+
+    <ol class="timeline">
+      <li class="milestone reveal">
+        <span class="milestone__year t-h2">2014</span>
+        <h3 class="t-h4">Founded in Kaunas</h3>
+        <p class="milestone__text">Three trucks and one lane: Lithuania – Germany.</p>
+      </li>
+      <li class="milestone reveal reveal--delay-1">
+        <span class="milestone__year t-h2">2018</span>
+        <h3 class="t-h4">Service point in Rhauderfehn</h3>
+        <p class="milestone__text">Own workshop and driver base in Germany.</p>
+      </li>
+      <li class="milestone reveal reveal--delay-2">
+        <span class="milestone__year t-h2">2021</span>
+        <h3 class="t-h4">TAPA TSR certified</h3>
+        <p class="milestone__text">Security standard for high-value cargo.</p>
+      </li>
+      <li class="milestone milestone--now reveal reveal--delay-3">
+        <span class="milestone__year t-h2">2026</span>
+        <h3 class="t-h4">60+ Mercedes-Benz trucks</h3>
+        <p class="milestone__text">Full loads and groupage across Europe.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= TEAM (100:6419 / 100:6428) ================= -->
+<section class="section bg-canvas" aria-labelledby="team-title">
+  <div class="container">
+    <div class="about-head reveal">
+      <div class="section-title team__title">
+        <p class="eyebrow">Team</p>
+        <h2 class="section-title team__title t-h2" id="team-title">
+          <span class="section-title__line">People you</span>
+          <span class="section-title__line section-title__line--indent">will talk to</span>
+        </h2>
+      </div>
+      <p class="about-head__aside t-body-m text-secondary">One manager follows your load from booking to signed CMR. These are the people who pick up the phone.</p>
+    </div>
+
+    <ul class="people">
+      <li class="person reveal">
+        <img class="person__photo" src="assets/img/team-1.jpg" alt="Tomas Vaitkus" width="555" height="312" loading="lazy">
+        <p class="person__text"><span class="person__name">Tomas Vaitkus</span><span class="t-body-s text-secondary">Managing director</span></p>
+        <ul class="person__langs" aria-label="Languages"><li class="lang-tag">LT</li><li class="lang-tag">EN</li></ul>
+      </li>
+      <li class="person reveal reveal--delay-1">
+        <img class="person__photo" src="assets/img/team-2.jpg" alt="Mantas Jonaitis" width="451" height="555" loading="lazy">
+        <p class="person__text"><span class="person__name">Mantas Jonaitis</span><span class="t-body-s text-secondary">Head of dispatch</span></p>
+        <ul class="person__langs" aria-label="Languages"><li class="lang-tag">LT</li><li class="lang-tag">EN</li><li class="lang-tag">RU</li></ul>
+      </li>
+      <li class="person reveal reveal--delay-2">
+        <img class="person__photo" src="assets/img/team-3.jpg" alt="Laura Petraitė" width="555" height="370" loading="lazy">
+        <p class="person__text"><span class="person__name">Laura Petraitė</span><span class="t-body-s text-secondary">Head of sales</span></p>
+        <ul class="person__langs" aria-label="Languages"><li class="lang-tag">EN</li><li class="lang-tag">DE</li><li class="lang-tag">LT</li></ul>
+      </li>
+      <li class="person reveal reveal--delay-3">
+        <img class="person__photo" src="assets/img/team-4.jpg" alt="Olena Kovalenko" width="370" height="555" loading="lazy">
+        <p class="person__text"><span class="person__name">Olena Kovalenko</span><span class="t-body-s text-secondary">Driver recruitment</span></p>
+        <ul class="person__langs" aria-label="Languages"><li class="lang-tag">UA</li><li class="lang-tag">RU</li><li class="lang-tag">PL</li></ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATES (100:6420 / 100:6429) — компонент Proof ================= -->
+<section class="section proof bg-canvas" id="certificates" aria-labelledby="cert-title">
+  <div class="container proof__inner">
+    <div class="proof__intro reveal">
+      <p class="eyebrow">Certificates</p>
+      <h2 class="section-title section-title--tight section-title--short-indent t-h2" id="cert-title">
+        <span class="section-title__line">Certified, insured,</span>
+        <span class="section-title__line section-title__line--indent">documented.</span>
+      </h2>
+      <p class="t-body-m text-secondary">Check what we hold. Copies of the licence and insurance are sent on request for supplier checks and tenders.</p>
+    </div>
+
+    <div data-dark class="proof__panel reveal reveal--delay-1">
+      <ul class="proof__grid">
+        <li class="cert">
+          <span class="cert__seal">ISO</span>
+          <span class="cert__text"><span class="t-h4">ISO 9001</span><span class="cert__desc">Quality management system</span></span>
+          <span class="cert__status cert__status--valid">VALID · 2027</span>
+        </li>
+        <li class="cert">
+          <span class="cert__seal">ISO</span>
+          <span class="cert__text"><span class="t-h4">ISO 14001</span><span class="cert__desc">Environmental management</span></span>
+          <span class="cert__status cert__status--valid">VALID · 2027</span>
+        </li>
+        <li class="cert">
+          <span class="cert__seal">TAPA</span>
+          <span class="cert__text"><span class="t-h4">TAPA TSR</span><span class="cert__desc">Security standard for high-value cargo</span></span>
+          <span class="cert__status cert__status--valid">VALID · 2027</span>
+        </li>
+        <li class="cert">
+          <span class="cert__seal">EU</span>
+          <span class="cert__text"><span class="t-h4">EU Community Licence</span><span class="cert__desc">International road haulage</span></span>
+          <span class="cert__status">COPY ON REQUEST</span>
+        </li>
+        <li class="cert">
+          <span class="cert__seal">CMR</span>
+          <span class="cert__text"><span class="t-h4">CMR insurance</span><span class="cert__desc">Cargo cover up to €300,000 per load</span></span>
+          <span class="cert__status">COPY ON REQUEST</span>
+        </li>
+        <li>
+          <a class="cert cert--all" href="contact.html">
+            <span class="cert__text"><span class="t-h4">Need copies?</span><span class="cert__desc">Licence and insurance copies are sent on request</span></span>
+            <span class="arrow-circle arrow-circle--on-accent"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPANY DATA (100:6421 / 100:6430) ================= -->
+<section class="section bg-muted" aria-labelledby="data-title">
+  <div class="container">
+    <div class="about-head reveal">
+      <div class="section-title">
+        <p class="eyebrow">Company data</p>
+        <h2 class="section-title section-title--tight t-h2" id="data-title">
+          <span class="section-title__line">For your</span>
+          <span class="section-title__line section-title__line--indent">supplier check.</span>
+        </h2>
+      </div>
+      <div class="about-head__aside about-head__aside--link">
+        <p class="t-body-m text-secondary">Registration, management and dispute resolution are listed in our legal notice.</p>
+        <a class="link-arrow" href="legal.html">
+          <span class="arrow-circle arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+          Full legal notice
+        </a>
+      </div>
+    </div>
+
+    <div class="data-cards">
+      <div class="data-card reveal">
+        <p class="data-card__label t-data">LEGAL ENTITY</p>
+        <dl class="data-card__rows">
+        <div class="data-card__row"><dt>Name</dt><dd>UAB Okvada</dd></div>
+        <div class="data-card__row"><dt>Company code</dt><dd>306070987</dd></div>
+        <div class="data-card__row"><dt>VAT</dt><dd>LT100016279613</dd></div>
+        <div class="data-card__row"><dt>Licence</dt><dd>EU Community Licence LT/0123/2019</dd></div>
+        </dl>
+      </div>
+      <div class="data-card reveal reveal--delay-1">
+        <p class="data-card__label t-data">HEAD OFFICE · KAUNAS</p>
+        <dl class="data-card__rows">
+        <div class="data-card__row"><dt>Address</dt><dd>Barkūnų g. 41, LT-46326 Kaunas</dd></div>
+        <div class="data-card__row"><dt>Phone</dt><dd><a href="tel:+37060045210">+370 600 45 210</a></dd></div>
+        <div class="data-card__row"><dt>Email</dt><dd><a href="mailto:info@okvada.com">info@okvada.com</a></dd></div>
+        <div class="data-card__row"><dt>Hours</dt><dd>Mon–Fri 8:00–18:00 EET</dd></div>
+        </dl>
+      </div>
+      <div class="data-card reveal reveal--delay-2">
+        <p class="data-card__label t-data">SERVICE POINT · GERMANY</p>
+        <dl class="data-card__rows">
+        <div class="data-card__row"><dt>Name</dt><dd>Okvada Service</dd></div>
+        <div class="data-card__row"><dt>Address</dt><dd>Industriestraße 12, 26817 Rhauderfehn</dd></div>
+        <div class="data-card__row"><dt>Use</dt><dd>Truck service, driver base</dd></div>
+        <div class="data-card__row"><dt>Parking</dt><dd>24 secured places</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section final-cta bg-muted" aria-labelledby="cta-title">
+  <div class="container final-cta__inner">
+    <div class="final-cta__intro reveal">
+      <p class="eyebrow">Contact</p>
+      <h2 class="final-cta__title" id="cta-title"><span>Let’s work</span><span>together.</span></h2>
+    </div>
+    <dl class="final-cta__contacts reveal reveal--delay-1">
+      <div class="final-cta__contact"><dt class="t-data">EMAIL</dt><dd><a href="mailto:info@okvada.com">info@okvada.com</a></dd></div>
+      <div class="final-cta__contact"><dt class="t-data">PHONE · MON–FRI 8–18 EET</dt><dd><a href="tel:+37000000000">+370 000 00000</a></dd></div>
+      <div class="final-cta__contact"><dt class="t-data">OFFICE</dt><dd>Barkūnų g. 41, Kaunas, Lithuania</dd></div>
+    </dl>
+    <a class="circle-cta reveal reveal--delay-2" href="contact.html">
+      <span class="arrow-circle arrow-circle--navy arrow-circle--72"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      <span class="arrow-circle arrow-circle--navy arrow-circle--120"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      Contact us
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer data-dark class="footer">
+  <div class="container footer__inner">
+    <div class="footer__top">
+      <p class="footer__brand"><img class="logo__img" src="assets/img/logo-alt-swirl-light.svg" alt="Okvada" width="668" height="160" loading="lazy"></p>
+      <div class="footer__icons">
+        <a class="footer__icon" href="tel:+37000000000" aria-label="Call Okvada"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"></use></svg></a>
+        <a class="footer__icon" href="mailto:info@okvada.com" aria-label="Email Okvada"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-mail"></use></svg></a>
+        <a class="footer__icon" href="careers.html#apply" aria-label="Message Okvada in messenger"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-message-circle"></use></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__company">
+      <p class="footer__brand"><img class="logo__img" src="assets/img/logo-alt-swirl-light.svg" alt="Okvada" width="668" height="160" loading="lazy"></p>
+      <p>UAB Okvada, Barkūnų g. 41, LT-46326 Kaunas, Lithuania</p>
+      <p>Service point: Rhauderfehn, Germany</p>
+      <p>Company code 306070987 · VAT LT100016279613</p>
+      <p>info@okvada.com · +370 000 00000</p>
+    </div>
+
+    <div class="footer__cols" data-footer-accordion>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-company">
+          <span class="footer__col-title">Company</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-company">
+          <ul class="footer__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-docs">
+          <span class="footer__col-title">Documents</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-docs">
+          <ul class="footer__list">
+            <li><a href="about.html#certificates">Certificates</a></li>
+            <li><a href="terms.html">Terms of carriage</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-legal">
+          <span class="footer__col-title">Legal</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-legal">
+          <ul class="footer__list">
+            <li><a href="legal.html">Legal notice</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="#cookie-settings" data-cookie-settings-open>Cookie settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__meta">
+      <p class="footer__place">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-map-pin"></use></svg>
+        Kaunas, Lithuania · Service point Rhauderfehn, Germany
+      </p>
+      <p>© 2026 UAB Okvada · Code 306070987 · VAT LT100016279613</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="overlay" data-overlay></div>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" data-menu>
+  <div class="mobile-menu__top">
+    <a class="logo" href="index.html" aria-label="Okvada — home"><img class="logo__img" src="assets/img/logo-alt-swirl.svg" alt="Okvada" width="668" height="160"></a>
+    <button class="icon-btn mobile-menu__close" type="button" aria-label="Close menu" data-menu-close>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav" aria-label="Main">
+    <a class="mobile-menu__link" href="index.html"><span>Home</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link is-active" href="about.html" aria-current="page"><span>About</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="services.html"><span>Services</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="careers.html"><span>Careers</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+  </nav>
+  <div class="mobile-menu__lang">
+    <label for="mobile-lang">Language</label>
+    <div class="select">
+      <select id="mobile-lang" data-lang-select>
+        <option value="EN" selected>EN</option>
+        <option value="DE">DE</option>
+      </select>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+    </div>
+  </div>
+  <div class="mobile-menu__cta">
+    <a class="pill pill--block" href="contact.html">
+      Contact us
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </a>
+  </div>
+</div>
+
+<!-- ================= BACK TO TOP (324:18831 / 324:18918) ================= -->
+<button class="back-to-top arrow-circle arrow-circle--48 arrow-circle--navy" type="button" aria-label="Back to top" data-back-to-top>
+  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-up"></use></svg>
+</button>
+
+<!-- ================= COOKIE BANNER ================= -->
+<div class="cookie-banner" role="region" aria-label="Cookie consent" data-cookie-banner>
+  <div class="cookie-banner__text">
+    <p class="cookie-banner__title t-h4">
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-cookie"></use></svg>
+      We use cookies
+    </p>
+    <p class="t-body-s text-secondary">Necessary cookies keep the site working. With your consent we also use analytics.</p>
+  </div>
+  <div class="cookie-banner__actions">
+    <button class="text-btn cookie-banner__settings--desktop" type="button" data-cookie-settings-open>Settings</button>
+    <button class="pill pill--outline" type="button" data-cookie-choice="reject">
+      Reject
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <button class="pill" type="button" data-cookie-choice="accept">
+      Accept
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+  </div>
+  <button class="text-btn cookie-banner__settings--mobile" type="button" data-cookie-settings-open>Settings</button>
+</div>
+
+<!-- ================= COOKIE SETTINGS ================= -->
+<div class="sheet" id="cookie-settings" role="dialog" aria-modal="true" aria-labelledby="cookie-settings-title" data-cookie-settings>
+  <div class="sheet__top">
+    <h2 class="sheet__title t-h3" id="cookie-settings-title">Cookie settings</h2>
+    <button class="icon-btn sheet__close" type="button" aria-label="Close cookie settings" data-cookie-settings-close>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg>
+    </button>
+  </div>
+  <p class="t-body-s text-secondary">Choose which cookies we may use. You can change your choice at any time.</p>
+  <div>
+    <div class="consent-row">
+      <div class="consent-row__text">
+        <p class="consent-row__name">Necessary</p>
+        <p class="consent-row__desc">Keep the site and the contact form working. Cannot be switched off.</p>
+      </div>
+      <label class="checkbox" for="consent-necessary">
+        <input type="checkbox" id="consent-necessary" checked disabled>
+        <span class="checkbox__box"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg></span>
+        Always on
+      </label>
+    </div>
+    <div class="consent-row">
+      <div class="consent-row__text">
+        <p class="consent-row__name">Analytics</p>
+        <p class="consent-row__desc">Show us which pages are useful. Anonymous, no advertising.</p>
+      </div>
+      <label class="checkbox" for="consent-analytics">
+        <input type="checkbox" id="consent-analytics" data-consent-analytics>
+        <span class="checkbox__box"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg></span>
+        Allow
+      </label>
+    </div>
+  </div>
+  <div class="sheet__actions">
+    <button class="pill pill--primary" type="button" data-cookie-choice="save">
+      Save choices
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <button class="pill pill--outline" type="button" data-cookie-choice="reject">
+      Reject all
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <a class="link-underline" href="privacy.html">Privacy policy</a>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,671 @@
+/* =========================================================
+   Careers — секции страницы
+   Figma: 04 · UI → Careers · Desktop 1440 (100:6433) / Mobile 375 (100:6443)
+   Mobile-first: base 375 → 768 (tablet) → 1200 (desktop)
+   Final CTA на этой странице нет (по макету): финал — тёмная секция Apply.
+   FAQ-аккордеон — общий (components.css + main.js).
+   ========================================================= */
+
+/* ---------- Page hero ---------- */
+
+.careers-hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.careers-hero__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.careers-hero__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.careers-hero__title span {
+  display: block;
+}
+
+.careers-hero__stage {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.careers-hero__stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Растушёвка фото в фон слева и сверху */
+.careers-hero__stage::before,
+.careers-hero__stage::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.careers-hero__stage::before {
+  inset: 0 auto 0 0;
+  width: 80px;
+  background-image: linear-gradient(to right, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+}
+
+.careers-hero__stage::after {
+  inset: 0 0 auto 0;
+  height: 70px;
+  background-image: linear-gradient(to bottom, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+}
+
+.careers-hero__chip {
+  position: absolute;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  z-index: 1;
+}
+
+/* ---------- Numbers ---------- */
+
+.numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-lg);
+}
+
+.numbers__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg) var(--space-md);
+  width: 100%;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-line);
+}
+
+/* ---------- Заголовок секции + текст справа ---------- */
+
+.careers-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--section-heading);
+}
+
+/* ---------- What we offer ---------- */
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Фото + плашка «Salary day», заходящая за нижний край фото */
+.offer__stage {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 300px;
+  padding-right: var(--space-sm);
+}
+
+.offer__photo {
+  position: absolute;
+  inset: 0 0 auto;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.stat-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  width: 196px;
+  padding: var(--space-md);
+  background-color: var(--color-bg-inverse-strong);
+  color: var(--color-text-on-inverse-muted);
+}
+
+.stat-tile__value {
+  color: var(--color-text-on-inverse);
+}
+
+/* Mobile/tablet: горизонтальная прокрутка карточек «лесенкой»,
+   следующая карточка выглядывает справа */
+.benefits {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: none;
+}
+
+.benefits::-webkit-scrollbar {
+  display: none;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 0 0 240px;
+  height: 220px;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-muted);
+  scroll-snap-align: start;
+}
+
+/* Каждая вторая карточка ниже на 40 (слоты Offset в Figma) */
+.benefit:nth-child(even) {
+  margin-top: 40px;
+}
+
+.benefit__num {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-accent-text);
+}
+
+.benefit__text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+/* ---------- Visa & relocation ---------- */
+
+/* Mobile: вертикальная линия слева */
+.visa-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: 0 0 var(--space-lg) var(--space-lg);
+  border-left: 2px solid var(--color-border-strong);
+}
+
+/* Узел на линии (svg из Figma), −9 от внешнего края линии */
+.visa-step::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: url("../assets/careers/node.svg") center / contain no-repeat;
+}
+
+.visa-step--last::before {
+  background-image: url("../assets/careers/node-last.svg");
+}
+
+.visa-step__when {
+  color: var(--color-text-secondary);
+}
+
+.visa-step--last .visa-step__when,
+.visa-step--last .visa-step__num {
+  color: var(--color-accent-text);
+}
+
+/* ---------- Requirements ---------- */
+
+.req {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.req__photo {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.req__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.checklist {
+  border-top: 1px solid var(--color-border-line);
+}
+
+.checklist__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--color-border-line);
+}
+
+.checklist__tick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-muted);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-accent-text);
+}
+
+/* ---------- Apply — тёмный финал страницы ---------- */
+
+.apply {
+  background-color: var(--color-bg-inverse-strong);
+  color: var(--color-text-on-inverse);
+}
+
+.apply__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.apply__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-lg);
+}
+
+.apply .eyebrow,
+.apply__lead,
+.apply__call {
+  color: var(--color-text-on-inverse-muted);
+}
+
+/* Heading/H1 56 → Display/96 */
+.apply__title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.apply__title-indent {
+  padding-left: 32px;
+  color: var(--color-accent-default);
+}
+
+.apply__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.apply__call a {
+  white-space: nowrap;
+  transition: color var(--duration) var(--ease);
+}
+
+.apply__call a:hover {
+  color: var(--color-accent-default);
+}
+
+/* Превью чата с ботом */
+.chat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-inverse);
+}
+
+.chat__name {
+  color: var(--color-text-on-inverse-muted);
+}
+
+.chat__msg {
+  max-width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-lg) var(--radius-sm);
+  background-color: var(--color-bg-canvas);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.chat__msg--driver {
+  align-self: flex-end;
+  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-sm) var(--radius-lg);
+  background-color: var(--color-bg-inverse-raised);
+  color: var(--color-text-on-inverse);
+}
+
+/* ---------- Other roles ---------- */
+
+.roles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.roles__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.roles__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-line);
+}
+
+.roles__email {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.roles__email a {
+  transition: color var(--duration) var(--ease);
+}
+
+.roles__email a:hover {
+  color: var(--color-accent-text);
+}
+
+/* ---------- Driver FAQ: вопросы с зазором, без верхней линии ---------- */
+
+.faq--spaced {
+  gap: var(--space-lg);
+  border-top: 0;
+}
+
+/* ---------- Tablet ---------- */
+
+@media screen and (min-width: 768px) {
+  .careers-hero__stage {
+    height: 360px;
+  }
+
+  .numbers__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .offer__stage {
+    height: 440px;
+  }
+
+  .offer__photo {
+    height: 400px;
+  }
+
+  .req__photo {
+    height: 400px;
+  }
+
+  .chat {
+    max-width: 400px;
+  }
+}
+
+/* ---------- Desktop ---------- */
+
+@media screen and (min-width: 1200px) {
+  .careers-hero__inner {
+    gap: 40px;
+  }
+
+  .careers-hero__main {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .careers-hero__copy {
+    flex-shrink: 0;
+    width: 568px;
+    gap: var(--space-lg);
+  }
+
+  .careers-hero__stage {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 440px;
+  }
+
+  .careers-hero__stage::before {
+    width: 200px;
+  }
+
+  .careers-hero__stage::after {
+    height: 120px;
+  }
+
+  .numbers {
+    gap: 40px;
+  }
+
+  .numbers__grid {
+    gap: var(--space-lg);
+  }
+
+  .metric {
+    padding-top: var(--space-lg);
+  }
+
+  .careers-head {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: var(--space-lg);
+  }
+
+  .careers-head .section-title {
+    flex: 1 1 0;
+  }
+
+  .careers-head__aside {
+    flex-shrink: 0;
+    width: 282px;
+  }
+
+  /* What we offer: фото слева, сетка 2 × 3 справа */
+  .offer {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .offer__stage {
+    flex-shrink: 0;
+    width: 568px;
+    height: 560px;
+    padding-right: var(--space-lg);
+  }
+
+  .offer__photo {
+    height: 520px;
+    border-radius: var(--radius-xl);
+  }
+
+  .stat-tile {
+    width: 272px;
+    padding: var(--space-lg);
+  }
+
+  .benefits {
+    flex: 1 1 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-xl) var(--space-lg);
+    min-width: 0;
+    margin-inline: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .benefit {
+    gap: var(--space-xs);
+    height: auto;
+    padding: 20px 0 0;
+    border-top: 1px solid var(--color-border-line);
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  .benefit:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .benefit__num {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  .benefit__text {
+    font-size: 16px;
+  }
+
+  /* Visa: горизонтальная линия сверху, 4 колонки */
+  .visa-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .visa-step {
+    padding: 28px 0 0;
+    border-left: 0;
+    border-top: 2px solid var(--color-border-strong);
+  }
+
+  .visa-step::before {
+    left: 0;
+    top: -11px;
+  }
+
+  .visa-step--last {
+    border-top-color: var(--color-accent-default);
+  }
+
+  /* Requirements: фото | список */
+  .req {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-3xl);
+  }
+
+  .req__photo {
+    flex-shrink: 0;
+    width: 520px;
+    height: 560px;
+    border-radius: var(--radius-xl);
+  }
+
+  .req__content {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  /* Apply: текст | превью чата */
+  .apply__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-3xl);
+  }
+
+  .apply__intro {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .apply__title {
+    font-size: 96px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .apply__title-indent {
+    padding-left: 96px;
+  }
+
+  .apply__actions {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .chat {
+    flex-shrink: 0;
+    width: 400px;
+    border-radius: var(--radius-xl);
+  }
+
+  .chat__msg {
+    white-space: nowrap;
+  }
+
+  /* Other roles: заголовок | текст 480 */
+  .roles {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-3xl);
+  }
+
+  .roles__intro {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .roles__text {
+    flex-shrink: 0;
+    width: 480px;
+  }
+
+  .roles__contact {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .roles__email {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .faq--spaced {
+    gap: var(--space-xl);
+  }
+}

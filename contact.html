@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — Okvada</title>
+<meta name="description" content="Tell us what you need to move — a single load or regular lanes. A personal manager from Okvada will get back to you. Kaunas, Mon–Fri 8–18 EET.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/contact.css">
+</head>
+<body class="page-contact">
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Okvada — home">
+      <img class="logo__img" src="assets/img/logo-alt-swirl.svg" alt="Okvada" width="668" height="160">
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="services.html">Services</a>
+      <a class="nav__link" href="careers.html">Careers</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="lang" data-lang>
+        <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" data-lang-btn>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-globe"></use></svg>
+          <span data-lang-current>EN</span>
+          <svg class="icon icon--chevron" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu" role="menu" data-lang-menu>
+          <button class="lang-menu__item" type="button" role="menuitemradio" aria-checked="true" data-lang-option="EN">
+            <span class="lang-menu__code">EN</span>
+            <span class="lang-menu__name">English</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+          </button>
+          <button class="lang-menu__item" type="button" role="menuitemradio" aria-checked="false" data-lang-option="DE">
+            <span class="lang-menu__code">DE</span>
+            <span class="lang-menu__name">Deutsch</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+          </button>
+        </div>
+      </div>
+
+      <a class="header__phone" href="tel:+37000000000">+370 000 00000</a>
+
+      <a class="pill pill--outline header__cta" href="contact.html">
+        Contact us
+        <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      </a>
+
+      <a class="icon-btn icon-btn--bordered header__call" href="tel:+37000000000" aria-label="Call Okvada">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"></use></svg>
+      </a>
+      <button class="icon-btn header__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-open>
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= PAGE HERO (Figma 100:6455 / 104:8353) ================= -->
+<section class="page-hero contact-hero bg-canvas" aria-labelledby="contact-title">
+  <div class="container contact-hero__inner">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html">Home</a></li>
+        <li class="breadcrumbs__item" aria-current="page">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg>
+          Contact us
+        </li>
+      </ol>
+    </nav>
+
+    <div class="contact-hero__main">
+      <div class="contact-hero__copy reveal">
+        <p class="eyebrow">Contact</p>
+        <h1 class="contact-hero__title t-display-72" id="contact-title">
+          <span>Let’s talk</span>
+          <span>about your</span>
+          <span class="text-secondary">cargo.</span>
+        </h1>
+        <p class="t-body-l text-secondary">Tell us what you need to move — a single load or regular lanes. A personal manager will get back to you.</p>
+      </div>
+
+      <div class="contact-hero__stage reveal reveal--delay-1">
+        <img src="assets/img/contact-hero.jpg" alt="Warehouse workers moving boxed cargo on a pallet truck between high racks" width="1119" height="745">
+        <span class="chip chip--navy contact-hero__chip">Kaunas · Mon–Fri 8–18 EET</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FORM (Figma 100:6456 / 104:8361, states 294:14043) ================= -->
+<section class="section bg-muted" aria-labelledby="form-title">
+  <div class="container contact-form-section">
+
+    <div class="contact-form-section__main">
+      <!-- Форма ничего не отправляет: проверка → Sending 1,5 с → thank-you.html. Демо «не отправлено» — #fail в адресе -->
+      <form class="lead-form" action="thank-you.html" novalidate data-lead-form>
+        <h2 class="t-h3" id="form-title">Tell us about your company</h2>
+
+        <div class="lead-form__row">
+          <div class="field" data-field>
+            <label class="field__label" for="lf-company">Company</label>
+            <input class="field__control" id="lf-company" name="company" type="text" placeholder="Company name" autocomplete="organization" required aria-describedby="lf-company-error">
+            <p class="field__error" id="lf-company-error" hidden>Enter your company name.</p>
+          </div>
+          <div class="field" data-field>
+            <label class="field__label" for="lf-name">Your name</label>
+            <input class="field__control" id="lf-name" name="name" type="text" placeholder="First and last name" autocomplete="name">
+          </div>
+        </div>
+
+        <div class="lead-form__row">
+          <div class="field" data-field>
+            <label class="field__label" for="lf-email">Work email</label>
+            <input class="field__control" id="lf-email" name="email" type="email" placeholder="name@company.com" autocomplete="email" required aria-describedby="lf-email-error">
+            <p class="field__error" id="lf-email-error" hidden>Enter a valid email, e.g. name@company.com.</p>
+          </div>
+          <div class="field" data-field>
+            <label class="field__label" for="lf-phone">Phone (optional)</label>
+            <input class="field__control" id="lf-phone" name="phone" type="tel" placeholder="+49 …" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="lf-topic">Topic</label>
+          <div class="field__select">
+            <select class="field__control" id="lf-topic" name="topic">
+              <option>New cooperation</option>
+              <option>Existing client</option>
+              <option>Partner carrier</option>
+              <option>Other</option>
+            </select>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="lf-message">Message</label>
+          <textarea class="field__control field__control--textarea" id="lf-message" name="message" placeholder="What do you need to move, how often, which routes…" maxlength="500"></textarea>
+        </div>
+
+        <label class="checkbox lead-form__consent" data-consent>
+          <input type="checkbox" name="consent" required>
+          <span class="checkbox__box" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#i-check"></use></svg></span>
+          <span>I agree that Okvada processes my data to reply to my message. <a class="lead-form__link" href="privacy.html">Privacy policy</a></span>
+        </label>
+
+        <div class="form-alert" role="alert" hidden data-form-alert>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-circle-alert"></use></svg>
+          <div class="form-alert__text">
+            <p class="form-alert__title">Your message wasn’t sent</p>
+            <p>Something went wrong on our side. Please try again, or write to <a href="mailto:info@okvada.com">info@okvada.com</a>.</p>
+          </div>
+        </div>
+
+        <button class="pill lead-form__submit" type="submit" data-lead-submit>
+          <span class="pill__label" data-lead-label>Send message</span>
+          <span class="pill__loading">Sending…</span>
+          <span class="arrow-circle">
+            <svg class="icon lead-form__icon-arrow" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg>
+            <svg class="icon lead-form__icon-loader" aria-hidden="true"><use href="assets/icons.svg#i-loader"></use></svg>
+          </span>
+        </button>
+
+        <p class="t-body-s text-secondary">Mon–Fri 8:00–18:00 EET (Lithuanian time).</p>
+      </form>
+
+      <div class="after-send">
+        <h3 class="t-data text-secondary">AFTER YOU SEND</h3>
+        <ol class="after-send__steps">
+          <li class="after-send__step">
+            <span class="t-data text-accent">01</span>
+            <span class="t-h4">We read it</span>
+            <span class="t-body-s text-secondary">Your request goes straight to the sales team, not a call centre.</span>
+          </li>
+          <li class="after-send__step">
+            <span class="t-data text-accent">02</span>
+            <span class="t-h4">Manager calls</span>
+            <span class="t-body-s text-secondary">With questions or a first offer.</span>
+          </li>
+          <li class="after-send__step">
+            <span class="t-data text-accent">03</span>
+            <span class="t-h4">Trial load</span>
+            <span class="t-body-s text-secondary">Start with one shipment and see how we work.</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <aside data-dark class="manager" aria-label="Your personal manager">
+      <div class="manager__photo">
+        <img src="assets/img/contact-manager.jpg" alt="Laura Petraitė, head of sales, smiling in the office" width="555" height="370" loading="lazy">
+        <span class="manager__badge">Your personal manager</span>
+      </div>
+      <div class="manager__who">
+        <p class="t-h3">Laura Petraitė</p>
+        <p class="t-body-s">Head of sales · English, German, Lithuanian</p>
+      </div>
+      <dl class="manager__contacts">
+        <div class="manager__row">
+          <dt class="t-data">PHONE</dt>
+          <dd><a class="manager__phone t-h3" href="tel:+37060045210">+370 600 45 210</a></dd>
+        </div>
+        <div class="manager__row">
+          <dt class="t-data">EMAIL</dt>
+          <dd><a class="t-body-m" href="mailto:info@okvada.com">info@okvada.com</a></dd>
+        </div>
+        <div class="manager__row">
+          <dt class="t-data">HOURS</dt>
+          <dd class="t-body-m">Mon–Fri 8:00–18:00 EET</dd>
+        </div>
+      </dl>
+      <div class="manager__links t-body-s">
+        <p>Questions about payment or insurance?&nbsp; <a href="services.html#faq">See FAQ →</a></p>
+        <p>Driver? <a href="careers.html#apply">Apply via Telegram on Careers →</a></p>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- ================= OFFICES (Figma 187:1481 / 187:1660) ================= -->
+<section class="section bg-canvas" aria-labelledby="offices-title">
+  <div class="container offices">
+    <div class="offices__head reveal">
+      <div class="section-title">
+        <p class="eyebrow">Where we are</p>
+        <h2 class="section-title section-title--tight t-h2" id="offices-title">
+          <span class="section-title__line">Two bases,</span>
+          <span class="section-title__line section-title__line--indent">one team.</span>
+        </h2>
+      </div>
+      <p class="offices__aside t-body-m text-secondary">Sales and dispatch in Kaunas, truck service and driver base in Germany.</p>
+    </div>
+
+    <div class="offices__list">
+      <article class="office reveal">
+        <img class="office__photo" src="assets/img/contact-office-kaunas.jpg" alt="Okvada team celebrating around a laptop in the Kaunas office" width="1040" height="585" loading="lazy">
+        <p class="t-data text-accent">HEAD OFFICE · LITHUANIA</p>
+        <div class="office__text">
+          <h3 class="t-h3">UAB Okvada</h3>
+          <p class="t-body-m">Barkūnų g. 41, LT-46326 Kaunas</p>
+          <p class="t-body-s text-secondary">Sales, dispatch, accounting, HR</p>
+        </div>
+        <!-- Ссылка на карты собрана по адресу из макета — заменить на точную метку клиента -->
+        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Bark%C5%AB%C5%B3+g.+41%2C+LT-46326+Kaunas" target="_blank" rel="noopener">
+          <span class="arrow-circle arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+          Open in Maps
+        </a>
+      </article>
+
+      <article class="office reveal reveal--delay-1">
+        <img class="office__photo" src="assets/img/contact-office-germany.jpg" alt="Red truck cab parked on a green field at the service point" width="839" height="556" loading="lazy">
+        <p class="t-data text-accent">SERVICE POINT · GERMANY</p>
+        <div class="office__text">
+          <h3 class="t-h3">Okvada Service</h3>
+          <p class="t-body-m">Industriestraße 12, 26817 Rhauderfehn</p>
+          <p class="t-body-s text-secondary">Truck service, driver base, parking</p>
+        </div>
+        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Industriestra%C3%9Fe+12%2C+26817+Rhauderfehn" target="_blank" rel="noopener">
+          <span class="arrow-circle arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+          Open in Maps
+        </a>
+      </article>
+    </div>
+
+    <div class="trust reveal">
+      <p class="t-data text-secondary">VERIFIED CARRIER</p>
+      <ul class="trust__badges">
+        <li class="trust__badge">ISO 9001</li>
+        <li class="trust__badge">ISO 14001</li>
+        <li class="trust__badge">TAPA TSR</li>
+        <li class="trust__badge">EU Community Licence</li>
+        <li class="trust__badge">CMR insured €300,000</li>
+      </ul>
+      <a class="link-arrow trust__link" href="about.html#certificates">
+        <span class="arrow-circle arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+        See all documents
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer data-dark class="footer">
+  <div class="container footer__inner">
+    <div class="footer__top">
+      <p class="footer__brand"><img class="logo__img" src="assets/img/logo-alt-swirl-light.svg" alt="Okvada" width="668" height="160" loading="lazy"></p>
+      <div class="footer__icons">
+        <a class="footer__icon" href="tel:+37000000000" aria-label="Call Okvada"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"></use></svg></a>
+        <a class="footer__icon" href="mailto:info@okvada.com" aria-label="Email Okvada"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-mail"></use></svg></a>
+        <a class="footer__icon" href="careers.html#apply" aria-label="Message Okvada in messenger"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-message-circle"></use></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__company">
+      <p class="footer__brand"><img class="logo__img" src="assets/img/logo-alt-swirl-light.svg" alt="Okvada" width="668" height="160" loading="lazy"></p>
+      <p>UAB Okvada, Barkūnų g. 41, LT-46326 Kaunas, Lithuania</p>
+      <p>Service point: Rhauderfehn, Germany</p>
+      <p>Company code 306070987 · VAT LT100016279613</p>
+      <p>info@okvada.com · +370 000 00000</p>
+    </div>
+
+    <div class="footer__cols" data-footer-accordion>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-company">
+          <span class="footer__col-title">Company</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-company">
+          <ul class="footer__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-docs">
+          <span class="footer__col-title">Documents</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-docs">
+          <ul class="footer__list">
+            <li><a href="about.html#certificates">Certificates</a></li>
+            <li><a href="terms.html">Terms of carriage</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-legal">
+          <span class="footer__col-title">Legal</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-legal">
+          <ul class="footer__list">
+            <li><a href="legal.html">Legal notice</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="#cookie-settings" data-cookie-settings-open>Cookie settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__meta">
+      <p class="footer__place">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-map-pin"></use></svg>
+        Kaunas, Lithuania · Service point Rhauderfehn, Germany
+      </p>
+      <p>© 2026 UAB Okvada · Code 306070987 · VAT LT100016279613</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="overlay" data-overlay></div>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" data-menu>
+  <div class="mobile-menu__top">
+    <a class="logo" href="index.html" aria-label="Okvada — home"><img class="logo__img" src="assets/img/logo-alt-swirl.svg" alt="Okvada" width="668" height="160"></a>
+    <button class="icon-btn mobile-menu__close" type="button" aria-label="Close menu" data-menu-close>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav" aria-label="Main">
+    <a class="mobile-menu__link" href="index.html"><span>Home</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="about.html"><span>About</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="services.html"><span>Services</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="careers.html"><span>Careers</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+  </nav>
+  <div class="mobile-menu__lang">
+    <label for="mobile-lang">Language</label>
+    <div class="select">
+      <select id="mobile-lang" data-lang-select>
+        <option value="EN" selected>EN</option>
+        <option value="DE">DE</option>
+      </select>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+    </div>
+  </div>
+  <div class="mobile-menu__cta">
+    <a class="pill pill--block" href="contact.html">
+      Contact us
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </a>
+  </div>
+</div>
+
+<!-- ================= BACK TO TOP (324:18831 / 324:18918) ================= -->
+<button class="back-to-top back-to-top--mobile-only arrow-circle arrow-circle--48 arrow-circle--navy" type="button" aria-label="Back to top" data-back-to-top>
+  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-up"></use></svg>
+</button>
+
+<!-- ================= COOKIE BANNER ================= -->
+<div class="cookie-banner" role="region" aria-label="Cookie consent" data-cookie-banner>
+  <div class="cookie-banner__text">
+    <p class="cookie-banner__title t-h4">
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-cookie"></use></svg>
+      We use cookies
+    </p>
+    <p class="t-body-s text-secondary">Necessary cookies keep the site working. With your consent we also use analytics.</p>
+  </div>
+  <div class="cookie-banner__actions">
+    <button class="text-btn cookie-banner__settings--desktop" type="button" data-cookie-settings-open>Settings</button>
+    <button class="pill pill--outline" type="button" data-cookie-choice="reject">
+      Reject
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <button class="pill" type="button" data-cookie-choice="accept">
+      Accept
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+  </div>
+  <button class="text-btn cookie-banner__settings--mobile" type="button" data-cookie-settings-open>Settings</button>
+</div>
+
+<!-- ================= COOKIE SETTINGS ================= -->
+<div class="sheet" id="cookie-settings" role="dialog" aria-modal="true" aria-labelledby="cookie-settings-title" data-cookie-settings>
+  <div class="sheet__top">
+    <h2 class="sheet__title t-h3" id="cookie-settings-title">Cookie settings</h2>
+    <button class="icon-btn sheet__close" type="button" aria-label="Close cookie settings" data-cookie-settings-close>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg>
+    </button>
+  </div>
+  <p class="t-body-s text-secondary">Choose which cookies we may use. You can change your choice at any time.</p>
+  <div>
+    <div class="consent-row">
+      <div class="consent-row__text">
+        <p class="consent-row__name">Necessary</p>
+        <p class="consent-row__desc">Keep the site and the contact form working. Cannot be switched off.</p>
+      </div>
+      <label class="checkbox" for="consent-necessary">
+        <input type="checkbox" id="consent-necessary" checked disabled>
+        <span class="checkbox__box"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg></span>
+        Always on
+      </label>
+    </div>
+    <div class="consent-row">
+      <div class="consent-row__text">
+        <p class="consent-row__name">Analytics</p>
+        <p class="consent-row__desc">Show us which pages are useful. Anonymous, no advertising.</p>
+      </div>
+      <label class="checkbox" for="consent-analytics">
+        <input type="checkbox" id="consent-analytics" data-consent-analytics>
+        <span class="checkbox__box"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg></span>
+        Allow
+      </label>
+    </div>
+  </div>
+  <div class="sheet__actions">
+    <button class="pill pill--primary" type="button" data-cookie-choice="save">
+      Save choices
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <button class="pill pill--outline" type="button" data-cookie-choice="reject">
+      Reject all
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <a class="link-underline" href="privacy.html">Privacy policy</a>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/contact.js"></script>
+</body>
+</html>

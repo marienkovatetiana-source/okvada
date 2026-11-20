@@ -1,0 +1,568 @@
+/* =========================================================
+   Contact — секции страницы
+   Figma: 04 · UI → Contact · Desktop 1440 (100:6452) / Mobile 375 (100:6458)
+   States (294:14043): Error, Sending, Not sent — классы ставит js/contact.js
+   Mobile-first: base 375 → 768 (tablet) → 1200 (desktop)
+   Final CTA на этой странице нет (по макету).
+   ========================================================= */
+
+/* ---------- Page hero ---------- */
+
+.contact-hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.contact-hero__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.contact-hero__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.contact-hero__title span {
+  display: block;
+}
+
+.contact-hero__stage {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.contact-hero__stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Растушёвка фото в фон слева и сверху */
+.contact-hero__stage::before,
+.contact-hero__stage::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.contact-hero__stage::before {
+  inset: 0 auto 0 0;
+  width: 80px;
+  background-image: linear-gradient(to right, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+}
+
+.contact-hero__stage::after {
+  inset: 0 0 auto 0;
+  height: 70px;
+  background-image: linear-gradient(to bottom, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+}
+
+.contact-hero__chip {
+  position: absolute;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  z-index: 1;
+}
+
+/* ---------- Form section: форма + панель менеджера ---------- */
+
+.contact-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.contact-form-section__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  min-width: 0;
+}
+
+/* Lead form (102:1408) */
+.lead-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  padding: var(--space-lg) var(--space-md);
+  border: 1px solid var(--color-border-line);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-surface);
+}
+
+.lead-form > * {
+  width: 100%;
+}
+
+.lead-form__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Field (59:191) / Textarea (64:123) */
+.field {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: var(--space-xs);
+  min-width: 0;
+}
+
+.field__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-text-primary);
+}
+
+.field__control {
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--space-md);
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-surface);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  scroll-margin-top: calc(var(--header-h) + var(--space-lg));
+}
+
+.field__control::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 1;
+}
+
+.field__control--textarea {
+  display: block;
+  height: 112px;
+  padding: var(--space-sm) var(--space-md);
+  resize: none;
+}
+
+/* Select: нативный, стрелка — иконка поверх */
+.field__select {
+  position: relative;
+}
+
+.field__select select {
+  padding-right: 44px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.field__select .icon {
+  position: absolute;
+  top: 50%;
+  right: var(--space-md);
+  width: 20px;
+  height: 20px;
+  color: var(--color-text-secondary);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.field__error {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-status-delay);
+}
+
+/* Error: рамка 2 px status/delay */
+.field.is-error .field__control {
+  border-width: 2px;
+  border-color: var(--color-status-delay);
+}
+
+/* Checkbox: общий компонент, свои только ошибка и ссылка */
+.lead-form__consent.is-error .checkbox__box {
+  border-width: 2px;
+  border-color: var(--color-status-delay);
+}
+
+.lead-form__link:hover {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Form alert (293:404) — State = Failed */
+.form-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border: 1px solid var(--color-status-delay);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-surface);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.form-alert[hidden] {
+  display: none;
+}
+
+.form-alert .icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-status-delay);
+}
+
+.form-alert__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.form-alert__title {
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-text-primary);
+}
+
+/* Pill: на mobile во всю ширину, текст слева, круг справа */
+.lead-form__submit {
+  justify-content: space-between;
+}
+
+/* Sending: вместо стрелки — loader (крутит общий .pill.is-loading .icon) */
+.lead-form__icon-loader,
+.pill.is-loading .lead-form__icon-arrow {
+  display: none;
+}
+
+.pill.is-loading .lead-form__icon-loader {
+  display: block;
+}
+
+/* After you send */
+.after-send {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.after-send__steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.after-send__step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-line);
+}
+
+/* Manager panel — тёмная панель (footer navy); на mobile она первая */
+.manager {
+  order: -1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: 20px;
+  border-radius: var(--radius-xl);
+  background-color: var(--color-bg-inverse-strong);
+  color: var(--color-text-on-inverse);
+}
+
+.manager__photo {
+  position: relative;
+  height: 200px;
+  padding: var(--space-sm) 0 0 var(--space-sm);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.manager__photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manager__badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-canvas);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-text-primary);
+}
+
+.manager__badge::before {
+  content: "";
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-status-on-time);
+}
+
+.manager__who {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.manager__who .t-body-s,
+.manager__links,
+.manager__row dt {
+  color: var(--color-text-on-inverse-muted);
+}
+
+.manager__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding-block: var(--space-sm);
+  border-top: 1px solid var(--color-border-strong);
+}
+
+.manager__phone {
+  color: var(--color-accent-default);
+}
+
+.manager__contacts a:hover,
+.manager__links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.manager__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+/* ---------- Offices ---------- */
+
+.offices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-heading);
+}
+
+.offices__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.offices__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.office {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.office__photo {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+
+.office__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+/* Trust row: Verified carrier */
+.trust {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border-line);
+}
+
+.trust__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.trust__badge {
+  padding: var(--space-xs) 14px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* ---------- Tablet ---------- */
+
+@media screen and (min-width: 768px) {
+  .contact-hero__stage {
+    height: 360px;
+  }
+
+  .lead-form {
+    padding: var(--space-xl);
+  }
+
+  .lead-form__row {
+    flex-direction: row;
+    gap: var(--space-md);
+  }
+
+  .lead-form__submit {
+    width: auto;
+    justify-content: center;
+  }
+
+  .after-send__steps {
+    flex-direction: row;
+    gap: var(--space-lg);
+  }
+
+  .after-send__step {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .manager__photo {
+    height: 240px;
+  }
+
+  .offices__list {
+    flex-direction: row;
+    gap: var(--space-lg);
+  }
+
+  .office {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .office__photo {
+    height: 300px;
+  }
+}
+
+/* ---------- Desktop ---------- */
+
+@media screen and (min-width: 1200px) {
+  .contact-hero__inner {
+    gap: 40px;
+  }
+
+  .contact-hero__main {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contact-hero__copy {
+    flex-shrink: 0;
+    width: 568px;
+    gap: var(--space-lg);
+  }
+
+  .contact-hero__stage {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 440px;
+  }
+
+  .contact-hero__stage::before {
+    width: 200px;
+  }
+
+  .contact-hero__stage::after {
+    height: 120px;
+  }
+
+  .contact-form-section {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-2xl);
+  }
+
+  .contact-form-section__main {
+    flex: 1 1 0;
+    gap: var(--space-xl);
+  }
+
+  .lead-form {
+    border-radius: var(--radius-xl);
+  }
+
+  .field__control {
+    border-radius: var(--radius-xl);
+  }
+
+  .manager {
+    order: 0;
+    flex-shrink: 0;
+    width: 400px;
+    padding: var(--space-xl);
+    border-radius: var(--radius-2xl);
+  }
+
+  .manager__photo {
+    border-radius: var(--radius-xl);
+  }
+
+  .offices__head {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: var(--space-lg);
+  }
+
+  .offices__head .section-title {
+    flex: 1 1 0;
+  }
+
+  .offices__aside {
+    flex-shrink: 0;
+    width: 282px;
+  }
+
+  .office__photo {
+    border-radius: var(--radius-xl);
+  }
+
+  /* В Figma ряд держит Spacer высотой 100 px — бейджи по центру этой высоты */
+  .trust {
+    flex-direction: row;
+    align-items: center;
+    min-height: calc(var(--space-lg) + 100px);
+  }
+
+  .trust__badges {
+    flex-wrap: nowrap;
+  }
+
+  .trust__link {
+    margin-left: auto;
+  }
+}

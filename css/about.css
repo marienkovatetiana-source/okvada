@@ -1,0 +1,386 @@
+/* =========================================================
+   About — секции страницы
+   Figma: 04 · UI → About · Desktop 1440 (100:6414) / Mobile 375 (100:6424)
+   Mobile-first: base 375 → 768 (tablet) → 1200 (desktop)
+   Certificates — общий компонент Proof (components.css)
+   ========================================================= */
+
+/* ---------- Page hero ---------- */
+
+.about-hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.about-hero__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.about-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about-hero__title span {
+  display: block;
+}
+
+.about-hero__stage {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.about-hero__stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Растушёвка фото в фон слева и сверху */
+.about-hero__stage::before,
+.about-hero__stage::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.about-hero__stage::before {
+  inset: 0 auto 0 0;
+  width: 80px;
+  background-image: linear-gradient(to right, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+}
+
+.about-hero__stage::after {
+  inset: 0 0 auto 0;
+  height: 70px;
+  background-image: linear-gradient(to bottom, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+}
+
+.about-hero__chip {
+  position: absolute;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  z-index: 1;
+}
+
+.about-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.about-hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-line);
+}
+
+/* ---------- Заголовок секции + текст справа ---------- */
+
+.about-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--section-heading);
+}
+
+.about-head__aside--link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+/* ---------- How we work ---------- */
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border-line);
+}
+
+/* ---------- Story (тёмный блок страницы) ---------- */
+
+.story {
+  background-color: var(--color-bg-inverse-strong);
+  color: var(--color-text-on-inverse);
+}
+
+.story .eyebrow,
+.story .about-head__aside {
+  color: var(--color-text-on-inverse-muted);
+}
+
+.story .section-title__line--indent {
+  color: var(--color-accent-default);
+}
+
+/* Mobile: вертикальная линия слева */
+.milestone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: 0 0 var(--space-lg) var(--space-lg);
+  border-left: 2px solid var(--color-text-on-inverse-muted);
+}
+
+/* Узел на линии (svg из Figma) */
+.milestone::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: url("../assets/about/story-node.svg") center / contain no-repeat;
+}
+
+.milestone--now::before {
+  background-image: url("../assets/about/story-node-last.svg");
+}
+
+.milestone--now .milestone__year {
+  color: var(--color-accent-default);
+}
+
+.milestone__text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-on-inverse-muted);
+}
+
+/* ---------- Team ---------- */
+
+.team__title {
+  gap: var(--space-sm);
+}
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg) var(--space-md);
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.person__photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.person__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.person__name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.person__langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.lang-tag {
+  padding: var(--space-2xs) var(--space-xs);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+}
+
+/* ---------- Company data ---------- */
+
+.data-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.data-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-canvas);
+}
+
+.data-card__label {
+  color: var(--color-accent-text);
+}
+
+.data-card__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding-block: 10px;
+  border-top: 1px solid var(--color-border-line);
+  font-size: 14px;
+}
+
+.data-card__row dt {
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.data-card__row dd {
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.data-card__row a:hover {
+  color: var(--color-accent-text);
+}
+
+/* ---------- Tablet ---------- */
+
+@media screen and (min-width: 768px) {
+  .about-hero__stage {
+    height: 360px;
+  }
+
+  .about-hero__stats,
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .people {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-lg);
+  }
+}
+
+/* ---------- Desktop ---------- */
+
+@media screen and (min-width: 1200px) {
+  .about-hero__inner {
+    gap: 40px;
+  }
+
+  .about-hero__main {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-hero__copy {
+    flex-shrink: 0;
+    width: 568px;
+    gap: var(--space-lg);
+  }
+
+  .about-hero__stage {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 440px;
+  }
+
+  .about-hero__stage::before {
+    width: 200px;
+  }
+
+  .about-hero__stage::after {
+    height: 120px;
+  }
+
+  .about-head {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: var(--space-lg);
+  }
+
+  .about-head .section-title {
+    flex: 1 1 0;
+  }
+
+  .about-head__aside {
+    flex-shrink: 0;
+    width: 282px;
+  }
+
+  /* Timeline: горизонтальная линия сверху, 4 колонки */
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .milestone {
+    padding: 28px 0 0;
+    border-left: 0;
+    border-top: 2px solid var(--color-text-on-inverse-muted);
+  }
+
+  .milestone::before {
+    left: 0;
+    top: -7px;
+  }
+
+  .milestone--now {
+    border-top-color: var(--color-accent-default);
+  }
+
+  .team__title {
+    gap: var(--space-md);
+  }
+
+  .person {
+    gap: var(--space-md);
+  }
+
+  .person__photo {
+    height: 320px;
+    border-radius: var(--radius-xl);
+  }
+
+  .person__name {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  .data-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .data-card {
+    padding: 28px;
+    border-radius: var(--radius-xl);
+  }
+}

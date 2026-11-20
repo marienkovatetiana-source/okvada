@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thank you — Okvada</title>
+<meta name="description" content="Thanks, we’ve got your request. Laura from Okvada sales will contact you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/thank-you.css">
+</head>
+<body class="page-thank-you">
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Okvada — home">
+      <img class="logo__img" src="assets/img/logo-alt-swirl.svg" alt="Okvada" width="668" height="160">
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="services.html">Services</a>
+      <a class="nav__link" href="careers.html">Careers</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="lang" data-lang>
+        <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" data-lang-btn>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-globe"></use></svg>
+          <span data-lang-current>EN</span>
+          <svg class="icon icon--chevron" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu" role="menu" data-lang-menu>
+          <button class="lang-menu__item" type="button" role="menuitemradio" aria-checked="true" data-lang-option="EN">
+            <span class="lang-menu__code">EN</span>
+            <span class="lang-menu__name">English</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+          </button>
+          <button class="lang-menu__item" type="button" role="menuitemradio" aria-checked="false" data-lang-option="DE">
+            <span class="lang-menu__code">DE</span>
+            <span class="lang-menu__name">Deutsch</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+          </button>
+        </div>
+      </div>
+
+      <a class="header__phone" href="tel:+37000000000">+370 000 00000</a>
+
+      <a class="pill pill--outline header__cta" href="contact.html">
+        Contact us
+        <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      </a>
+
+      <a class="icon-btn icon-btn--bordered header__call" href="tel:+37000000000" aria-label="Call Okvada">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"></use></svg>
+      </a>
+      <button class="icon-btn header__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-open>
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= THANK YOU (Figma 100:6462 / 100:6467; outside hours 294:28668 / 294:28798) =================
+     Вне рабочих часов — тот же макет, другие тексты: thank-you.html#outside-hours (js/thank-you.js) -->
+<section class="page-system bg-muted" aria-labelledby="ty-title">
+  <div class="container ty">
+
+    <div class="ty__top">
+      <div class="ty__main">
+        <div class="ty__head">
+          <span class="ty__check" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#i-check"></use></svg></span>
+          <p class="eyebrow">Request received</p>
+          <h1 class="ty__title" id="ty-title">
+            <span class="section-title__line">Thanks, we’ve got it.</span>
+            <span class="section-title__line text-accent">Laura will contact you.</span>
+          </h1>
+          <p class="t-body-l text-secondary" data-ty-office>Your request is with our sales team. A copy has been sent to your inbox.</p>
+          <p class="t-body-l text-secondary" data-ty-closed hidden>Our office is closed now (Mon–Fri 8:00–18:00, Lithuanian time). Your request is saved, and a copy has been sent to your inbox.</p>
+        </div>
+
+        <!-- Данные заявки — пример из макета; в WordPress подставляются из формы -->
+        <dl class="ty-summary">
+          <div class="ty-summary__row">
+            <dt class="t-data text-secondary">REQUEST NO.</dt>
+            <dd class="t-label-m">Q-2026-1028</dd>
+          </div>
+          <div class="ty-summary__row">
+            <dt class="t-data text-secondary">TOPIC</dt>
+            <dd class="t-label-m">New cooperation</dd>
+          </div>
+          <div class="ty-summary__row">
+            <dt class="t-data text-secondary">COMPANY</dt>
+            <dd class="t-label-m">Nordhaus Packaging GmbH</dd>
+          </div>
+          <div class="ty-summary__row">
+            <dt class="t-data text-secondary">SENT</dt>
+            <dd class="t-label-m"><span data-ty-office>28 Oct 2026, 14:32 EET</span><span data-ty-closed hidden>28 Oct 2026, 21:47 EET</span></dd>
+          </div>
+        </dl>
+
+        <div class="ty-next">
+          <h2 class="t-data text-secondary">WHAT HAPPENS NEXT</h2>
+          <ol class="ty-next__steps">
+            <li class="ty-next__step ty-next__step--current">
+              <span class="t-data text-accent">NOW</span>
+              <span class="t-h4" data-ty-office>Request received</span>
+              <span class="t-h4" data-ty-closed hidden>Request saved</span>
+              <span class="t-body-s text-secondary" data-ty-office>Laura reads it and checks the lane.</span>
+              <span class="t-body-s text-secondary" data-ty-closed hidden>It waits in our sales inbox. Nothing is lost overnight.</span>
+            </li>
+            <li class="ty-next__step">
+              <span class="t-data text-secondary" data-ty-office>NEXT</span>
+              <span class="t-data text-secondary" data-ty-closed hidden>WHEN WE OPEN</span>
+              <span class="t-h4">Personal call</span>
+              <span class="t-body-s text-secondary" data-ty-office>Questions about cargo, dates and loading.</span>
+              <span class="t-body-s text-secondary" data-ty-closed hidden>Laura reads it, checks the lane and calls you about cargo and dates.</span>
+            </li>
+            <li class="ty-next__step">
+              <span class="t-data text-secondary">AFTER YOU CONFIRM</span>
+              <span class="t-h4">Truck assigned</span>
+              <span class="t-body-s text-secondary">Truck number, driver and a GPS link.</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <aside data-dark class="ty-manager" aria-label="Your manager">
+        <img class="ty-manager__photo" src="assets/img/contact-manager.jpg" alt="Laura Petraitė, head of sales, smiling in the office" width="555" height="370">
+        <p class="t-data ty-manager__muted">YOUR MANAGER</p>
+        <div class="ty-manager__who">
+          <p class="t-h3">Laura Petraitė</p>
+          <p class="t-body-s ty-manager__muted">Head of sales · EN, DE, LT</p>
+        </div>
+        <div class="ty-manager__urgent">
+          <p class="t-body-s ty-manager__muted">Urgent load? Call directly</p>
+          <a class="t-h3 ty-manager__phone" href="tel:+37060045210">+370 600 45 210</a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="ty-wait">
+      <h2 class="t-data text-secondary">WHILE YOU WAIT</h2>
+      <div class="ty-wait__cards">
+        <article class="ty-card">
+          <img class="ty-card__photo" src="assets/img/case-1.jpg" alt="White trailers parked at loading docks" width="1119" height="746" loading="lazy">
+          <div class="ty-card__text">
+            <h3 class="t-h3">How we carry</h3>
+            <p class="t-body-m text-secondary">FTL, groupage, fleet and transit times.</p>
+            <a class="link-arrow" href="services.html" aria-label="Open: How we carry">
+              <span class="arrow-circle arrow-circle--36 arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+              Open
+            </a>
+          </div>
+        </article>
+        <article class="ty-card">
+          <img class="ty-card__photo" src="assets/img/about-team.jpg" alt="Okvada team celebrating around a laptop in the office" width="1040" height="585" loading="lazy">
+          <div class="ty-card__text">
+            <h3 class="t-h3">Who we are</h3>
+            <p class="t-body-m text-secondary">The team and documents behind Okvada.</p>
+            <a class="link-arrow" href="about.html" aria-label="Open: Who we are">
+              <span class="arrow-circle arrow-circle--36 arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+              Open
+            </a>
+          </div>
+        </article>
+      </div>
+      <a class="pill pill--outline" href="index.html">
+        Back to home
+        <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer data-dark class="footer">
+  <div class="container footer__inner">
+    <div class="footer__top">
+      <p class="footer__brand"><img class="logo__img" src="assets/img/logo-alt-swirl-light.svg" alt="Okvada" width="668" height="160" loading="lazy"></p>
+      <div class="footer__icons">
+        <a class="footer__icon" href="tel:+37000000000" aria-label="Call Okvada"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"></use></svg></a>
+        <a class="footer__icon" href="mailto:info@okvada.com" aria-label="Email Okvada"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-mail"></use></svg></a>
+        <a class="footer__icon" href="careers.html#apply" aria-label="Message Okvada in messenger"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-message-circle"></use></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__company">
+      <p class="footer__brand"><img class="logo__img" src="assets/img/logo-alt-swirl-light.svg" alt="Okvada" width="668" height="160" loading="lazy"></p>
+      <p>UAB Okvada, Barkūnų g. 41, LT-46326 Kaunas, Lithuania</p>
+      <p>Service point: Rhauderfehn, Germany</p>
+      <p>Company code 306070987 · VAT LT100016279613</p>
+      <p>info@okvada.com · +370 000 00000</p>
+    </div>
+
+    <div class="footer__cols" data-footer-accordion>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-company">
+          <span class="footer__col-title">Company</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-company">
+          <ul class="footer__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-docs">
+          <span class="footer__col-title">Documents</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-docs">
+          <ul class="footer__list">
+            <li><a href="about.html#certificates">Certificates</a></li>
+            <li><a href="terms.html">Terms of carriage</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-legal">
+          <span class="footer__col-title">Legal</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-legal">
+          <ul class="footer__list">
+            <li><a href="legal.html">Legal notice</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="#cookie-settings" data-cookie-settings-open>Cookie settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__meta">
+      <p class="footer__place">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-map-pin"></use></svg>
+        Kaunas, Lithuania · Service point Rhauderfehn, Germany
+      </p>
+      <p>© 2026 UAB Okvada · Code 306070987 · VAT LT100016279613</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="overlay" data-overlay></div>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" data-menu>
+  <div class="mobile-menu__top">
+    <a class="logo" href="index.html" aria-label="Okvada — home"><img class="logo__img" src="assets/img/logo-alt-swirl.svg" alt="Okvada" width="668" height="160"></a>
+    <button class="icon-btn mobile-menu__close" type="button" aria-label="Close menu" data-menu-close>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav" aria-label="Main">
+    <a class="mobile-menu__link" href="index.html"><span>Home</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="about.html"><span>About</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="services.html"><span>Services</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="careers.html"><span>Careers</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+  </nav>
+  <div class="mobile-menu__lang">
+    <label for="mobile-lang">Language</label>
+    <div class="select">
+      <select id="mobile-lang" data-lang-select>
+        <option value="EN" selected>EN</option>
+        <option value="DE">DE</option>
+      </select>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+    </div>
+  </div>
+  <div class="mobile-menu__cta">
+    <a class="pill pill--block" href="contact.html">
+      Contact us
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </a>
+  </div>
+</div>
+
+<!-- ================= COOKIE BANNER ================= -->
+<div class="cookie-banner" role="region" aria-label="Cookie consent" data-cookie-banner>
+  <div class="cookie-banner__text">
+    <p class="cookie-banner__title t-h4">
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-cookie"></use></svg>
+      We use cookies
+    </p>
+    <p class="t-body-s text-secondary">Necessary cookies keep the site working. With your consent we also use analytics.</p>
+  </div>
+  <div class="cookie-banner__actions">
+    <button class="text-btn cookie-banner__settings--desktop" type="button" data-cookie-settings-open>Settings</button>
+    <button class="pill pill--outline" type="button" data-cookie-choice="reject">
+      Reject
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <button class="pill" type="button" data-cookie-choice="accept">
+      Accept
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+  </div>
+  <button class="text-btn cookie-banner__settings--mobile" type="button" data-cookie-settings-open>Settings</button>
+</div>
+
+<!-- ================= COOKIE SETTINGS ================= -->
+<div class="sheet" id="cookie-settings" role="dialog" aria-modal="true" aria-labelledby="cookie-settings-title" data-cookie-settings>
+  <div class="sheet__top">
+    <h2 class="sheet__title t-h3" id="cookie-settings-title">Cookie settings</h2>
+    <button class="icon-btn sheet__close" type="button" aria-label="Close cookie settings" data-cookie-settings-close>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg>
+    </button>
+  </div>
+  <p class="t-body-s text-secondary">Choose which cookies we may use. You can change your choice at any time.</p>
+  <div>
+    <div class="consent-row">
+      <div class="consent-row__text">
+        <p class="consent-row__name">Necessary</p>
+        <p class="consent-row__desc">Keep the site and the contact form working. Cannot be switched off.</p>
+      </div>
+      <label class="checkbox" for="consent-necessary">
+        <input type="checkbox" id="consent-necessary" checked disabled>
+        <span class="checkbox__box"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg></span>
+        Always on
+      </label>
+    </div>
+    <div class="consent-row">
+      <div class="consent-row__text">
+        <p class="consent-row__name">Analytics</p>
+        <p class="consent-row__desc">Show us which pages are useful. Anonymous, no advertising.</p>
+      </div>
+      <label class="checkbox" for="consent-analytics">
+        <input type="checkbox" id="consent-analytics" data-consent-analytics>
+        <span class="checkbox__box"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg></span>
+        Allow
+      </label>
+    </div>
+  </div>
+  <div class="sheet__actions">
+    <button class="pill pill--primary" type="button" data-cookie-choice="save">
+      Save choices
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <button class="pill pill--outline" type="button" data-cookie-choice="reject">
+      Reject all
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <a class="link-underline" href="privacy.html">Privacy policy</a>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/thank-you.js"></script>
+</body>
+</html>

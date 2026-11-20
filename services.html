@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Services — Okvada</title>
+<meta name="description" content="Full truck loads and groupage from 1 pallet across Europe. 60+ own Mercedes-Benz EURO 6 curtainsiders, GPS on every truck.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/services.css">
+</head>
+<body class="page-services">
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Okvada — home">
+      <img class="logo__img" src="assets/img/logo-alt-swirl.svg" alt="Okvada" width="668" height="160">
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link is-active" href="services.html" aria-current="page">Services</a>
+      <a class="nav__link" href="careers.html">Careers</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="lang" data-lang>
+        <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" data-lang-btn>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-globe"></use></svg>
+          <span data-lang-current>EN</span>
+          <svg class="icon icon--chevron" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu" role="menu" data-lang-menu>
+          <button class="lang-menu__item" type="button" role="menuitemradio" aria-checked="true" data-lang-option="EN">
+            <span class="lang-menu__code">EN</span>
+            <span class="lang-menu__name">English</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+          </button>
+          <button class="lang-menu__item" type="button" role="menuitemradio" aria-checked="false" data-lang-option="DE">
+            <span class="lang-menu__code">DE</span>
+            <span class="lang-menu__name">Deutsch</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+          </button>
+        </div>
+      </div>
+
+      <a class="header__phone" href="tel:+37000000000">+370 000 00000</a>
+
+      <a class="pill pill--outline header__cta" href="contact.html">
+        Contact us
+        <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      </a>
+
+      <a class="icon-btn icon-btn--bordered header__call" href="tel:+37000000000" aria-label="Call Okvada">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"></use></svg>
+      </a>
+      <button class="icon-btn header__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-open>
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="svc-hero bg-canvas" aria-labelledby="svc-title">
+  <div class="container svc-hero__inner">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html">Home</a></li>
+        <li class="breadcrumbs__item" aria-current="page">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg>
+          Services
+        </li>
+      </ol>
+    </nav>
+
+    <div class="svc-hero__main">
+      <div class="svc-hero__copy reveal">
+        <p class="eyebrow">Services</p>
+        <h1 class="svc-hero__title t-display-72" id="svc-title">
+          <span>Road freight,</span>
+          <span>full loads</span>
+          <span class="text-secondary">and groupage.</span>
+        </h1>
+        <p class="t-body-l text-secondary">Own Mercedes-Benz EURO 6 curtainsiders across Europe. One manager for every load, from booking to signed CMR.</p>
+      </div>
+
+      <div class="svc-hero__stage reveal reveal--delay-1">
+        <img src="assets/img/hero-truck.jpg" alt="Okvada curtainsider trailer on the road" width="1572" height="2367">
+        <span class="chip chip--navy svc-hero__chip">60+ own trucks · GPS on every one</span>
+      </div>
+    </div>
+
+    <nav class="svc-index" aria-label="On this page">
+      <a class="svc-index__link" href="#ftl">Full truck load</a>
+      <a class="svc-index__link" href="#ltl">Groupage</a>
+      <a class="svc-index__link" href="#fleet">Our fleet</a>
+      <a class="svc-index__link" href="#transit">Transit times</a>
+      <a class="svc-index__link" href="#faq">FAQ</a>
+    </nav>
+  </div>
+</section>
+
+<!-- ================= 01 FTL ================= -->
+<section class="svc-section bg-surface" id="ftl" aria-labelledby="ftl-title">
+  <div class="container svc-chapter">
+    <div class="section-title svc-chapter__title reveal">
+      <p class="eyebrow">Full loads</p>
+      <h2 class="section-title section-title--short-indent t-h2" id="ftl-title">
+        <span class="section-title__line">Full truck</span>
+        <span class="section-title__line section-title__line--indent">load (FTL)</span>
+      </h2>
+    </div>
+    <img class="svc-chapter__photo reveal reveal--delay-1" src="assets/img/case-1.jpg" alt="Curtainsider trailers at a loading dock" width="1119" height="746" loading="lazy">
+    <div class="svc-chapter__text reveal reveal--delay-2">
+      <p class="t-body-m text-secondary">A dedicated truck for your cargo, door to door, no reloading.</p>
+      <dl class="specs">
+        <div class="specs__row"><dt class="t-data">CAPACITY</dt><dd class="t-label-m">33 Euro pallets</dd></div>
+        <div class="specs__row"><dt class="t-data">PAYLOAD</dt><dd class="t-label-m">up to 24 t</dd></div>
+        <div class="specs__row"><dt class="t-data">LOADING LENGTH</dt><dd class="t-label-m">13.6 m</dd></div>
+        <div class="specs__row"><dt class="t-data">TRAILERS</dt><dd class="t-label-m">Curtainsider</dd></div>
+        <div class="specs__row"><dt class="t-data">SLOTS</dt><dd class="t-label-m">Fixed loading slots for production and JIT</dd></div>
+      </dl>
+      <a class="link-arrow" href="contact.html">
+        <span class="arrow-circle arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+        Ask about full loads
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 LTL ================= -->
+<section class="svc-section bg-muted" id="ltl" aria-labelledby="ltl-title">
+  <div class="container svc-chapter">
+    <div class="section-title svc-chapter__title reveal">
+      <p class="eyebrow">Groupage</p>
+      <h2 class="section-title section-title--short-indent t-h2" id="ltl-title">
+        <span class="section-title__line">Groupage</span>
+        <span class="section-title__line section-title__line--indent">from 1 pallet.</span>
+      </h2>
+    </div>
+    <img class="svc-chapter__photo reveal reveal--delay-1" src="assets/img/case-2.jpg" alt="Warehouse workers moving pallets" width="1119" height="745" loading="lazy">
+    <div class="svc-chapter__text reveal reveal--delay-2">
+      <p class="t-body-m text-secondary">Pay only for the space you use. Good for 1 to 12 pallets.</p>
+      <dl class="specs">
+        <div class="specs__row"><dt class="t-data">SIZE</dt><dd class="t-label-m">1–12 pallets</dd></div>
+        <div class="specs__row"><dt class="t-data">TRANSIT</dt><dd class="t-label-m">2–4 days typical</dd></div>
+        <div class="specs__row"><dt class="t-data">PRICING</dt><dd class="t-label-m">per pallet</dd></div>
+        <div class="specs__row"><dt class="t-data">DEPARTURES</dt><dd class="t-label-m">Regular, on our main lanes</dd></div>
+        <div class="specs__row"><dt class="t-data">SERVICE</dt><dd class="t-label-m">Same manager and GPS link as full loads</dd></div>
+      </dl>
+      <a class="link-arrow" href="contact.html">
+        <span class="arrow-circle arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+        Ask about groupage
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 FLEET (тёмная секция) ================= -->
+<section data-dark class="svc-section svc-fleet" id="fleet" aria-labelledby="fleet-title">
+  <div class="container svc-fleet__inner">
+    <div class="svc-fleet__head">
+      <div class="section-title reveal">
+        <p class="eyebrow">Our fleet</p>
+        <h2 class="section-title section-title--tight t-h2" id="fleet-title">
+          <span class="section-title__line">60+ own</span>
+          <span class="section-title__line section-title__line--indent">Mercedes-Benz trucks.</span>
+        </h2>
+      </div>
+      <p class="svc-fleet__lead t-body-l reveal reveal--delay-1">EURO 6 tractors with GPS on every truck, maintained at our own service point in Rhauderfehn, Germany.</p>
+    </div>
+
+    <img class="svc-fleet__photo reveal" src="assets/img/case-4.jpg" alt="White Mercedes-Benz Actros truck with trailer" width="1039" height="694" loading="lazy">
+
+    <dl class="svc-stats">
+      <div class="svc-stats__item reveal"><dt class="svc-stats__value t-display-72">60+</dt><dd class="t-body-s">own vehicles</dd></div>
+      <div class="svc-stats__item reveal reveal--delay-1"><dt class="svc-stats__value t-display-72">EURO 6</dt><dd class="t-body-s">whole fleet</dd></div>
+      <div class="svc-stats__item reveal reveal--delay-2"><dt class="svc-stats__value t-display-72">2.5 yrs</dt><dd class="t-body-s">average truck age</dd></div>
+      <div class="svc-stats__item reveal reveal--delay-3"><dt class="svc-stats__value t-display-72">100%</dt><dd class="t-body-s">GPS-tracked</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= TRAILER ================= -->
+<section class="svc-section bg-muted" aria-labelledby="trailer-title">
+  <div class="container svc-chapter">
+    <div class="section-title svc-chapter__title reveal">
+      <p class="eyebrow">Our trailer</p>
+      <h2 class="section-title section-title--short-indent t-h2" id="trailer-title">
+        <span class="section-title__line">One trailer type,</span>
+        <span class="section-title__line section-title__line--indent">done well.</span>
+      </h2>
+    </div>
+    <img class="svc-chapter__photo reveal reveal--delay-1" src="assets/img/services-trailer.jpg" alt="Red truck front view on a country road" width="839" height="556" loading="lazy">
+    <div class="svc-chapter__text reveal reveal--delay-2">
+      <p class="t-body-m text-secondary">Curtainsider across the whole fleet: side and top loading for palletised and bulky cargo.</p>
+      <dl class="specs">
+        <div class="specs__row"><dt class="t-data">PALLETS</dt><dd class="t-label-m">33 Euro pallets</dd></div>
+        <div class="specs__row"><dt class="t-data">PAYLOAD</dt><dd class="t-label-m">up to 24 t</dd></div>
+        <div class="specs__row"><dt class="t-data">INNER HEIGHT</dt><dd class="t-label-m">2.7 m</dd></div>
+        <div class="specs__row"><dt class="t-data">USE</dt><dd class="t-label-m">FTL and groupage</dd></div>
+      </dl>
+      <a class="link-arrow" href="contact.html">
+        <span class="arrow-circle arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+        Ask about curtainsiders
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SAFETY & TRACKING ================= -->
+<section class="svc-section bg-surface" aria-labelledby="safety-title">
+  <div class="container svc-safety">
+    <div class="section-title reveal">
+      <p class="eyebrow">Safety &amp; tracking</p>
+      <h2 class="section-title section-title--tight t-h2" id="safety-title">
+        <span class="section-title__line">You always know</span>
+        <span class="section-title__line section-title__line--indent">where your cargo is.</span>
+      </h2>
+    </div>
+
+    <div class="svc-safety__photo reveal">
+      <img src="assets/img/case-3.jpg" alt="Okvada driver in front of blue trucks" width="1119" height="746" loading="lazy">
+      <div class="status-card">
+        <p class="status-card__top t-data">TRUCK 23 · 52 KM TO DESTINATION</p>
+        <p class="t-h4">ETA 14:30, on time</p>
+      </div>
+      <ul class="svc-safety__chips">
+        <li class="chip">GPS link sent to client</li>
+        <li class="chip">Last service: 12 days ago</li>
+        <li class="chip">CMR insured · €300,000</li>
+      </ul>
+    </div>
+
+    <ul class="svc-points">
+      <li class="svc-points__item reveal"><h3 class="t-h4">GPS on every truck</h3><p class="t-body-m text-secondary">Tracking link from your manager, no login needed.</p></li>
+      <li class="svc-points__item reveal reveal--delay-1"><h3 class="t-h4">Own service point</h3><p class="t-body-m text-secondary">Maintenance and inspections in Rhauderfehn, Germany.</p></li>
+      <li class="svc-points__item reveal reveal--delay-2"><h3 class="t-h4">Trained drivers</h3><p class="t-body-m text-secondary">Code 95, eco-driving and safety briefings.</p></li>
+      <li class="svc-points__item reveal reveal--delay-3"><h3 class="t-h4">Insured cargo</h3><p class="t-body-m text-secondary">CMR insurance up to €300,000 per load.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 04 TRANSIT TIMES ================= -->
+<section class="svc-section bg-muted" id="transit" aria-labelledby="transit-title">
+  <div class="container svc-transit">
+    <!-- Desktop / tablet: карта 560×480 -->
+    <div class="corridor corridor--desktop reveal" aria-hidden="true">
+      <img class="corridor__grid" src="assets/services/dot-grid.svg" alt="" width="548" height="464">
+      <img class="corridor__line" src="assets/services/main-corridor.svg" alt="" width="347.2" height="354.8">
+      <img class="corridor__node" src="assets/services/node.svg" alt="" width="9" height="9" style="left: 440.5px; top: 68.4px;">
+      <span class="corridor__city" style="left: 455px; top: 62.9px;">Hamburg</span>
+      <img class="corridor__node" src="assets/services/node.svg" alt="" width="9" height="9" style="left: 303.7px; top: 186.27px;">
+      <span class="corridor__city" style="left: 318.2px; top: 180.77px;">Köln</span>
+      <img class="corridor__node" src="assets/services/node.svg" alt="" width="9" height="9" style="left: 188.5px; top: 174.53px;">
+      <span class="corridor__city" style="left: 109px; top: 161.03px;">Antwerpen</span>
+      <img class="corridor__node" src="assets/services/node.svg" alt="" width="9" height="9" style="left: 186.25px; top: 190.34px;">
+      <span class="corridor__city" style="left: 118.75px; top: 192.84px;">Bruxelles</span>
+      <img class="corridor__node" src="assets/services/node.svg" alt="" width="9" height="9" style="left: 96.25px; top: 280.21px;">
+      <span class="corridor__city" style="left: 56.75px; top: 274.71px;">Paris</span>
+      <img class="corridor__node" src="assets/services/node.svg" alt="" width="9" height="9" style="left: 207.85px; top: 420.21px;">
+      <span class="corridor__city" style="left: 222.35px; top: 414.71px;">Lyon</span>
+    </div>
+
+    <div class="svc-transit__body">
+      <div class="section-title svc-transit__title reveal">
+        <p class="eyebrow">Transit times</p>
+        <h2 class="section-title t-h2" id="transit-title">
+          <span class="section-title__line">Typical</span>
+          <span class="section-title__line section-title__line--indent">transit times</span>
+        </h2>
+      </div>
+
+      <!-- Mobile: карта 343×240 -->
+      <div class="corridor corridor--mobile" aria-hidden="true">
+        <div class="corridor__stage">
+          <img class="corridor__grid" src="assets/geo/m-dot-grid.svg" alt="" width="338" height="314">
+          <img class="corridor__line" src="assets/services/m-main-corridor.svg" alt="" width="135.3" height="163.8">
+          <img class="corridor__node" src="assets/services/m-node.svg" alt="" width="8" height="8" style="left: 241.7px; top: 39.61px;">
+          <span class="corridor__city" style="left: 253.7px; top: 33.11px;">Hamburg</span>
+          <img class="corridor__node" src="assets/services/m-node.svg" alt="" width="8" height="8" style="left: 189.11px; top: 93.5px;">
+          <span class="corridor__city" style="left: 201.11px; top: 87px;">Köln</span>
+          <img class="corridor__node" src="assets/services/m-node.svg" alt="" width="8" height="8" style="left: 144.82px; top: 88.13px;">
+          <span class="corridor__city" style="left: 67.82px; top: 73.63px;">Antwerpen</span>
+          <img class="corridor__node" src="assets/services/m-node.svg" alt="" width="8" height="8" style="left: 143.96px; top: 95.35px;">
+          <span class="corridor__city" style="left: 79.96px; top: 96.85px;">Bruxelles</span>
+          <img class="corridor__node" src="assets/services/m-node.svg" alt="" width="8" height="8" style="left: 109.36px; top: 136.44px;">
+          <span class="corridor__city" style="left: 72.36px; top: 129.94px;">Paris</span>
+          <img class="corridor__node" src="assets/services/m-node.svg" alt="" width="8" height="8" style="left: 152.26px; top: 200.44px;">
+          <span class="corridor__city" style="left: 164.26px; top: 193.94px;">Lyon</span>
+        </div>
+      </div>
+
+      <p class="svc-transit__lead t-body-m text-secondary reveal">Full loads, door to door, business days. Exact time is agreed per order.</p>
+
+      <div class="transit-table reveal">
+        <table>
+          <caption class="visually-hidden">Typical transit times for full loads</caption>
+          <thead>
+            <tr><th scope="col">Route</th><th scope="col" class="transit-table__km">Distance</th><th scope="col">Transit</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Hamburg → Lyon</td><td class="transit-table__km">≈ 1 040 km</td><td class="transit-table__days">2 days</td></tr>
+            <tr><td>Köln → Antwerpen</td><td class="transit-table__km">≈ 230 km</td><td class="transit-table__days">1 day</td></tr>
+            <tr><td>Antwerpen → Paris</td><td class="transit-table__km">≈ 350 km</td><td class="transit-table__days">1 day</td></tr>
+            <tr><td>Hamburg → Bruxelles</td><td class="transit-table__km">≈ 600 km</td><td class="transit-table__days">1–2 days</td></tr>
+            <tr class="transit-table__extra"><td>Köln → Lyon</td><td class="transit-table__km">≈ 760 km</td><td class="transit-table__days">1–2 days</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="svc-transit__note t-body-s text-secondary">Distances approximate; transit times are placeholders to confirm with the client.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 FAQ ================= -->
+<section class="svc-section bg-surface" id="faq" aria-labelledby="faq-title">
+  <div class="container svc-faq">
+    <div class="svc-faq__intro reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="section-title section-title--tight t-h2" id="faq-title">
+        <span class="section-title__line">Questions before</span>
+        <span class="section-title__line section-title__line--indent">your first order</span>
+      </h2>
+      <div class="sales-contact">
+        <p class="t-data text-secondary">SALES TEAM</p>
+        <a class="t-h4" href="tel:+37000000000">+370 000 00000</a>
+        <a class="t-body-m" href="mailto:info@okvada.com">info@okvada.com</a>
+        <p class="t-body-s text-secondary">English, German · Mon–Fri 8:00–18:00 EET</p>
+      </div>
+    </div>
+
+    <div class="faq reveal reveal--delay-1" data-faq>
+      <div class="faq__item">
+        <h3 class="faq__q">
+          <button class="faq__btn" type="button" aria-expanded="true" aria-controls="faq-a1">
+            <span>What are your payment terms?</span>
+            <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+            <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+          </button>
+        </h3>
+        <p class="faq__a t-body-m text-secondary" id="faq-a1">Invoice after delivery, payment within 30 days. Other terms for regular clients on request.</p>
+      </div>
+      <!-- Ответы 2–9 и вопросы 7–9: в Figma их нет, черновой текст — подтвердить с клиентом -->
+      <div class="faq__item">
+        <h3 class="faq__q">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-a2">
+            <span>How is my cargo insured?</span>
+            <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+            <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+          </button>
+        </h3>
+        <p class="faq__a t-body-m text-secondary" id="faq-a2" hidden>Every load is covered by CMR insurance up to €300,000.</p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__q">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-a3">
+            <span>What happens if cargo is damaged or delayed?</span>
+            <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+            <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+          </button>
+        </h3>
+        <p class="faq__a t-body-m text-secondary" id="faq-a3" hidden>Your manager tells you at once, agrees the next steps with you and handles the CMR claim.</p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__q">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-a4">
+            <span>Which documents do I receive?</span>
+            <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+            <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+          </button>
+        </h3>
+        <p class="faq__a t-body-m text-secondary" id="faq-a4" hidden>A signed CMR after delivery and an invoice. Other documents on request.</p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__q">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-a5">
+            <span>How do I reach you outside business hours?</span>
+            <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+            <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+          </button>
+        </h3>
+        <p class="faq__a t-body-m text-secondary" id="faq-a5" hidden>For loads on the road, call your manager’s number. Other questions — by email, we reply the next business day.</p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__q">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-a6">
+            <span>Do you take small loads from 1 pallet?</span>
+            <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+            <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+          </button>
+        </h3>
+        <p class="faq__a t-body-m text-secondary" id="faq-a6" hidden>Yes. Groupage starts from 1 pallet, and you pay per pallet.</p>
+      </div>
+
+      <div class="faq__more" id="faq-more" hidden>
+        <div class="faq__item">
+          <h3 class="faq__q">
+            <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-a7">
+              <span>Which countries do you cover?</span>
+              <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+              <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+            </button>
+          </h3>
+          <p class="faq__a t-body-m text-secondary" id="faq-a7" hidden>Our main lanes run between Germany, the Benelux and France. Other routes in Europe on request.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q">
+            <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-a8">
+              <span>How fast do I get a quote?</span>
+              <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+              <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+            </button>
+          </h3>
+          <p class="faq__a t-body-m text-secondary" id="faq-a8" hidden>Usually within one business day after we have the route, dates and cargo details.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q">
+            <button class="faq__btn" type="button" aria-expanded="false" aria-controls="faq-a9">
+              <span>How do I track my cargo?</span>
+              <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+              <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+            </button>
+          </h3>
+          <p class="faq__a t-body-m text-secondary" id="faq-a9" hidden>Your manager sends a GPS link. It opens in any browser, no login needed.</p>
+        </div>
+      </div>
+
+      <button class="faq__show-all" type="button" aria-expanded="false" aria-controls="faq-more" data-faq-more>Show all 9 questions&nbsp;&nbsp;↓</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section final-cta bg-muted" aria-labelledby="cta-title">
+  <div class="container final-cta__inner">
+    <div class="final-cta__intro reveal">
+      <p class="eyebrow">Contact</p>
+      <h2 class="final-cta__title" id="cta-title"><span>Let’s work</span><span>together.</span></h2>
+    </div>
+    <dl class="final-cta__contacts reveal reveal--delay-1">
+      <div class="final-cta__contact"><dt class="t-data">EMAIL</dt><dd><a href="mailto:info@okvada.com">info@okvada.com</a></dd></div>
+      <div class="final-cta__contact"><dt class="t-data">PHONE · MON–FRI 8–18 EET</dt><dd><a href="tel:+37000000000">+370 000 00000</a></dd></div>
+      <div class="final-cta__contact"><dt class="t-data">OFFICE</dt><dd>Barkūnų g. 41, Kaunas, Lithuania</dd></div>
+    </dl>
+    <a class="circle-cta reveal reveal--delay-2" href="contact.html">
+      <span class="arrow-circle arrow-circle--navy arrow-circle--72"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      <span class="arrow-circle arrow-circle--navy arrow-circle--120"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      Contact us
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer data-dark class="footer">
+  <div class="container footer__inner">
+    <div class="footer__top">
+      <p class="footer__brand"><img class="logo__img" src="assets/img/logo-alt-swirl-light.svg" alt="Okvada" width="668" height="160" loading="lazy"></p>
+      <div class="footer__icons">
+        <a class="footer__icon" href="tel:+37000000000" aria-label="Call Okvada"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"></use></svg></a>
+        <a class="footer__icon" href="mailto:info@okvada.com" aria-label="Email Okvada"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-mail"></use></svg></a>
+        <a class="footer__icon" href="careers.html#apply" aria-label="Message Okvada in messenger"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-message-circle"></use></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__company">
+      <p class="footer__brand"><img class="logo__img" src="assets/img/logo-alt-swirl-light.svg" alt="Okvada" width="668" height="160" loading="lazy"></p>
+      <p>UAB Okvada, Barkūnų g. 41, LT-46326 Kaunas, Lithuania</p>
+      <p>Service point: Rhauderfehn, Germany</p>
+      <p>Company code 306070987 · VAT LT100016279613</p>
+      <p>info@okvada.com · +370 000 00000</p>
+    </div>
+
+    <div class="footer__cols" data-footer-accordion>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-company">
+          <span class="footer__col-title">Company</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-company">
+          <ul class="footer__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-docs">
+          <span class="footer__col-title">Documents</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-docs">
+          <ul class="footer__list">
+            <li><a href="about.html#certificates">Certificates</a></li>
+            <li><a href="terms.html">Terms of carriage</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-legal">
+          <span class="footer__col-title">Legal</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-legal">
+          <ul class="footer__list">
+            <li><a href="legal.html">Legal notice</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="#cookie-settings" data-cookie-settings-open>Cookie settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__meta">
+      <p class="footer__place">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-map-pin"></use></svg>
+        Kaunas, Lithuania · Service point Rhauderfehn, Germany
+      </p>
+      <p>© 2026 UAB Okvada · Code 306070987 · VAT LT100016279613</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="overlay" data-overlay></div>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" data-menu>
+  <div class="mobile-menu__top">
+    <a class="logo" href="index.html" aria-label="Okvada — home"><img class="logo__img" src="assets/img/logo-alt-swirl.svg" alt="Okvada" width="668" height="160"></a>
+    <button class="icon-btn mobile-menu__close" type="button" aria-label="Close menu" data-menu-close>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav" aria-label="Main">
+    <a class="mobile-menu__link" href="index.html"><span>Home</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="about.html"><span>About</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link is-active" href="services.html" aria-current="page"><span>Services</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="careers.html"><span>Careers</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+  </nav>
+  <div class="mobile-menu__lang">
+    <label for="mobile-lang">Language</label>
+    <div class="select">
+      <select id="mobile-lang" data-lang-select>
+        <option value="EN" selected>EN</option>
+        <option value="DE">DE</option>
+      </select>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+    </div>
+  </div>
+  <div class="mobile-menu__cta">
+    <a class="pill pill--block" href="contact.html">
+      Contact us
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </a>
+  </div>
+</div>
+
+<!-- ================= BACK TO TOP (324:18831 / 324:18918) ================= -->
+<button class="back-to-top arrow-circle arrow-circle--48 arrow-circle--navy" type="button" aria-label="Back to top" data-back-to-top>
+  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-up"></use></svg>
+</button>
+
+<!-- ================= COOKIE BANNER ================= -->
+<div class="cookie-banner" role="region" aria-label="Cookie consent" data-cookie-banner>
+  <div class="cookie-banner__text">
+    <p class="cookie-banner__title t-h4">
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-cookie"></use></svg>
+      We use cookies
+    </p>
+    <p class="t-body-s text-secondary">Necessary cookies keep the site working. With your consent we also use analytics.</p>
+  </div>
+  <div class="cookie-banner__actions">
+    <button class="text-btn cookie-banner__settings--desktop" type="button" data-cookie-settings-open>Settings</button>
+    <button class="pill pill--outline" type="button" data-cookie-choice="reject">
+      Reject
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <button class="pill" type="button" data-cookie-choice="accept">
+      Accept
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+  </div>
+  <button class="text-btn cookie-banner__settings--mobile" type="button" data-cookie-settings-open>Settings</button>
+</div>
+
+<!-- ================= COOKIE SETTINGS ================= -->
+<div class="sheet" id="cookie-settings" role="dialog" aria-modal="true" aria-labelledby="cookie-settings-title" data-cookie-settings>
+  <div class="sheet__top">
+    <h2 class="sheet__title t-h3" id="cookie-settings-title">Cookie settings</h2>
+    <button class="icon-btn sheet__close" type="button" aria-label="Close cookie settings" data-cookie-settings-close>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg>
+    </button>
+  </div>
+  <p class="t-body-s text-secondary">Choose which cookies we may use. You can change your choice at any time.</p>
+  <div>
+    <div class="consent-row">
+      <div class="consent-row__text">
+        <p class="consent-row__name">Necessary</p>
+        <p class="consent-row__desc">Keep the site and the contact form working. Cannot be switched off.</p>
+      </div>
+      <label class="checkbox" for="consent-necessary">
+        <input type="checkbox" id="consent-necessary" checked disabled>
+        <span class="checkbox__box"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg></span>
+        Always on
+      </label>
+    </div>
+    <div class="consent-row">
+      <div class="consent-row__text">
+        <p class="consent-row__name">Analytics</p>
+        <p class="consent-row__desc">Show us which pages are useful. Anonymous, no advertising.</p>
+      </div>
+      <label class="checkbox" for="consent-analytics">
+        <input type="checkbox" id="consent-analytics" data-consent-analytics>
+        <span class="checkbox__box"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg></span>
+        Allow
+      </label>
+    </div>
+  </div>
+  <div class="sheet__actions">
+    <button class="pill pill--primary" type="button" data-cookie-choice="save">
+      Save choices
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <button class="pill pill--outline" type="button" data-cookie-choice="reject">
+      Reject all
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <a class="link-underline" href="privacy.html">Privacy policy</a>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

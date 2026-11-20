@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Okvada</title>
+<meta name="description" content="UAB Okvada — Lithuanian road carrier. 60+ own Mercedes-Benz curtainsiders, full loads and groupage across Europe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<div class="page-home">
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Okvada — home">
+      <img class="logo__img" src="assets/img/logo-alt-swirl.svg" alt="Okvada" width="668" height="160">
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a class="nav__link is-active" href="index.html" aria-current="page">Home</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="services.html">Services</a>
+      <a class="nav__link" href="careers.html">Careers</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="lang" data-lang>
+        <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" data-lang-btn>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-globe"></use></svg>
+          <span data-lang-current>EN</span>
+          <svg class="icon icon--chevron" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu" role="menu" data-lang-menu>
+          <button class="lang-menu__item" type="button" role="menuitemradio" aria-checked="true" data-lang-option="EN">
+            <span class="lang-menu__code">EN</span>
+            <span class="lang-menu__name">English</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+          </button>
+          <button class="lang-menu__item" type="button" role="menuitemradio" aria-checked="false" data-lang-option="DE">
+            <span class="lang-menu__code">DE</span>
+            <span class="lang-menu__name">Deutsch</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+          </button>
+        </div>
+      </div>
+
+      <a class="header__phone" href="tel:+37000000000">+370 000 00000</a>
+
+      <a class="pill pill--outline header__cta" href="contact.html">
+        Contact us
+        <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      </a>
+
+      <a class="icon-btn icon-btn--bordered header__call" href="tel:+37000000000" aria-label="Call Okvada">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"></use></svg>
+      </a>
+      <button class="icon-btn header__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-open>
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__stage" aria-hidden="true">
+    <div class="hero__photo hero__photo--blur">
+      <img src="assets/img/hero-truck.jpg" alt="" width="1572" height="2367">
+    </div>
+    <div class="hero__photo">
+      <img src="assets/img/hero-truck.jpg" alt="" width="1572" height="2367" fetchpriority="high">
+    </div>
+    <div class="hero__fade-left"></div>
+    <div class="hero__fade-top"></div>
+  </div>
+
+  <div class="hero__band" aria-hidden="true"></div>
+  <div class="hero__wordwrap" aria-hidden="true">
+    <p class="hero__word">okvada</p>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow">Lithuanian road carrier</p>
+      <h1 class="hero__title t-display" id="hero-title">
+        <span>Road freight</span>
+        <span>across Europe,</span>
+        <span class="text-secondary">on our own trucks.</span>
+      </h1>
+      <p class="hero__lead t-body-l">60+ own Mercedes-Benz curtainsiders, full loads and groupage. One manager follows your cargo from booking to signed CMR.</p>
+      <a class="pill" href="contact.html">
+        Contact us
+        <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      </a>
+    </div>
+
+    <!-- Desktop: мини-карта коридора, точка едет Hamburg → Lyon -->
+    <div class="mini-map" aria-label="Weekly corridor: 6 cities from Hamburg to Lyon" role="img">
+      <svg viewBox="0 0 248 132" aria-hidden="true">
+        <image href="assets/home/dot-grid.svg" x="6" y="6" width="242" height="122"/>
+        <path transform="translate(53.67 22.28)" d="M135.55 1.25022L82.25 31.5502L37.25 28.5502L36.35 32.5502L1.25 55.6502L44.85 91.5502" stroke="#00D1B2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <circle cx="189.22" cy="23.53" r="3" fill="#0B2545"/>
+        <circle cx="135.85" cy="53.79" r="3" fill="#00D1B2"/>
+        <circle cx="90.91" cy="50.77" r="3" fill="#00D1B2"/>
+        <circle cx="90.03" cy="54.83" r="3" fill="#00D1B2"/>
+        <circle cx="54.92" cy="77.9" r="3" fill="#00D1B2"/>
+        <circle cx="98.46" cy="113.83" r="3" fill="#0B2545"/>
+        <text class="mini-map__label" x="124.22" y="18">Hamburg</text>
+        <text class="mini-map__label" x="106.46" y="118.3">Lyon</text>
+        <g data-truck="mini" data-route="189.22,23.53 135.92,53.83 90.92,50.83 90.02,54.83 54.92,77.93 98.52,113.83"><circle r="5.5" fill="#0B2545" stroke="#00D1B2" stroke-width="3"/></g>
+      </svg>
+      <p class="mini-map__caption"><span class="pulse-dot"></span>WEEKLY CORRIDOR · 6 CITIES</p>
+    </div>
+
+    <!-- Mobile: live-плашка вместо мини-карты -->
+    <p class="hero__live">
+      <span class="hero__live-tag"><span class="pulse-dot"></span>LIVE</span>
+      Truck 23 · Hamburg → Lyon
+    </p>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section about bg-canvas" aria-labelledby="about-title">
+  <div class="container">
+    <div class="about__head reveal">
+      <p class="eyebrow">About Okvada</p>
+      <h2 class="section-title t-h2" id="about-title" style="margin-top: var(--space-md)">
+        <span class="section-title__line">Ten years</span>
+        <span class="section-title__line section-title__line--indent">on European lanes.</span>
+      </h2>
+    </div>
+
+    <div class="about__grid">
+      <figure class="about__photo reveal">
+        <img src="assets/img/about-team.jpg" alt="Okvada team in the Kaunas office" width="1040" height="585" loading="lazy">
+      </figure>
+
+      <dl class="about__stats stats reveal reveal--delay-1">
+        <div class="stat">
+          <dt class="stat__num t-h2">10+</dt>
+          <dd class="t-body-s text-secondary">years of team experience on European lanes</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat__num t-h2">60+</dt>
+          <dd class="t-body-s text-secondary">own Mercedes-Benz trucks</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat__num t-h2">106</dt>
+          <dd class="t-body-s text-secondary">people in the team</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat__num t-h2">EURO 6</dt>
+          <dd class="t-body-s text-secondary">emission class, whole fleet</dd>
+        </div>
+      </dl>
+
+      <div class="about__aside reveal reveal--delay-2">
+        <p class="t-h4">A Kaunas carrier with its own fleet and a team that has run European lanes for over a decade.</p>
+        <p class="t-body-s text-secondary">We move full and part loads across Europe for manufacturers, automotive suppliers and retailers. Every load has one manager from booking to signed CMR.</p>
+        <a class="pill" href="about.html">
+          About the company
+          <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLIENT STORIES ================= -->
+<section class="section cases bg-canvas" aria-labelledby="cases-title">
+  <div class="container">
+    <div class="cases__head reveal">
+      <div class="section-title">
+        <p class="eyebrow">Client stories</p>
+        <h2 class="section-title t-h2" id="cases-title">
+          <span class="section-title__line">Trusted on lanes</span>
+          <span class="section-title__line section-title__line--indent">that can’t be late.</span>
+        </h2>
+      </div>
+      <div class="cases__aside">
+        <p class="t-body-m text-secondary">Real lanes, real numbers — clients named by industry, not by logo. Full references are shared on request for supplier checks and tenders.</p>
+        <a class="link-arrow link-arrow--wide" href="contact.html">
+          <span class="arrow-circle arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+          Talk to us
+        </a>
+      </div>
+    </div>
+
+    <div class="cases__track reveal reveal--delay-1">
+      <a class="case" href="services.html#ftl">
+        <span class="case__photo"><img src="assets/img/case-1.jpg" alt="" width="1119" height="746" loading="lazy"></span>
+        <span class="case__overlay"></span>
+        <span class="case__tag">01 / Automotive</span>
+        <span class="case__content">
+          <span class="case__result"><span>98.7% on time,</span><span>3 years running.</span></span>
+          <span class="case__dot"></span>
+          <span class="case__meta">Tier-1 automotive supplier, Germany<span class="case__route">Kaunas → Stuttgart · weekly FTL</span></span>
+          <span class="arrow-circle arrow-circle--on-dark"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+        </span>
+      </a>
+      <a class="case" href="services.html#ftl">
+        <span class="case__photo"><img src="assets/img/case-2.jpg" alt="" width="1119" height="745" loading="lazy"></span>
+        <span class="case__overlay"></span>
+        <span class="case__tag">02 / Manufacturing</span>
+        <span class="case__content">
+          <span class="case__result"><span>1,200 loads,</span><span>zero cargo claims.</span></span>
+          <span class="case__dot"></span>
+          <span class="case__meta">Packaging producer, Netherlands<span class="case__route">Antwerpen ↔ Kaunas · daily FTL</span></span>
+          <span class="arrow-circle arrow-circle--on-dark"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+        </span>
+      </a>
+      <a class="case" href="services.html#ltl">
+        <span class="case__photo"><img src="assets/img/case-3.jpg" alt="" width="1119" height="746" loading="lazy"></span>
+        <span class="case__overlay"></span>
+        <span class="case__tag">03 / Retail</span>
+        <span class="case__content">
+          <span class="case__result"><span>From 4 pallets</span><span>to 3 trucks a week.</span></span>
+          <span class="case__dot"></span>
+          <span class="case__meta">Home-goods retailer, Belgium<span class="case__route">Groupage that grew into FTL</span></span>
+          <span class="arrow-circle arrow-circle--on-dark"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+        </span>
+      </a>
+      <a class="case case--light" href="contact.html">
+        <span class="case__photo"><img src="assets/img/case-4.jpg" alt="" width="1039" height="694" loading="lazy"></span>
+        <span class="case__overlay"></span>
+        <span class="case__tag">04 / Your lane</span>
+        <span class="case__content">
+          <span class="case__result"><span>Your cargo</span><span>could be next.</span></span>
+          <span class="case__dot"></span>
+          <span class="case__meta">Client references available on request for tenders.</span>
+          <span class="link-arrow">
+            <span class="arrow-circle arrow-circle--outline arrow-circle--36"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+            Talk to us
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY OKVADA (автотабы) ================= -->
+<section class="section adv bg-canvas" aria-labelledby="adv-title" data-adv>
+  <div class="container">
+    <div class="adv__head reveal">
+      <div class="section-title">
+        <p class="eyebrow">Why Okvada</p>
+        <h2 class="section-title t-h2" id="adv-title">
+          <span class="section-title__line">Reliable</span>
+          <span class="section-title__line section-title__line--indent">by design.</span>
+        </h2>
+      </div>
+      <p class="adv__intro t-body-m text-secondary">Four things every client gets from the first load — no premium tier, no small print.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Advantages">
+      <button class="tab is-active" type="button" role="tab" id="adv-tab-1" aria-selected="true" aria-controls="adv-panel" data-adv-tab="0">
+        <span class="tab__num">01</span>Own fleet<span class="tab__progress" aria-hidden="true"></span>
+      </button>
+      <button class="tab" type="button" role="tab" id="adv-tab-2" aria-selected="false" aria-controls="adv-panel" tabindex="-1" data-adv-tab="1">
+        <span class="tab__num">02</span>CMR insured<span class="tab__progress" aria-hidden="true"></span>
+      </button>
+      <button class="tab" type="button" role="tab" id="adv-tab-3" aria-selected="false" aria-controls="adv-panel" tabindex="-1" data-adv-tab="2">
+        <span class="tab__num">03</span>Certified<span class="tab__progress" aria-hidden="true"></span>
+      </button>
+      <button class="tab" type="button" role="tab" id="adv-tab-4" aria-selected="false" aria-controls="adv-panel" tabindex="-1" data-adv-tab="3">
+        <span class="tab__num">04</span>One manager<span class="tab__progress" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="adv__body">
+      <div class="adv__media">
+        <div class="adv__photo" data-adv-photo-stage>
+          <img class="is-active" src="assets/img/case-4.jpg" alt="Mercedes-Benz truck from the Okvada fleet" width="1039" height="694" loading="lazy" data-adv-photo>
+          <img src="assets/img/case-1.jpg" alt="Curtainsider trailers at a loading dock" width="1119" height="746" loading="lazy" data-adv-photo>
+          <img src="assets/img/case-2.jpg" alt="Warehouse with pallets ready for loading" width="1119" height="745" loading="lazy" data-adv-photo>
+          <img src="assets/img/about-team.jpg" alt="Okvada logistics managers" width="1040" height="585" loading="lazy" data-adv-photo>
+          <!-- Media toggle (Figma 313:12976): по умолчанию скрыт, по центру фото -->
+          <button class="media-toggle" type="button" aria-label="Pause" data-adv-toggle>
+            <svg class="media-toggle__icon media-toggle__icon--pause" aria-hidden="true"><use href="assets/icons.svg#i-pause"></use></svg>
+            <svg class="media-toggle__icon media-toggle__icon--play" aria-hidden="true"><use href="assets/icons.svg#i-play"></use></svg>
+          </button>
+        </div>
+        <div class="stat-tile" aria-live="polite">
+          <p class="stat-tile__label" data-adv-tile-label>OWN FLEET · 2026</p>
+          <p class="stat-tile__num" data-adv-tile-num>60+</p>
+          <p class="stat-tile__text stat-tile__text--long" data-adv-tile-long>own Mercedes-Benz trucks with GPS, maintained at our own service point.</p>
+          <p class="stat-tile__text stat-tile__text--short" data-adv-tile-short>own trucks with GPS</p>
+        </div>
+        <div class="adv__arrows">
+          <button class="arrow-circle arrow-circle--outline" type="button" aria-label="Previous advantage" data-adv-prev>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg>
+          </button>
+          <button class="arrow-circle arrow-circle--outline" type="button" aria-label="Next advantage" data-adv-next>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="adv__panel" id="adv-panel" role="tabpanel" aria-labelledby="adv-tab-1" data-adv-panel>
+        <h3 class="adv__panel-title t-h2" data-adv-title><span>60+ trucks.</span><span>All of them ours.</span></h3>
+        <ul class="bullets t-body-m" data-adv-bullets>
+          <li>Mercedes-Benz EURO 6 curtainsiders, 13.6 m</li>
+          <li>GPS on every truck — tracking link with your order</li>
+          <li>Maintained at our own service point in Rhauderfehn</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT WE CARRY ================= -->
+<section class="section services bg-canvas" aria-labelledby="services-title">
+  <div class="container">
+    <div class="services__head reveal">
+      <div class="section-title">
+        <p class="eyebrow">What we carry</p>
+        <h2 class="section-title t-h2" id="services-title">
+          <span class="section-title__line">Two ways</span>
+          <span class="section-title__line section-title__line--indent">to move your cargo.</span>
+        </h2>
+      </div>
+      <div class="services__aside">
+        <p class="t-body-m text-secondary">Full loads or shared space — the same trucks, the same manager, the same tracking link.</p>
+        <a class="link-arrow" href="services.html">
+          <span class="arrow-circle arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+          All services
+        </a>
+      </div>
+    </div>
+
+    <div class="services__rows">
+      <article class="service-row reveal">
+        <div class="service-row__title">
+          <p class="service-row__num t-data">01</p>
+          <h3 class="t-h2">Full truck load</h3>
+        </div>
+        <div class="service-row__photo">
+          <img src="assets/img/case-1.jpg" alt="Curtainsider trailers at a loading dock" width="1119" height="746" loading="lazy">
+        </div>
+        <div class="service-row__text">
+          <div class="service-row__top">
+            <p class="t-body-m text-secondary">A dedicated 13.6 m curtainsider for your cargo, door to door across Europe. No reloading on the way.</p>
+            <ul class="tags">
+              <li class="tag">Up to 24 t</li>
+              <li class="tag">33 pallets</li>
+              <li class="tag">Direct</li>
+            </ul>
+          </div>
+          <a class="link-arrow" href="services.html#ftl">
+            <span class="arrow-circle arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+            Learn more<span class="visually-hidden"> about full truck load</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-row reveal">
+        <div class="service-row__title">
+          <p class="service-row__num t-data">02</p>
+          <h3 class="t-h2">Groupage from 1 pallet</h3>
+        </div>
+        <div class="service-row__photo">
+          <img src="assets/img/case-2.jpg" alt="Warehouse workers moving pallets" width="1119" height="745" loading="lazy">
+        </div>
+        <div class="service-row__text">
+          <div class="service-row__top">
+            <p class="t-body-m text-secondary">Share the truck and pay only for the space you use on our regular weekly lanes.</p>
+            <ul class="tags">
+              <li class="tag">From 1 pallet</li>
+              <li class="tag">Weekly departures</li>
+              <li class="tag">Same manager</li>
+            </ul>
+          </div>
+          <a class="link-arrow" href="services.html#ltl">
+            <span class="arrow-circle arrow-circle--outline"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+            Learn more<span class="visually-hidden"> about groupage</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROOF ================= -->
+<section class="section proof bg-canvas" aria-labelledby="proof-title">
+  <div class="container proof__inner">
+    <div class="proof__intro reveal">
+      <p class="eyebrow">Reliability</p>
+      <h2 class="section-title section-title--tight section-title--short-indent t-h2" id="proof-title">
+        <span class="section-title__line">Certified, insured,</span>
+        <span class="section-title__line section-title__line--indent">documented.</span>
+      </h2>
+      <p class="t-body-m text-secondary">CMR insurance up to €300,000 per load. Invoice after delivery, payment within 30 days. Every document is ready for your supplier check or tender.</p>
+    </div>
+
+    <div data-dark class="proof__panel reveal reveal--delay-1">
+      <ul class="proof__grid">
+        <li class="cert">
+          <span class="cert__seal">ISO</span>
+          <span class="cert__text"><span class="t-h4">ISO 9001</span><span class="cert__desc">Quality management system</span></span>
+          <span class="cert__status cert__status--valid">VALID · 2027</span>
+        </li>
+        <li class="cert">
+          <span class="cert__seal">ISO</span>
+          <span class="cert__text"><span class="t-h4">ISO 14001</span><span class="cert__desc">Environmental management</span></span>
+          <span class="cert__status cert__status--valid">VALID · 2027</span>
+        </li>
+        <li class="cert">
+          <span class="cert__seal">TAPA</span>
+          <span class="cert__text"><span class="t-h4">TAPA TSR</span><span class="cert__desc">Security standard for high-value cargo</span></span>
+          <span class="cert__status cert__status--valid">VALID · 2027</span>
+        </li>
+        <li class="cert">
+          <span class="cert__seal">EU</span>
+          <span class="cert__text"><span class="t-h4">EU Community Licence</span><span class="cert__desc">International road haulage</span></span>
+          <span class="cert__status">COPY ON REQUEST</span>
+        </li>
+        <li class="cert">
+          <span class="cert__seal">CMR</span>
+          <span class="cert__text"><span class="t-h4">CMR insurance</span><span class="cert__desc">Cargo cover up to €300,000 per load</span></span>
+          <span class="cert__status">COPY ON REQUEST</span>
+        </li>
+        <li>
+          <a class="cert cert--all" href="about.html#certificates">
+            <span class="cert__text"><span class="t-h4">See all documents</span><span class="cert__desc">Certificates, licence and insurance in one place</span></span>
+            <span class="arrow-circle arrow-circle--on-accent"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GEOGRAPHY ================= -->
+<section class="section geo bg-surface" aria-labelledby="geo-title">
+  <div class="container">
+    <div class="geo__top reveal">
+      <div class="section-title" style="gap: var(--space-lg)">
+        <p class="eyebrow">Where we drive</p>
+        <h2 class="section-title section-title--tight t-h2" id="geo-title">
+          <span class="section-title__line">Across Europe,</span>
+          <span class="section-title__line section-title__line--indent">every week.</span>
+        </h2>
+      </div>
+      <div class="geo__text">
+        <p class="t-body-m text-secondary">Any route within the EU on request. Weekly departures on Hamburg – Köln – Antwerpen – Bruxelles – Paris – Lyon. Bases in Lithuania and Germany, service point in Rhauderfehn.</p>
+        <dl class="geo__stats">
+          <div class="geo__stat"><dt class="t-h2">6</dt><dd class="t-body-s text-secondary">cities on the weekly corridor</dd></div>
+          <div class="geo__stat"><dt class="t-h2">EU</dt><dd class="t-body-s text-secondary">any route on request</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="geo-map reveal reveal--delay-1" data-geo>
+      <div class="geo-map__canvas">
+<svg class="geo-map__svg geo-map__svg--desktop" viewBox="0 0 1184 480" role="img" aria-label="Map: weekly corridor Hamburg – Köln – Antwerpen – Bruxelles – Paris – Lyon, other routes from Kaunas on request">
+<image href="assets/geo/dot-grid.svg" x="8" y="8" width="1170" height="466"/>
+<path class="geo-map__route" transform="translate(894.52 63.25)" d="M125.15 0.750013L123.265 2.36821M0.750013 107.55L2.63486 105.932M7.1585 102.048L10.9282 98.8118M15.4518 94.9282L19.2215 91.6918M23.7452 87.8082L27.5149 84.5718M32.0385 80.6882L35.8082 77.4518M40.3318 73.5682L44.1015 70.3318M48.6252 66.4482L52.3949 63.2118M56.9185 59.3282L60.6882 56.0918M65.2118 52.2082L68.9815 48.9718M73.5052 45.0882L77.2749 41.8518M81.7985 37.9682L85.5682 34.7318M90.0918 30.8482L93.8615 27.6118M98.3852 23.7282L102.155 20.4918M106.678 16.6082L110.448 13.3718M114.972 9.48821L118.742 6.25185" stroke="var(--color-border-strong)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path class="geo-map__route" transform="translate(568.41 63.25)" d="M451.25 0.750153L448.812 1.26529M0.750153 95.9502L3.18792 95.435M9.03857 94.1986L13.9141 93.1683M19.7648 91.932L24.6403 90.9017M30.491 89.6653L35.3665 88.635M41.2171 87.3986L46.0927 86.3683M51.9433 85.132L56.8189 84.1017M62.6695 82.8653L67.5451 81.835M73.3957 80.5986L78.2713 79.5683M84.1219 78.332L88.9975 77.3017M94.8481 76.0653L99.7237 75.035M105.574 73.7986L110.45 72.7683M116.3 71.532L121.176 70.5017M127.027 69.2653L131.902 68.235M137.753 66.9986L142.628 65.9683M148.479 64.732L153.355 63.7017M159.205 62.4653L164.081 61.435M169.931 60.1986L174.807 59.1683M180.658 57.932L185.533 56.9017M191.384 55.6653L196.259 54.635M202.11 53.3986L206.986 52.3683M212.836 51.132L217.712 50.1017M223.562 48.8653L228.438 47.835M234.289 46.5986L239.164 45.5683M245.015 44.332L249.89 43.3017M255.741 42.0653L260.617 41.035M266.467 39.7986L271.343 38.7683M277.193 37.532L282.069 36.5017M287.92 35.2653L292.795 34.235M298.646 32.9986L303.521 31.9683M309.372 30.732L314.247 29.7017M320.098 28.4653L324.974 27.435M330.824 26.1986L335.7 25.1683M341.551 23.932L346.426 22.9017M352.277 21.6653L357.152 20.635M363.003 19.3986L367.878 18.3683M373.729 17.132L378.605 16.1017M384.455 14.8653L389.331 13.835M395.181 12.5986L400.057 11.5683M405.908 10.332L410.783 9.30165M416.634 8.06529L421.509 7.03499M427.36 5.79863L432.236 4.76832M438.086 3.53196L442.962 2.50166" stroke="var(--color-border-strong)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path class="geo-map__route" transform="translate(612.18 63.25)" d="M407.55 0.750176L405.296 1.81874M0.750176 193.55L3.00516 192.481M8.41714 189.916L12.9271 187.779M18.3391 185.214L22.8491 183.077M28.261 180.512L32.771 178.374M38.183 175.809L42.693 173.672M48.1049 171.107L52.6149 168.969M58.0269 166.404L62.5369 164.267M67.9488 161.702L72.4588 159.564M77.8708 156.999L82.3808 154.862M87.7927 152.297L92.3027 150.159M97.7147 147.595L102.225 145.457M107.637 142.892L112.147 140.755M117.559 138.19L122.069 136.052M127.481 133.487L131.99 131.35M137.402 128.785L141.912 126.647M147.324 124.082L151.834 121.945M157.246 119.38L161.756 117.242M167.168 114.677L171.678 112.54M177.09 109.975L181.6 107.838M187.012 105.273L191.522 103.135M196.934 100.57L201.444 98.4327M206.856 95.8677L211.366 93.7302M216.778 91.1653L221.288 89.0278M226.7 86.4628L231.21 84.3254M236.622 81.7604L241.132 79.6229M246.544 77.0579L251.054 74.9205M256.466 72.3555L260.976 70.218M266.388 67.653L270.898 65.5156M276.31 62.9506L280.82 60.8131M286.232 58.2481L290.742 56.1107M296.154 53.5457L300.664 51.4082M306.076 48.8432L310.586 46.7058M315.998 44.1408L320.508 42.0033M325.92 39.4383L330.43 37.3009M335.842 34.7359L340.352 32.5984M345.764 30.0334L350.274 27.896M355.686 25.331L360.196 23.1935M365.608 20.6285L370.118 18.4911M375.53 15.9261L380.04 13.7886M385.452 11.2236L389.962 9.08616M395.374 6.52118L399.884 4.38371" stroke="var(--color-border-strong)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path class="geo-map__route" transform="translate(490.32 63.25)" d="M529.35 0.750159L527.126 1.88807M0.750159 271.15L2.97491 270.012M8.3143 267.281L12.7638 265.005M18.1032 262.273L22.5527 259.997M27.8921 257.266L32.3416 254.99M37.681 252.259L42.1305 249.982M47.4699 247.251L51.9194 244.975M57.2587 242.244L61.7082 239.968M67.0476 237.236L71.4971 234.96M76.8365 232.229L81.286 229.953M86.6254 227.222L91.0749 224.945M96.4143 222.214L100.864 219.938M106.203 217.207L110.653 214.931M115.992 212.199L120.442 209.923M125.781 207.192L130.23 204.916M135.57 202.185L140.019 199.908M145.359 197.177L149.808 194.901M155.148 192.17L159.597 189.894M164.937 187.162L169.386 184.886M174.725 182.155L179.175 179.879M184.514 177.147L188.964 174.871M194.303 172.14L198.753 169.864M204.092 167.133L208.542 164.857M213.881 162.125L218.331 159.849M223.67 157.118L228.119 154.842M233.459 152.11L237.908 149.834M243.248 147.103L247.697 144.827M253.037 142.096L257.486 139.819M262.825 137.088L267.275 134.812M272.614 132.081L277.064 129.805M282.403 127.073L286.853 124.797M292.192 122.066L296.642 119.79M301.981 117.059L306.431 114.782M311.77 112.051L316.219 109.775M321.559 107.044L326.008 104.768M331.348 102.036L335.797 99.7602M341.137 97.0289L345.586 94.7528M350.926 92.0215L355.375 89.7454M360.714 87.0141L365.164 84.738M370.503 82.0066L374.953 79.7306M380.292 76.9992L384.742 74.7231M390.081 71.9918L394.531 69.7157M399.87 66.9844L404.32 64.7083M409.659 61.977L414.108 59.7009M419.448 56.9696L423.897 54.6935M429.237 51.9622L433.686 49.6861M439.026 46.9548L443.475 44.6787M448.814 41.9474L453.264 39.6713M458.603 36.94L463.053 34.6639M468.392 31.9325L472.842 29.6564M478.181 26.9251L482.631 24.649M487.97 21.9177L492.42 19.6416M497.759 16.9103L502.208 14.6342M507.548 11.9029L511.997 9.62681M517.337 6.89549L521.786 4.61939" stroke="var(--color-border-strong)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path class="geo-map__route" transform="translate(387.77 63.25)" d="M631.95 0.750114L629.809 2.03099M0.750114 378.35L2.89123 377.069M8.0299 373.995L12.3121 371.433M17.4508 368.359L21.733 365.798M26.8717 362.724L31.1539 360.162M36.2926 357.088L40.5748 354.526M45.7135 351.452L49.9957 348.89M55.1344 345.816L59.4166 343.254M64.5553 340.18L68.8375 337.619M73.9762 334.544L78.2584 331.983M83.3971 328.909L87.6793 326.347M92.818 323.273L97.1002 320.711M102.239 317.637L106.521 315.075M111.66 312.001L115.942 309.439M121.081 306.365L125.363 303.804M130.502 300.729L134.784 298.168M139.922 295.094L144.205 292.532M149.343 289.458L153.626 286.896M158.764 283.822L163.046 281.26M168.185 278.186L172.467 275.624M177.606 272.55L181.888 269.989M187.027 266.915L191.309 264.353M196.448 261.279L200.73 258.717M205.869 255.643L210.151 253.081M215.29 250.007L219.572 247.445M224.71 244.371L228.993 241.81M234.131 238.735L238.414 236.174M243.552 233.1L247.835 230.538M252.973 227.464L257.255 224.902M262.394 221.828L266.676 219.266M271.815 216.192L276.097 213.63M281.236 210.556L285.518 207.995M290.657 204.921L294.939 202.359M300.078 199.285L304.36 196.723M309.499 193.649L313.781 191.087M318.919 188.013L323.202 185.451M328.34 182.377L332.623 179.816M337.761 176.741L342.043 174.18M347.182 171.106L351.464 168.544M356.603 165.47L360.885 162.908M366.024 159.834L370.306 157.272M375.445 154.198L379.727 151.636M384.866 148.562L389.148 146.001M394.287 142.927L398.569 140.365M403.707 137.291L407.99 134.729M413.128 131.655L417.411 129.093M422.549 126.019L426.832 123.457M431.97 120.383L436.252 117.821M441.391 114.747L445.673 112.186M450.812 109.112L455.094 106.55M460.233 103.476L464.515 100.914M469.654 97.8399L473.936 95.2782M479.075 92.2041L483.357 89.6424M488.496 86.5683L492.778 84.0066M497.916 80.9325L502.199 78.3707M507.337 75.2967L511.62 72.7349M516.758 69.6608L521.04 67.0991M526.179 64.025L530.461 61.4633M535.6 58.3892L539.882 55.8275M545.021 52.7534L549.303 50.1916M554.442 47.1175L558.724 44.5558M563.863 41.4817L568.145 38.92M573.284 35.8459L577.566 33.2842M582.705 30.2101L586.987 27.6483M592.125 24.5743L596.408 22.0125M601.546 18.9384L605.829 16.3767M610.967 13.3026L615.249 10.7409M620.388 7.66681L624.67 5.10507" stroke="var(--color-border-strong)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path class="geo-map__feeder" transform="translate(422.27 63.00)" d="M597.4 1.00006L594.89 1.22733M1.00006 55.0001L3.51016 54.7728M9.53441 54.2273L14.5546 53.7728M20.5789 53.2273L25.5991 52.7728M31.6233 52.2273L36.6435 51.7728M42.6677 51.2273L47.6879 50.7728M53.7122 50.2273L58.7324 49.7728M64.7566 49.2273L69.7768 48.7728M75.8011 48.2273L80.8213 47.7728M86.8455 47.2273L91.8657 46.7728M97.89 46.2273L102.91 45.7728M108.934 45.2273L113.955 44.7728M119.979 44.2273L124.999 43.7728M131.023 43.2273L136.044 42.7728M142.068 42.2273L147.088 41.7728M153.112 41.2273L158.132 40.7728M164.157 40.2273L169.177 39.7728M175.201 39.2273L180.221 38.7728M186.246 38.2273L191.266 37.7728M197.29 37.2273L202.31 36.7728M208.334 36.2273L213.355 35.7728M219.379 35.2273L224.399 34.7728M230.423 34.2273L235.444 33.7728M241.468 33.2273L246.488 32.7728M252.512 32.2273L257.532 31.7728M263.557 31.2273L268.577 30.7728M274.601 30.2273L279.621 29.7728M285.646 29.2273L290.666 28.7728M296.69 28.2273L301.71 27.7728M307.735 27.2273L312.755 26.7728M318.779 26.2273L323.799 25.7728M329.823 25.2273L334.844 24.7728M340.868 24.2273L345.888 23.7728M351.912 23.2273L356.933 22.7728M362.957 22.2273L367.977 21.7728M374.001 21.2273L379.021 20.7728M385.046 20.2273L390.066 19.7728M396.09 19.2273L401.11 18.7728M407.135 18.2273L412.155 17.7728M418.179 17.2273L423.199 16.7728M429.223 16.2273L434.244 15.7728M440.268 15.2273L445.288 14.7728M451.312 14.2273L456.333 13.7728M462.357 13.2273L467.377 12.7728M473.401 12.2273L478.422 11.7728M484.446 11.2273L489.466 10.7728M495.49 10.2273L500.51 9.77277M506.535 9.22732L511.555 8.77277M517.579 8.22732L522.599 7.77277M528.624 7.22732L533.644 6.77278M539.668 6.22732L544.688 5.77278M550.712 5.22732L555.733 4.77278M561.757 4.22732L566.777 3.77278M572.801 3.22733L577.821 2.77278M583.846 2.22733L588.866 1.77279" stroke="var(--color-accent-default)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path class="geo-map__corridor" transform="translate(93.02 116.00)" d="M330.3 2.00007L199.8 106.4L90 96.0001L87.8 110L2.00002 189.6L108.4 313.6" stroke="var(--color-accent-default)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="1012.71" y="57" width="14" height="14" rx="3" class="geo-map__hub"/>
+<text x="979.71" y="42.4" class="geo-map__label geo-map__label--mono">Kaunas · HQ</text>
+<circle cx="423.27" cy="118.00" r="4.0" class="geo-map__city"/>
+<text x="436.27" y="117.8" class="geo-map__label">Hamburg</text>
+<rect x="313.29" y="129" width="14" height="14" rx="3" class="geo-map__hub"/>
+<text x="244.29" y="114.4" class="geo-map__label geo-map__label--mono">Rhauderfehn · Service</text>
+<circle cx="292.83" cy="222.40" r="4.0" class="geo-map__city"/>
+<text x="249.83" y="222.2" class="geo-map__label">Köln</text>
+<circle cx="182.98" cy="212.00" r="4.0" class="geo-map__city"/>
+<text x="95.98" y="203.8" class="geo-map__label">Antwerpen</text>
+<circle cx="180.84" cy="226.00" r="4.0" class="geo-map__city"/>
+<text x="105.84" y="233.8" class="geo-map__label">Bruxelles</text>
+<circle cx="95.02" cy="305.60" r="4.0" class="geo-map__city"/>
+<text x="48.02" y="305.4" class="geo-map__label">Paris</text>
+<circle cx="201.43" cy="429.60" r="4.0" class="geo-map__city"/>
+<text x="214.43" y="429.4" class="geo-map__label">Lyon</text>
+<circle cx="895.27" cy="170.80" r="2" class="geo-map__town"/>
+<text x="906.27" y="170.6" class="geo-map__label geo-map__label--muted">Warszawa</text>
+<circle cx="569.16" cy="159.20" r="2" class="geo-map__town"/>
+<text x="580.16" y="159.0" class="geo-map__label geo-map__label--muted">Berlin</text>
+<circle cx="491.07" cy="334.40" r="2" class="geo-map__town"/>
+<text x="502.07" y="334.2" class="geo-map__label geo-map__label--muted">München</text>
+<circle cx="388.52" cy="441.60" r="2" class="geo-map__town"/>
+<text x="399.52" y="441.4" class="geo-map__label geo-map__label--muted">Milano</text>
+<circle cx="612.93" cy="256.80" r="2" class="geo-map__town"/>
+<text x="623.93" y="256.6" class="geo-map__label geo-map__label--muted">Praha</text>
+<g class="geo-map__truck" data-truck="desktop" data-route="423.32,118 292.82,222.4 183.02,212 180.82,226 95.02,305.6 201.42,429.6"><circle r="7" class="geo-map__truck-dot"/></g>
+</svg>
+<svg class="geo-map__svg geo-map__svg--mobile" viewBox="0 0 343 320" role="img" aria-label="Map: weekly corridor Hamburg – Köln – Antwerpen – Bruxelles – Paris – Lyon, other routes from Kaunas on request">
+<image href="assets/geo/m-dot-grid.svg" x="6" y="6" width="338" height="314"/>
+<path class="geo-map__route" transform="translate(238.84 73.41)" d="M33.0502 0.750158L31.8267 3.13652M0.750158 63.7502L1.97364 61.3638M4.91001 55.6365L7.35698 50.8638M10.2933 45.1365L12.7403 40.3638M15.6767 34.6365L18.1236 29.8638M21.06 24.1365L23.507 19.3638M26.4433 13.6365L28.8903 8.8638" stroke="var(--color-border-strong)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path class="geo-map__route" transform="translate(154.20 73.41)" d="M117.65 0.750173L115.436 1.81269M0.750173 56.8502L2.96419 55.7877M8.27782 53.2377L12.7059 51.1127M18.0195 48.5627L22.4475 46.4377M27.7612 43.8877L32.1892 41.7627M37.5028 39.2127L41.9309 37.0877M47.2445 34.5377L51.6725 32.4127M56.9862 29.8627L61.4142 27.7377M66.7278 25.1877L71.1558 23.0627M76.4695 20.5127L80.8975 18.3877M86.2111 15.8377L90.6392 13.7127M95.9528 11.1627L100.381 9.03768M105.694 6.48768L110.123 4.36268" stroke="var(--color-border-strong)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path class="geo-map__route" transform="translate(133.94 73.41)" d="M137.95 0.750013L136.309 2.65785M0.750013 160.25L2.39116 158.342M6.32992 153.763L9.61221 149.947M13.551 145.368L16.8333 141.553M20.772 136.974L24.0543 133.158M27.9931 128.579L31.2754 124.763M35.2141 120.184L38.4964 116.368M42.4352 111.789L45.7175 107.974M49.6562 103.395L52.9385 99.579M56.8773 95L60.1596 91.1842M64.0983 86.6053L67.3806 82.7895M71.3194 78.2105L74.6017 74.3947M78.5405 69.8158L81.8228 66M85.7615 61.421L89.0438 57.6053M92.9826 53.0263L96.2649 49.2105M100.204 44.6316L103.486 40.8158M107.425 36.2368L110.707 32.421M114.646 27.8421L117.928 24.0263M121.867 19.4473L125.149 15.6315M129.088 11.0526L132.37 7.2368" stroke="var(--color-border-strong)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path class="geo-map__feeder" transform="translate(116.09 73.16)" d="M155.8 1.0002L153.287 1.51644M1.0002 32.8002L3.51319 32.284M9.54435 31.045L14.5703 30.0125M20.6015 28.7736L25.6275 27.7411M31.6586 26.5021L36.6846 25.4697M42.7158 24.2307L47.7418 23.1983M53.7729 21.9593L58.7989 20.9268M64.8301 19.6879L69.856 18.6554M75.8872 17.4164L80.9132 16.384M86.9444 15.145L91.9703 14.1125M98.0015 12.8736L103.027 11.8411M109.059 10.6021L114.085 9.56968M120.116 8.33072L125.142 7.29825M131.173 6.05929L136.199 5.02682M142.23 3.78786L147.256 2.75539" stroke="var(--color-accent-default)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path class="geo-map__corridor" transform="translate(30.40 104.52)" d="M86.7 1.50028L52.8 63.1003L24.3 57.0003L23.8 65.2003L1.5 112.2L29.1 185.4" stroke="var(--color-accent-default)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="266.89" y="69.16" width="10" height="10" rx="3" class="geo-map__hub"/>
+<text x="249.89" y="54.56" class="geo-map__label geo-map__label--mono">Kaunas</text>
+<circle cx="117.09" cy="106.02" r="2.5" class="geo-map__city"/>
+<text x="126.59" y="93.32" class="geo-map__label geo-map__label--reg">Hamburg</text>
+<rect x="85.36" y="111.64" width="10" height="10" rx="3" class="geo-map__hub"/>
+<text x="50.36" y="134.04" class="geo-map__label geo-map__label--mono">Rhauderfehn</text>
+<circle cx="83.24" cy="167.62" r="2.5" class="geo-map__city"/>
+<circle cx="54.73" cy="161.48" r="2.5" class="geo-map__city"/>
+<circle cx="54.17" cy="169.74" r="2.5" class="geo-map__city"/>
+<circle cx="31.90" cy="216.70" r="2.5" class="geo-map__city"/>
+<text x="41.4" y="221.0" class="geo-map__label geo-map__label--reg">Paris</text>
+<circle cx="59.52" cy="289.86" r="2.5" class="geo-map__city"/>
+<text x="71.02" y="289.16" class="geo-map__label geo-map__label--reg">Lyon</text>
+<circle cx="239.59" cy="137.17" r="2" class="geo-map__town"/>
+<circle cx="154.95" cy="130.33" r="2" class="geo-map__town"/>
+<circle cx="134.69" cy="233.70" r="2" class="geo-map__town"/>
+<g class="geo-map__truck" data-truck="mobile" data-route="117.1,106.02 83.2,167.62 54.7,161.52 54.2,169.72 31.9,216.72 59.5,289.92"><circle r="5" class="geo-map__truck-dot"/></g>
+</svg>
+        <div class="geo-map__legend" aria-hidden="true">
+          <span class="geo-map__legend-item">Weekly corridor</span>
+          <span class="geo-map__legend-item geo-map__legend-item--request">On request</span>
+        </div>
+        <p class="live-strip" aria-live="polite">
+          <span class="live-strip__tag"><span class="pulse-dot"></span><span class="live-strip__tag-long">ON THE ROAD NOW</span><span class="live-strip__tag-short">LIVE</span></span>
+          <span class="live-strip__status" data-live-status>Truck 23 · Hamburg → Lyon · on time</span>
+        </p>
+      </div>
+
+      <div class="route-card">
+        <div class="route-card__row">
+          <p class="route-card__label t-data">EXAMPLE ROUTE</p>
+          <p class="route-card__status t-data">● ON TIME</p>
+        </div>
+        <p class="t-h3">Hamburg → Lyon</p>
+        <div class="route-card__bar" aria-hidden="true">
+          <span class="route-card__track"></span>
+          <span class="route-card__fill" data-route-fill></span>
+          <span class="route-card__end route-card__end--start"></span>
+          <span class="route-card__end route-card__end--finish"></span>
+          <span class="route-card__handle" data-route-handle></span>
+        </div>
+        <div class="route-card__row t-data">
+          <p class="route-card__done" data-route-done>KÖLN · 412 KM DONE</p>
+          <p data-route-eta>ETA THU 14:30</p>
+        </div>
+        <p class="route-card__manager"><span class="route-card__avatar" aria-hidden="true"></span>Your manager follows this load</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAREERS TEASER ================= -->
+<section class="section careers bg-surface" aria-labelledby="careers-title">
+  <div class="container careers__inner">
+    <div class="careers__photo reveal">
+      <img src="assets/img/case-3.jpg" alt="Okvada driver next to the trucks" width="1119" height="746" loading="lazy">
+    </div>
+    <div class="careers__text reveal reveal--delay-1">
+      <p class="eyebrow">Careers</p>
+      <h2 class="section-title section-title--tight t-h2" id="careers-title">
+        <span class="section-title__line">Drive with</span>
+        <span class="section-title__line section-title__line--indent">Okvada.</span>
+      </h2>
+      <p class="t-body-m text-secondary">Modern Mercedes-Benz trucks, a Lithuanian contract, base salary plus daily allowances. We help non-EU drivers with visas and relocation.</p>
+      <a class="pill pill--outline careers__cta" href="careers.html">
+        Open positions
+        <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section final-cta bg-muted" aria-labelledby="cta-title">
+  <div class="container final-cta__inner">
+    <div class="final-cta__intro reveal">
+      <p class="eyebrow">Contact</p>
+      <h2 class="final-cta__title" id="cta-title"><span>Let’s work</span><span>together.</span></h2>
+    </div>
+    <dl class="final-cta__contacts reveal reveal--delay-1">
+      <div class="final-cta__contact"><dt class="t-data">EMAIL</dt><dd><a href="mailto:info@okvada.com">info@okvada.com</a></dd></div>
+      <div class="final-cta__contact"><dt class="t-data">PHONE · MON–FRI 8–18 EET</dt><dd><a href="tel:+37000000000">+370 000 00000</a></dd></div>
+      <div class="final-cta__contact"><dt class="t-data">OFFICE</dt><dd>Barkūnų g. 41, Kaunas, Lithuania</dd></div>
+    </dl>
+    <a class="circle-cta reveal reveal--delay-2" href="contact.html">
+      <span class="arrow-circle arrow-circle--navy arrow-circle--72"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      <span class="arrow-circle arrow-circle--navy arrow-circle--120"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      Contact us
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer data-dark class="footer">
+  <div class="container footer__inner">
+    <div class="footer__top">
+      <p class="footer__brand"><img class="logo__img" src="assets/img/logo-alt-swirl-light.svg" alt="Okvada" width="668" height="160" loading="lazy"></p>
+      <div class="footer__icons">
+        <a class="footer__icon" href="tel:+37000000000" aria-label="Call Okvada"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"></use></svg></a>
+        <a class="footer__icon" href="mailto:info@okvada.com" aria-label="Email Okvada"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-mail"></use></svg></a>
+        <a class="footer__icon" href="careers.html#apply" aria-label="Message Okvada in messenger"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-message-circle"></use></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__company">
+      <p class="footer__brand"><img class="logo__img" src="assets/img/logo-alt-swirl-light.svg" alt="Okvada" width="668" height="160" loading="lazy"></p>
+      <p>UAB Okvada, Barkūnų g. 41, LT-46326 Kaunas, Lithuania</p>
+      <p>Service point: Rhauderfehn, Germany</p>
+      <p>Company code 306070987 · VAT LT100016279613</p>
+      <p>info@okvada.com · +370 000 00000</p>
+    </div>
+
+    <div class="footer__cols" data-footer-accordion>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-company">
+          <span class="footer__col-title">Company</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-company">
+          <ul class="footer__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-docs">
+          <span class="footer__col-title">Documents</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-docs">
+          <ul class="footer__list">
+            <li><a href="about.html#certificates">Certificates</a></li>
+            <li><a href="terms.html">Terms of carriage</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-legal">
+          <span class="footer__col-title">Legal</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-legal">
+          <ul class="footer__list">
+            <li><a href="legal.html">Legal notice</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="#cookie-settings" data-cookie-settings-open>Cookie settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__meta">
+      <p class="footer__place">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-map-pin"></use></svg>
+        Kaunas, Lithuania · Service point Rhauderfehn, Germany
+      </p>
+      <p>© 2026 UAB Okvada · Code 306070987 · VAT LT100016279613</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="overlay" data-overlay></div>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" data-menu>
+  <div class="mobile-menu__top">
+    <a class="logo" href="index.html" aria-label="Okvada — home"><img class="logo__img" src="assets/img/logo-alt-swirl.svg" alt="Okvada" width="668" height="160"></a>
+    <button class="icon-btn mobile-menu__close" type="button" aria-label="Close menu" data-menu-close>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav" aria-label="Main">
+    <a class="mobile-menu__link is-active" href="index.html" aria-current="page"><span>Home</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="about.html"><span>About</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="services.html"><span>Services</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="careers.html"><span>Careers</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+  </nav>
+  <div class="mobile-menu__lang">
+    <label for="mobile-lang">Language</label>
+    <div class="select">
+      <select id="mobile-lang" data-lang-select>
+        <option value="EN" selected>EN</option>
+        <option value="DE">DE</option>
+      </select>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+    </div>
+  </div>
+  <div class="mobile-menu__cta">
+    <a class="pill pill--block" href="contact.html">
+      Contact us
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </a>
+  </div>
+</div>
+
+<!-- ================= BACK TO TOP (324:18831 / 324:18918) ================= -->
+<button class="back-to-top arrow-circle arrow-circle--48 arrow-circle--navy" type="button" aria-label="Back to top" data-back-to-top>
+  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-up"></use></svg>
+</button>
+
+<!-- ================= COOKIE BANNER ================= -->
+<div class="cookie-banner" role="region" aria-label="Cookie consent" data-cookie-banner>
+  <div class="cookie-banner__text">
+    <p class="cookie-banner__title t-h4">
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-cookie"></use></svg>
+      We use cookies
+    </p>
+    <p class="t-body-s text-secondary">Necessary cookies keep the site working. With your consent we also use analytics.</p>
+  </div>
+  <div class="cookie-banner__actions">
+    <button class="text-btn cookie-banner__settings--desktop" type="button" data-cookie-settings-open>Settings</button>
+    <button class="pill pill--outline" type="button" data-cookie-choice="reject">
+      Reject
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <button class="pill" type="button" data-cookie-choice="accept">
+      Accept
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+  </div>
+  <button class="text-btn cookie-banner__settings--mobile" type="button" data-cookie-settings-open>Settings</button>
+</div>
+
+<!-- ================= COOKIE SETTINGS ================= -->
+<div class="sheet" id="cookie-settings" role="dialog" aria-modal="true" aria-labelledby="cookie-settings-title" data-cookie-settings>
+  <div class="sheet__top">
+    <h2 class="sheet__title t-h3" id="cookie-settings-title">Cookie settings</h2>
+    <button class="icon-btn sheet__close" type="button" aria-label="Close cookie settings" data-cookie-settings-close>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg>
+    </button>
+  </div>
+  <p class="t-body-s text-secondary">Choose which cookies we may use. You can change your choice at any time.</p>
+  <div>
+    <div class="consent-row">
+      <div class="consent-row__text">
+        <p class="consent-row__name">Necessary</p>
+        <p class="consent-row__desc">Keep the site and the contact form working. Cannot be switched off.</p>
+      </div>
+      <label class="checkbox" for="consent-necessary">
+        <input type="checkbox" id="consent-necessary" checked disabled>
+        <span class="checkbox__box"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg></span>
+        Always on
+      </label>
+    </div>
+    <div class="consent-row">
+      <div class="consent-row__text">
+        <p class="consent-row__name">Analytics</p>
+        <p class="consent-row__desc">Show us which pages are useful. Anonymous, no advertising.</p>
+      </div>
+      <label class="checkbox" for="consent-analytics">
+        <input type="checkbox" id="consent-analytics" data-consent-analytics>
+        <span class="checkbox__box"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg></span>
+        Allow
+      </label>
+    </div>
+  </div>
+  <div class="sheet__actions">
+    <button class="pill pill--primary" type="button" data-cookie-choice="save">
+      Save choices
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <button class="pill pill--outline" type="button" data-cookie-choice="reject">
+      Reject all
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <a class="link-underline" href="privacy.html">Privacy policy</a>
+  </div>
+</div>
+
+</div>
+
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/home.js"></script>
+</body>
+</html>

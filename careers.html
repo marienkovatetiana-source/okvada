@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Careers — Okvada</title>
+<meta name="description" content="CE drivers for routes across Europe. Modern Mercedes-Benz trucks, salary on the 10th of every month. Visa, work permit and relocation support for non-EU drivers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/careers.css">
+</head>
+<body class="page-careers">
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Okvada — home">
+      <img class="logo__img" src="assets/img/logo-alt-swirl.svg" alt="Okvada" width="668" height="160">
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="services.html">Services</a>
+      <a class="nav__link is-active" href="careers.html" aria-current="page">Careers</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="lang" data-lang>
+        <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" data-lang-btn>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-globe"></use></svg>
+          <span data-lang-current>EN</span>
+          <svg class="icon icon--chevron" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu" role="menu" data-lang-menu>
+          <button class="lang-menu__item" type="button" role="menuitemradio" aria-checked="true" data-lang-option="EN">
+            <span class="lang-menu__code">EN</span>
+            <span class="lang-menu__name">English</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+          </button>
+          <button class="lang-menu__item" type="button" role="menuitemradio" aria-checked="false" data-lang-option="DE">
+            <span class="lang-menu__code">DE</span>
+            <span class="lang-menu__name">Deutsch</span>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+          </button>
+        </div>
+      </div>
+
+      <a class="header__phone" href="tel:+37000000000">+370 000 00000</a>
+
+      <a class="pill pill--outline header__cta" href="contact.html">
+        Contact us
+        <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+      </a>
+
+      <a class="icon-btn icon-btn--bordered header__call" href="tel:+37000000000" aria-label="Call Okvada">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"></use></svg>
+      </a>
+      <button class="icon-btn header__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-open>
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- Ссылка на Telegram-бота: настоящего адреса нет в макете — заменить на ссылку клиента (везде TELEGRAM_URL = https://t.me/) -->
+
+<!-- ================= PAGE HERO (Figma 100:6436 / 100:6445) ================= -->
+<section class="page-hero careers-hero bg-canvas" aria-labelledby="careers-title">
+  <div class="container careers-hero__inner">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html">Home</a></li>
+        <li class="breadcrumbs__item" aria-current="page">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg>
+          Careers
+        </li>
+      </ol>
+    </nav>
+
+    <div class="careers-hero__main">
+      <div class="careers-hero__copy reveal">
+        <p class="eyebrow">Careers</p>
+        <h1 class="careers-hero__title t-display-72" id="careers-title">
+          <span>Drive modern</span>
+          <span>Mercedes trucks.</span>
+          <span class="text-secondary">Get paid on time.</span>
+        </h1>
+        <p class="t-body-l text-secondary">CE drivers for routes across Europe. Visa, work permit and relocation support for non-EU drivers.</p>
+        <a class="pill" href="https://t.me/" target="_blank" rel="noopener">
+          Apply in Telegram
+          <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+        </a>
+        <p class="t-body-s text-secondary">About one minute in Telegram. Recruiters speak English, Ukrainian, Russian and Polish.</p>
+      </div>
+
+      <div class="careers-hero__stage reveal reveal--delay-1">
+        <img src="assets/img/case-4.jpg" alt="White Mercedes-Benz Actros truck with a box trailer" width="1039" height="694" fetchpriority="high">
+        <span class="chip chip--navy careers-hero__chip">Salary on the 10th · every month</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NUMBERS (178:2204 / 178:2503) ================= -->
+<section class="section bg-surface" aria-labelledby="numbers-title">
+  <div class="container numbers">
+    <h2 class="eyebrow" id="numbers-title">Driving with Okvada</h2>
+    <dl class="numbers__grid">
+      <div class="metric reveal"><dt class="t-display-72">60+</dt><dd class="t-body-m text-secondary">Mercedes-Benz trucks in our own fleet</dd></div>
+      <div class="metric reveal reveal--delay-1"><dt class="t-display-72">2.5 yrs</dt><dd class="t-body-m text-secondary">average age of the truck you drive</dd></div>
+      <div class="metric reveal reveal--delay-2"><dt class="t-display-72">6 / 2</dt><dd class="t-body-m text-secondary">weeks on the road / weeks at home</dd></div>
+      <div class="metric reveal reveal--delay-3"><dt class="t-display-72">10th</dt><dd class="t-body-m text-secondary">salary day — every month, no delays</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= WHAT WE OFFER (100:6438 / 100:6447) ================= -->
+<section class="section bg-canvas" aria-labelledby="offer-title">
+  <div class="container">
+    <div class="careers-head reveal">
+      <div class="section-title">
+        <p class="eyebrow">What you get</p>
+        <h2 class="section-title t-h2" id="offer-title">
+          <span class="section-title__line">Good work deserves</span>
+          <span class="section-title__line section-title__line--indent">good conditions.</span>
+        </h2>
+      </div>
+      <p class="careers-head__aside t-body-m text-secondary">Exact pay depends on experience and is discussed with you directly — before you sign anything.</p>
+    </div>
+
+    <div class="offer">
+      <div class="offer__stage reveal">
+        <img class="offer__photo" src="assets/img/services-trailer.jpg" alt="Red truck cab parked on a green field" width="839" height="556" loading="lazy">
+        <p class="stat-tile">
+          <span class="t-data">SALARY DAY</span>
+          <span class="stat-tile__value t-display-72">10th</span>
+          <span class="t-body-s">of every month — no delays.</span>
+        </p>
+      </div>
+
+      <ul class="benefits reveal reveal--delay-1">
+        <li class="benefit">
+          <span class="benefit__num">01</span>
+          <h3 class="t-h4">Salary paid on time</h3>
+          <p class="benefit__text">Base salary plus daily allowances, transferred on the 10th of every month.</p>
+        </li>
+        <li class="benefit">
+          <span class="benefit__num">02</span>
+          <h3 class="t-h4">Regular rotation</h3>
+          <p class="benefit__text">6 weeks on the road, 2 weeks at home. Schedule agreed before you start.</p>
+        </li>
+        <li class="benefit">
+          <span class="benefit__num">03</span>
+          <h3 class="t-h4">Modern trucks</h3>
+          <p class="benefit__text">Mercedes-Benz Actros EURO 6, one truck — one driver.</p>
+        </li>
+        <li class="benefit">
+          <span class="benefit__num">04</span>
+          <h3 class="t-h4">Familiar routes</h3>
+          <p class="benefit__text">Mostly Germany, Belgium and France. Bases in Kaunas and Rhauderfehn.</p>
+        </li>
+        <li class="benefit">
+          <span class="benefit__num">05</span>
+          <h3 class="t-h4">24/7 dispatch</h3>
+          <p class="benefit__text">Dispatchers who speak your language and pick up at any hour.</p>
+        </li>
+        <li class="benefit">
+          <span class="benefit__num">06</span>
+          <h3 class="t-h4">Official contract</h3>
+          <p class="benefit__text">Lithuanian employment contract, social insurance and paid leave.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISA & RELOCATION (100:6437 / 100:6446) ================= -->
+<section class="section bg-muted" aria-labelledby="visa-title">
+  <div class="container">
+    <div class="careers-head reveal">
+      <div class="section-title">
+        <p class="eyebrow">Visa &amp; relocation</p>
+        <h2 class="section-title t-h2" id="visa-title">
+          <span class="section-title__line">From outside the EU?</span>
+          <span class="section-title__line section-title__line--indent">We handle the paperwork.</span>
+        </h2>
+      </div>
+      <p class="careers-head__aside t-body-m text-secondary">From the first chat to your first trip takes about 8–10 weeks. Our HR team walks every step with you.</p>
+    </div>
+
+    <ol class="visa-steps">
+      <li class="visa-step reveal">
+        <span class="visa-step__when t-data">DAY 1</span>
+        <span class="visa-step__num t-h2">01</span>
+        <h3 class="t-h4">Apply</h3>
+        <p class="t-body-s text-secondary">Chat with our bot in Telegram — about one minute.</p>
+      </li>
+      <li class="visa-step reveal reveal--delay-1">
+        <span class="visa-step__when t-data">WEEKS 1–6</span>
+        <span class="visa-step__num t-h2">02</span>
+        <h3 class="t-h4">Work permit</h3>
+        <p class="t-body-s text-secondary">We prepare the documents and book your visa appointment.</p>
+      </li>
+      <li class="visa-step reveal reveal--delay-2">
+        <span class="visa-step__when t-data">WEEKS 7–8</span>
+        <span class="visa-step__num t-h2">03</span>
+        <h3 class="t-h4">Arrival</h3>
+        <p class="t-body-s text-secondary">Travel help and first accommodation near our base in Kaunas.</p>
+      </li>
+      <li class="visa-step visa-step--last reveal reveal--delay-3">
+        <span class="visa-step__when t-data">WEEK 9+</span>
+        <span class="visa-step__num t-h2">04</span>
+        <h3 class="t-h4">First trip</h3>
+        <p class="t-body-s text-secondary">Code 95, licence exchange and first routes with a mentor driver.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= REQUIREMENTS (100:6439 / 100:6448) ================= -->
+<section class="section bg-surface" aria-labelledby="req-title">
+  <div class="container req">
+    <img class="req__photo reveal" src="assets/img/case-3.jpg" alt="Truck driver with arms crossed in front of blue trucks" width="1119" height="746" loading="lazy">
+
+    <div class="req__content reveal reveal--delay-1">
+      <div class="section-title">
+        <p class="eyebrow">Requirements</p>
+        <h2 class="section-title section-title--tight t-h2" id="req-title">
+          <span class="section-title__line">What you need</span>
+          <span class="section-title__line section-title__line--indent">to start.</span>
+        </h2>
+      </div>
+
+      <ul class="checklist">
+        <li class="checklist__item t-body-l"><span class="checklist__tick" aria-hidden="true">✓</span>CE driving licence</li>
+        <li class="checklist__item t-body-l"><span class="checklist__tick" aria-hidden="true">✓</span>Code 95 — or we help you get it</li>
+        <li class="checklist__item t-body-l"><span class="checklist__tick" aria-hidden="true">✓</span>Digital tachograph card</li>
+        <li class="checklist__item t-body-l"><span class="checklist__tick" aria-hidden="true">✓</span>1+ year of international experience</li>
+        <li class="checklist__item t-body-l"><span class="checklist__tick" aria-hidden="true">✓</span>Basic English, Russian or Lithuanian</li>
+      </ul>
+
+      <p class="t-body-s text-secondary">No experience abroad yet? Write to us anyway — we train new drivers on our own routes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPLY — тёмный финал страницы (100:6440 / 100:6449) ================= -->
+<section data-dark class="section apply" id="apply" aria-labelledby="apply-title">
+  <div class="container apply__inner">
+    <div class="apply__intro reveal">
+      <p class="eyebrow">Apply</p>
+      <h2 class="apply__title" id="apply-title">
+        <span>Apply in</span>
+        <span class="apply__title-indent">one minute.</span>
+      </h2>
+      <p class="apply__lead t-body-l">No forms and no CV to start. Our Telegram bot asks a few short questions — a recruiter will contact you.</p>
+      <div class="apply__actions">
+        <a class="pill pill--outline" href="https://t.me/" target="_blank" rel="noopener">
+          Apply in Telegram
+          <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+        </a>
+        <p class="apply__call t-body-s">or call <a href="tel:+37060012345">+370 600 12345</a> · Mon–Fri 8–18 EET</p>
+      </div>
+    </div>
+
+    <!-- Превью чата — иллюстрация, не интерактив -->
+    <div class="chat reveal reveal--delay-1" aria-label="Example chat with the Okvada jobs bot" role="img">
+      <p class="t-data chat__name">OKVADA JOBS BOT</p>
+      <p class="chat__msg">Hi! Do you have a CE licence?</p>
+      <p class="chat__msg chat__msg--driver">Yes, since 2017</p>
+      <p class="chat__msg">Great. Which countries have you driven in?</p>
+      <p class="chat__msg chat__msg--driver">Germany, Poland, France</p>
+      <p class="chat__msg">Thanks! A recruiter will contact you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OTHER ROLES (174:1831 / 174:2090) ================= -->
+<section class="section bg-muted" aria-labelledby="roles-title">
+  <div class="container roles">
+    <div class="section-title roles__intro reveal">
+      <p class="eyebrow">Other roles</p>
+      <h2 class="section-title section-title--tight t-h2" id="roles-title">
+        <span class="section-title__line">Not a driver?</span>
+        <span class="section-title__line section-title__line--indent">Let’s still talk.</span>
+      </h2>
+    </div>
+
+    <div class="roles__text reveal reveal--delay-1">
+      <p class="t-body-l text-secondary">Drivers are the heart of Okvada, but not the only way to join us. From time to time we look for people in other roles too — send us your CV or simply write, and we will get back to you.</p>
+      <div class="roles__contact">
+        <p class="roles__email">
+          <span class="t-data text-secondary">SEND YOUR CV</span>
+          <a class="t-h4" href="mailto:info@okvada.com">info@okvada.com</a>
+        </p>
+        <a class="pill pill--outline" href="contact.html">
+          Contact us
+          <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DRIVER FAQ (100:6441 / 100:6450) ================= -->
+<section class="section bg-surface" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="careers-head reveal">
+      <div class="section-title">
+        <p class="eyebrow">Driver FAQ</p>
+        <h2 class="section-title t-h2" id="faq-title">
+          <span class="section-title__line">Questions</span>
+          <span class="section-title__line section-title__line--indent">from drivers.</span>
+        </h2>
+      </div>
+      <p class="careers-head__aside t-body-m text-secondary">Didn’t find your answer? Ask the recruiter in the Telegram chat.</p>
+    </div>
+
+    <div class="faq faq--spaced reveal reveal--delay-1" data-faq>
+      <div class="faq__item">
+        <h3 class="faq__q">
+          <button class="faq__btn" type="button" aria-expanded="true" aria-controls="dfaq-a1">
+            <span>Which documents do I need to start?</span>
+            <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+            <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+          </button>
+        </h3>
+        <p class="faq__a t-body-m text-secondary" id="dfaq-a1">A CE licence, Code 95 and a digital tachograph card. If you are from outside the EU, you also need a work permit — we prepare the paperwork with you.</p>
+      </div>
+      <!-- Ответы 2–5: в Figma их нет, черновой текст — подтвердить с клиентом -->
+      <div class="faq__item">
+        <h3 class="faq__q">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="dfaq-a2">
+            <span>How does the rotation work?</span>
+            <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+            <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+          </button>
+        </h3>
+        <p class="faq__a t-body-m text-secondary" id="dfaq-a2" hidden>6 weeks on the road, 2 weeks at home. The schedule is agreed with you before you start.</p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__q">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="dfaq-a3">
+            <span>Where do trips start and end?</span>
+            <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+            <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+          </button>
+        </h3>
+        <p class="faq__a t-body-m text-secondary" id="dfaq-a3" hidden>At our bases in Kaunas and Rhauderfehn. Routes run mostly in Germany, Belgium and France.</p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__q">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="dfaq-a4">
+            <span>Who pays for travel to the truck?</span>
+            <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+            <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+          </button>
+        </h3>
+        <p class="faq__a t-body-m text-secondary" id="dfaq-a4" hidden>The recruiter explains travel to and from the truck in the Telegram chat — before you sign anything.</p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__q">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="dfaq-a5">
+            <span>Can I bring my family?</span>
+            <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+            <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+          </button>
+        </h3>
+        <p class="faq__a t-body-m text-secondary" id="dfaq-a5" hidden>Ask the recruiter in the Telegram chat — our HR team will tell you what is possible in your case.</p>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__q">
+          <button class="faq__btn" type="button" aria-expanded="false" aria-controls="dfaq-a6">
+            <span>Do you hire for roles other than drivers?</span>
+            <svg class="icon faq__plus" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg>
+            <svg class="icon faq__minus" aria-hidden="true"><use href="assets/icons.svg#i-minus"></use></svg>
+          </button>
+        </h3>
+        <p class="faq__a t-body-m text-secondary" id="dfaq-a6" hidden>Yes, from time to time. Send your CV to info@okvada.com or write to us — we keep it on file and contact you when a suitable role opens.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer data-dark class="footer">
+  <div class="container footer__inner">
+    <div class="footer__top">
+      <p class="footer__brand"><img class="logo__img" src="assets/img/logo-alt-swirl-light.svg" alt="Okvada" width="668" height="160" loading="lazy"></p>
+      <div class="footer__icons">
+        <a class="footer__icon" href="tel:+37000000000" aria-label="Call Okvada"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"></use></svg></a>
+        <a class="footer__icon" href="mailto:info@okvada.com" aria-label="Email Okvada"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-mail"></use></svg></a>
+        <a class="footer__icon" href="#apply" aria-label="Message Okvada in messenger"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-message-circle"></use></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__company">
+      <p class="footer__brand"><img class="logo__img" src="assets/img/logo-alt-swirl-light.svg" alt="Okvada" width="668" height="160" loading="lazy"></p>
+      <p>UAB Okvada, Barkūnų g. 41, LT-46326 Kaunas, Lithuania</p>
+      <p>Service point: Rhauderfehn, Germany</p>
+      <p>Company code 306070987 · VAT LT100016279613</p>
+      <p>info@okvada.com · +370 000 00000</p>
+    </div>
+
+    <div class="footer__cols" data-footer-accordion>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-company">
+          <span class="footer__col-title">Company</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-company">
+          <ul class="footer__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-docs">
+          <span class="footer__col-title">Documents</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-docs">
+          <ul class="footer__list">
+            <li><a href="about.html#certificates">Certificates</a></li>
+            <li><a href="terms.html">Terms of carriage</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <button class="footer__toggle" type="button" aria-expanded="false" aria-controls="f-legal">
+          <span class="footer__col-title">Legal</span>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+        </button>
+        <div class="footer__panel" id="f-legal">
+          <ul class="footer__list">
+            <li><a href="legal.html">Legal notice</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="#cookie-settings" data-cookie-settings-open>Cookie settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__meta">
+      <p class="footer__place">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-map-pin"></use></svg>
+        Kaunas, Lithuania · Service point Rhauderfehn, Germany
+      </p>
+      <p>© 2026 UAB Okvada · Code 306070987 · VAT LT100016279613</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="overlay" data-overlay></div>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" data-menu>
+  <div class="mobile-menu__top">
+    <a class="logo" href="index.html" aria-label="Okvada — home"><img class="logo__img" src="assets/img/logo-alt-swirl.svg" alt="Okvada" width="668" height="160"></a>
+    <button class="icon-btn mobile-menu__close" type="button" aria-label="Close menu" data-menu-close>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav" aria-label="Main">
+    <a class="mobile-menu__link" href="index.html"><span>Home</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="about.html"><span>About</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link" href="services.html"><span>Services</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+    <a class="mobile-menu__link is-active" href="careers.html" aria-current="page"><span>Careers</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></a>
+  </nav>
+  <div class="mobile-menu__lang">
+    <label for="mobile-lang">Language</label>
+    <div class="select">
+      <select id="mobile-lang" data-lang-select>
+        <option value="EN" selected>EN</option>
+        <option value="DE">DE</option>
+      </select>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"></use></svg>
+    </div>
+  </div>
+  <div class="mobile-menu__cta">
+    <a class="pill pill--block" href="contact.html">
+      Contact us
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </a>
+  </div>
+</div>
+
+<!-- ================= BACK TO TOP (324:18831 / 324:18918) ================= -->
+<button class="back-to-top arrow-circle arrow-circle--48 arrow-circle--navy" type="button" aria-label="Back to top" data-back-to-top>
+  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-up"></use></svg>
+</button>
+
+<!-- ================= COOKIE BANNER ================= -->
+<div class="cookie-banner" role="region" aria-label="Cookie consent" data-cookie-banner>
+  <div class="cookie-banner__text">
+    <p class="cookie-banner__title t-h4">
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-cookie"></use></svg>
+      We use cookies
+    </p>
+    <p class="t-body-s text-secondary">Necessary cookies keep the site working. With your consent we also use analytics.</p>
+  </div>
+  <div class="cookie-banner__actions">
+    <button class="text-btn cookie-banner__settings--desktop" type="button" data-cookie-settings-open>Settings</button>
+    <button class="pill pill--outline" type="button" data-cookie-choice="reject">
+      Reject
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <button class="pill" type="button" data-cookie-choice="accept">
+      Accept
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+  </div>
+  <button class="text-btn cookie-banner__settings--mobile" type="button" data-cookie-settings-open>Settings</button>
+</div>
+
+<!-- ================= COOKIE SETTINGS ================= -->
+<div class="sheet" id="cookie-settings" role="dialog" aria-modal="true" aria-labelledby="cookie-settings-title" data-cookie-settings>
+  <div class="sheet__top">
+    <h2 class="sheet__title t-h3" id="cookie-settings-title">Cookie settings</h2>
+    <button class="icon-btn sheet__close" type="button" aria-label="Close cookie settings" data-cookie-settings-close>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-x"></use></svg>
+    </button>
+  </div>
+  <p class="t-body-s text-secondary">Choose which cookies we may use. You can change your choice at any time.</p>
+  <div>
+    <div class="consent-row">
+      <div class="consent-row__text">
+        <p class="consent-row__name">Necessary</p>
+        <p class="consent-row__desc">Keep the site and the contact form working. Cannot be switched off.</p>
+      </div>
+      <label class="checkbox" for="consent-necessary">
+        <input type="checkbox" id="consent-necessary" checked disabled>
+        <span class="checkbox__box"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg></span>
+        Always on
+      </label>
+    </div>
+    <div class="consent-row">
+      <div class="consent-row__text">
+        <p class="consent-row__name">Analytics</p>
+        <p class="consent-row__desc">Show us which pages are useful. Anonymous, no advertising.</p>
+      </div>
+      <label class="checkbox" for="consent-analytics">
+        <input type="checkbox" id="consent-analytics" data-consent-analytics>
+        <span class="checkbox__box"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg></span>
+        Allow
+      </label>
+    </div>
+  </div>
+  <div class="sheet__actions">
+    <button class="pill pill--primary" type="button" data-cookie-choice="save">
+      Save choices
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <button class="pill pill--outline" type="button" data-cookie-choice="reject">
+      Reject all
+      <span class="arrow-circle"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></span>
+    </button>
+    <a class="link-underline" href="privacy.html">Privacy policy</a>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

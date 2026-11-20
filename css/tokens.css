@@ -1,0 +1,125 @@
+/* =========================================================
+   Okvada — design tokens (из Figma: 04 · UI / variables)
+   Светлая тема везде (решение проекта), поэтому одна палитра.
+   ========================================================= */
+
+:root {
+  color-scheme: light;
+
+  /* ---------- Color ---------- */
+  --color-bg-canvas: #f5f7fa;
+  --color-bg-muted: #eef2f7;        /* в Figma: bg/muted */
+  --color-bg-surface: #ffffff;
+  --color-bg-hover: #dce3ec;
+  --color-bg-inverse: #0b2545;      /* navy, primary accent */
+  --color-bg-inverse-raised: #13335a;
+  --color-bg-inverse-strong: #061a30; /* footer navy, dark panels */
+
+  --color-text-primary: #0b2545;
+  --color-text-secondary: #4a5a6e;
+  --color-text-on-inverse: #ffffff;
+  --color-text-on-inverse-muted: #a9b8cc;
+  --color-text-on-accent: #0b2545;
+
+  --color-accent-default: #00d1b2;  /* яркий teal — только точки и линии */
+  --color-accent-text: #00796b;     /* teal для текста на светлом */
+
+  --color-border-line: #dce2ea;
+  --color-border-strong: #0b2545;
+
+  --color-status-on-time: #1e8e5a;
+  --color-status-delay: #c8372d;    /* status/delay — ошибки формы (Contact) */
+  --color-error: #c0392b;
+
+  --color-overlay: rgba(11, 37, 69, 0.6); /* 60 % navy под меню и модалками */
+
+  /* Тёмная секция (Services · Fleet): режим dark в Figma */
+  --color-text-on-inverse-soft: #eef2f7;
+  --color-accent-on-inverse: #4fddc7;
+  --color-border-on-inverse: #2a4466;
+
+  /* Прозрачный canvas — конец градиента-растушёвки у фото */
+  --color-bg-canvas-clear: rgba(245, 247, 250, 0);
+
+  /* ---------- Type ---------- */
+  --font-heading: "Barlow", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* ---------- Space ---------- */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+
+  /* Отступы секций (Figma: section/*) */
+  --section-desktop: 96px;          /* section/desktop — сверху и снизу */
+  --section-mobile-top: 32px;       /* section/mobile-top */
+  --section-mobile-bottom: 48px;    /* section/mobile-bottom */
+  --section-heading-desktop: 56px;  /* section/heading-desktop — заголовок → контент */
+  --section-heading-mobile: 32px;   /* section/heading-mobile */
+
+  /* Рабочие значения: mobile по умолчанию, desktop — в media ниже */
+  --section-top: var(--section-mobile-top);
+  --section-bottom: var(--section-mobile-bottom);
+  --section-heading: var(--section-heading-mobile);
+
+  /* Контейнер и поля (Figma: container/content, gutter/*) */
+  --container-content: 1184px;
+  --gutter-desktop: 128px;
+  --gutter-mobile: 16px;
+
+  /* Боковые поля: 16 mobile / 32 tablet / 128 desktop */
+  --gutter: var(--gutter-mobile);
+  --container: calc(var(--container-content) + 2 * var(--gutter-desktop)); /* 1440 */
+
+  /* Размер контролов (Figma: size/control-lg) — Media toggle */
+  --size-control-lg: 56px;
+  --size-hit: 44px;                 /* минимальная зона нажатия */
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 999px;
+
+  /* ---------- Shadow ---------- */
+  --shadow-sm: 0 2px 8px rgba(11, 37, 69, 0.08);
+  --shadow-md: 0 4px 16px rgba(11, 37, 69, 0.08);
+  --shadow-lg: 0 -4px 24px rgba(11, 37, 69, 0.12);
+  --shadow-float: 0 16px 36px rgba(5, 15, 36, 0.25);
+  --shadow-chip: 0 6px 20px rgba(13, 26, 51, 0.14); /* плашки поверх фото */
+  --shadow-card: 0 12px 40px rgba(13, 26, 51, 0.16); /* Status card на фото (404) */
+
+  /* ---------- Motion ---------- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --duration: 250ms;
+
+  /* ---------- Header ---------- */
+  --header-h: 69px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    /* 128 px на 1440, плавно меньше на узких десктопах */
+    --gutter: min(8.889vw, var(--gutter-desktop));
+    --header-h: 100px;
+    --section-top: var(--section-desktop);
+    --section-bottom: var(--section-desktop);
+    --section-heading: var(--section-heading-desktop);
+  }
+}
