@@ -284,6 +284,11 @@
   }
 }
 
+/* Tablet: карточки реквизитов в три колонки */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .data-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-md); align-items: start; }
+}
+
 /* ---------- Desktop ---------- */
 
 @media screen and (min-width: 1200px) {

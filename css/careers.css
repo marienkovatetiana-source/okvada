@@ -442,6 +442,38 @@
   }
 }
 
+/* Tablet: карточки сеткой 3 × 2 вместо ленты, Apply — текст | чат */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-md);
+    margin-inline: 0;
+    padding-inline: 0;
+    overflow: visible;
+  }
+  .benefit { flex: none; height: auto; min-height: 200px; }
+  .benefit:nth-child(even) { margin-top: 0; }
+  .apply__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+  .chat { max-width: none; }
+
+  /* Visa: горизонтальный таймлайн, 4 колонки */
+  .visa-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-lg); }
+  .visa-step { padding: 28px 0 0; border-left: 0; border-top: 2px solid var(--color-border-strong); }
+  .visa-step::before { left: 0; top: -11px; }
+  .visa-step--last { border-top-color: var(--color-accent-default); }
+
+  /* Requirements: фото | список */
+  .req { flex-direction: row; align-items: center; gap: var(--space-xl); }
+  .req__photo { flex-shrink: 0; width: 44%; height: 480px; border-radius: var(--radius-xl); }
+  .req__content { flex: 1 1 0; min-width: 0; }
+}
+
 /* ---------- Desktop ---------- */
 
 @media screen and (min-width: 1200px) {
