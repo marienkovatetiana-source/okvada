@@ -52,13 +52,13 @@
 .about-hero__stage::before {
   inset: 0 auto 0 0;
   width: 80px;
-  background-image: linear-gradient(to right, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+  background-image: linear-gradient(to right, var(--color-canvas), var(--color-canvas-clear));
 }
 
 .about-hero__stage::after {
   inset: 0 0 auto 0;
   height: 70px;
-  background-image: linear-gradient(to bottom, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+  background-image: linear-gradient(to bottom, var(--color-canvas), var(--color-canvas-clear));
 }
 
 .about-hero__chip {
@@ -79,7 +79,7 @@
   flex-direction: column;
   gap: var(--space-2xs);
   padding-top: var(--space-md);
-  border-top: 1px solid var(--color-border-line);
+  border-top: 1px solid var(--color-line);
 }
 
 /* ---------- Заголовок секции + текст справа ---------- */
@@ -111,23 +111,23 @@
   flex-direction: column;
   gap: var(--space-sm);
   padding-top: var(--space-lg);
-  border-top: 1px solid var(--color-border-line);
+  border-top: 1px solid var(--color-line);
 }
 
 /* ---------- Story (тёмный блок страницы) ---------- */
 
 .story {
-  background-color: var(--color-bg-inverse-strong);
-  color: var(--color-text-on-inverse);
+  background-color: var(--color-navy-deep);
+  color: var(--color-surface);
 }
 
 .story .eyebrow,
 .story .about-head__aside {
-  color: var(--color-text-on-inverse-muted);
+  color: var(--color-on-navy-muted);
 }
 
 .story .section-title__line--indent {
-  color: var(--color-accent-default);
+  color: var(--color-teal);
 }
 
 /* Mobile: вертикальная линия слева */
@@ -137,7 +137,7 @@
   flex-direction: column;
   gap: var(--space-xs);
   padding: 0 0 var(--space-lg) var(--space-lg);
-  border-left: 2px solid var(--color-text-on-inverse-muted);
+  border-left: 2px solid var(--color-on-navy-muted);
 }
 
 /* Узел на линии (svg из Figma) */
@@ -156,13 +156,13 @@
 }
 
 .milestone--now .milestone__year {
-  color: var(--color-accent-default);
+  color: var(--color-teal);
 }
 
 .milestone__text {
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--color-text-on-inverse-muted);
+  font-size: var(--text-small);
+  line-height: var(--lh-body);
+  color: var(--color-on-navy-muted);
 }
 
 /* ---------- Team ---------- */
@@ -198,9 +198,9 @@
 }
 
 .person__name {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
 }
 
 .person__langs {
@@ -211,13 +211,13 @@
 
 .lang-tag {
   padding: var(--space-2xs) var(--space-xs);
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-navy);
   border-radius: var(--radius-full);
   font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.4;
-  color: var(--color-text-secondary);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-data);
+  line-height: var(--lh-label);
+  color: var(--color-ink-muted);
 }
 
 /* ---------- Company data ---------- */
@@ -234,11 +234,11 @@
   gap: var(--space-md);
   padding: 20px;
   border-radius: var(--radius-lg);
-  background-color: var(--color-bg-canvas);
+  background-color: var(--color-canvas);
 }
 
 .data-card__label {
-  color: var(--color-accent-text);
+  color: var(--color-teal-text);
 }
 
 .data-card__row {
@@ -246,22 +246,22 @@
   flex-direction: column;
   gap: var(--space-2xs);
   padding-block: 10px;
-  border-top: 1px solid var(--color-border-line);
-  font-size: 14px;
+  border-top: 1px solid var(--color-line);
+  font-size: var(--text-small);
 }
 
 .data-card__row dt {
-  line-height: 1.5;
-  color: var(--color-text-secondary);
+  line-height: var(--lh-body);
+  color: var(--color-ink-muted);
 }
 
 .data-card__row dd {
-  font-weight: 500;
-  line-height: 1.4;
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
 }
 
 .data-card__row a:hover {
-  color: var(--color-accent-text);
+  color: var(--color-teal-text);
 }
 
 /* ---------- Tablet ---------- */
@@ -303,7 +303,7 @@
 
   .about-hero__copy {
     flex-shrink: 0;
-    width: 568px;
+    width: var(--measure-lg);
     gap: var(--space-lg);
   }
 
@@ -346,7 +346,7 @@
   .milestone {
     padding: 28px 0 0;
     border-left: 0;
-    border-top: 2px solid var(--color-text-on-inverse-muted);
+    border-top: 2px solid var(--color-on-navy-muted);
   }
 
   .milestone::before {
@@ -355,7 +355,7 @@
   }
 
   .milestone--now {
-    border-top-color: var(--color-accent-default);
+    border-top-color: var(--color-teal);
   }
 
   .team__title {
@@ -373,9 +373,9 @@
 
   .person__name {
     font-family: var(--font-heading);
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.15;
+    font-size: var(--text-lead);
+    font-weight: var(--weight-semibold);
+    line-height: var(--lh-heading);
   }
 
   .data-cards {

@@ -20,10 +20,10 @@
 /* «404»: H1 56 mobile → Display/Hero 160 desktop */
 .nf__code {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
+  font-weight: var(--weight-bold);
+  font-size: var(--text-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
 }
 
 /* Mobile: кнопки на всю ширину, стрелка справа */
@@ -42,14 +42,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs) var(--space-lg);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  line-height: var(--lh-ui);
 }
 
 .nf__links a {
   position: relative;
-  color: var(--color-accent-text);
+  color: var(--color-teal-text);
 }
 
 .nf__links a:hover {
@@ -95,8 +95,8 @@
   gap: var(--space-2xs);
   padding: var(--space-md) 20px;
   border-radius: var(--radius-md);
-  background-color: var(--color-bg-canvas);
-  box-shadow: var(--shadow-card);
+  background-color: var(--color-canvas);
+  box-shadow: var(--shadow-raised);
 }
 
 .nf__status-top {
@@ -111,8 +111,8 @@
   flex-shrink: 0;
   width: 8px;
   height: 8px;
-  border-radius: 50%;
-  background-color: var(--color-status-delay);
+  border-radius: var(--radius-full);
+  background-color: var(--color-danger);
 }
 
 /* ---------- Desktop ---------- */

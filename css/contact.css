@@ -54,13 +54,13 @@
 .contact-hero__stage::before {
   inset: 0 auto 0 0;
   width: 80px;
-  background-image: linear-gradient(to right, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+  background-image: linear-gradient(to right, var(--color-canvas), var(--color-canvas-clear));
 }
 
 .contact-hero__stage::after {
   inset: 0 0 auto 0;
   height: 70px;
-  background-image: linear-gradient(to bottom, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+  background-image: linear-gradient(to bottom, var(--color-canvas), var(--color-canvas-clear));
 }
 
 .contact-hero__chip {
@@ -92,9 +92,9 @@
   align-items: flex-start;
   gap: var(--space-lg);
   padding: var(--space-lg) var(--space-md);
-  border: 1px solid var(--color-border-line);
+  border: 1px solid var(--color-line);
   border-radius: var(--radius-lg);
-  background-color: var(--color-bg-surface);
+  background-color: var(--color-surface);
 }
 
 .lead-form > * {
@@ -117,27 +117,34 @@
 }
 
 .field__label {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
-  color: var(--color-text-primary);
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
+  color: var(--color-navy);
 }
 
 .field__control {
   width: 100%;
   height: 48px;
   padding: 0 var(--space-md);
-  border: 1.5px solid var(--color-border-strong);
+  border: 1.5px solid var(--color-navy);
   border-radius: var(--radius-lg);
-  background-color: var(--color-bg-surface);
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
+  color: var(--color-navy);
   scroll-margin-top: calc(var(--header-h) + var(--space-lg));
 }
 
+.field__control:disabled {
+  border-color: var(--color-line);
+  background-color: var(--color-muted);
+  color: var(--color-ink-muted);
+  cursor: not-allowed;
+}
+
 .field__control::placeholder {
-  color: var(--color-text-secondary);
+  color: var(--color-ink-muted);
   opacity: 1;
 }
 
@@ -154,7 +161,7 @@
 }
 
 .field__select select {
-  padding-right: 44px;
+  padding-right: var(--size-hit);
   appearance: none;
   cursor: pointer;
 }
@@ -165,31 +172,31 @@
   right: var(--space-md);
   width: 20px;
   height: 20px;
-  color: var(--color-text-secondary);
+  color: var(--color-ink-muted);
   transform: translateY(-50%);
   pointer-events: none;
 }
 
 .field__error {
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--color-status-delay);
+  font-size: var(--text-small);
+  line-height: var(--lh-body);
+  color: var(--color-danger);
 }
 
 /* Error: рамка 2 px status/delay */
 .field.is-error .field__control {
   border-width: 2px;
-  border-color: var(--color-status-delay);
+  border-color: var(--color-danger);
 }
 
 /* Checkbox: общий компонент, свои только ошибка и ссылка */
 .lead-form__consent.is-error .checkbox__box {
   border-width: 2px;
-  border-color: var(--color-status-delay);
+  border-color: var(--color-danger);
 }
 
 .lead-form__link:hover {
-  color: var(--color-text-primary);
+  color: var(--color-navy);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -200,12 +207,12 @@
   align-items: flex-start;
   gap: var(--space-sm);
   padding: var(--space-md);
-  border: 1px solid var(--color-status-delay);
+  border: 1px solid var(--color-danger);
   border-radius: var(--radius-md);
-  background-color: var(--color-bg-surface);
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--color-text-secondary);
+  background-color: var(--color-surface);
+  font-size: var(--text-small);
+  line-height: var(--lh-body);
+  color: var(--color-ink-muted);
 }
 
 .form-alert[hidden] {
@@ -215,7 +222,7 @@
 .form-alert .icon {
   width: 20px;
   height: 20px;
-  color: var(--color-status-delay);
+  color: var(--color-danger);
 }
 
 .form-alert__text {
@@ -225,9 +232,9 @@
 }
 
 .form-alert__title {
-  font-weight: 500;
-  line-height: 1.4;
-  color: var(--color-text-primary);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
+  color: var(--color-navy);
 }
 
 /* Pill: на mobile во всю ширину, текст слева, круг справа */
@@ -263,7 +270,7 @@
   flex-direction: column;
   gap: var(--space-xs);
   padding-top: var(--space-md);
-  border-top: 1px solid var(--color-border-line);
+  border-top: 1px solid var(--color-line);
 }
 
 /* Manager panel — тёмная панель (footer navy); на mobile она первая */
@@ -274,8 +281,8 @@
   gap: var(--space-lg);
   padding: 20px;
   border-radius: var(--radius-xl);
-  background-color: var(--color-bg-inverse-strong);
-  color: var(--color-text-on-inverse);
+  background-color: var(--color-navy-deep);
+  color: var(--color-surface);
 }
 
 .manager__photo {
@@ -301,11 +308,11 @@
   gap: var(--space-xs);
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-full);
-  background-color: var(--color-bg-canvas);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
-  color: var(--color-text-primary);
+  background-color: var(--color-canvas);
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
+  color: var(--color-navy);
 }
 
 .manager__badge::before {
@@ -313,8 +320,8 @@
   flex-shrink: 0;
   width: 8px;
   height: 8px;
-  border-radius: 50%;
-  background-color: var(--color-status-on-time);
+  border-radius: var(--radius-full);
+  background-color: var(--color-success);
 }
 
 .manager__who {
@@ -326,7 +333,7 @@
 .manager__who .t-body-s,
 .manager__links,
 .manager__row dt {
-  color: var(--color-text-on-inverse-muted);
+  color: var(--color-on-navy-muted);
 }
 
 .manager__row {
@@ -334,11 +341,11 @@
   flex-direction: column;
   gap: var(--space-2xs);
   padding-block: var(--space-sm);
-  border-top: 1px solid var(--color-border-strong);
+  border-top: 1px solid var(--color-navy);
 }
 
 .manager__phone {
-  color: var(--color-accent-default);
+  color: var(--color-teal);
 }
 
 .manager__contacts a:hover,
@@ -400,7 +407,7 @@
   align-items: flex-start;
   gap: var(--space-md);
   padding-top: var(--space-lg);
-  border-top: 1px solid var(--color-border-line);
+  border-top: 1px solid var(--color-line);
 }
 
 .trust__badges {
@@ -410,12 +417,12 @@
 }
 
 .trust__badge {
-  padding: var(--space-xs) 14px;
-  border: 1px solid var(--color-border-strong);
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--color-navy);
   border-radius: var(--radius-full);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
   white-space: nowrap;
 }
 
@@ -492,7 +499,7 @@
 
   .contact-hero__copy {
     flex-shrink: 0;
-    width: 568px;
+    width: var(--measure-lg);
     gap: var(--space-lg);
   }
 

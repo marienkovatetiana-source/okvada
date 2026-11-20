@@ -54,13 +54,13 @@
 .careers-hero__stage::before {
   inset: 0 auto 0 0;
   width: 80px;
-  background-image: linear-gradient(to right, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+  background-image: linear-gradient(to right, var(--color-canvas), var(--color-canvas-clear));
 }
 
 .careers-hero__stage::after {
   inset: 0 0 auto 0;
   height: 70px;
-  background-image: linear-gradient(to bottom, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+  background-image: linear-gradient(to bottom, var(--color-canvas), var(--color-canvas-clear));
 }
 
 .careers-hero__chip {
@@ -91,7 +91,7 @@
   flex-direction: column;
   gap: var(--space-xs);
   padding-top: var(--space-md);
-  border-top: 1px solid var(--color-border-line);
+  border-top: 1px solid var(--color-line);
 }
 
 /* ---------- Заголовок секции + текст справа ---------- */
@@ -137,12 +137,12 @@
   gap: var(--space-2xs);
   width: 196px;
   padding: var(--space-md);
-  background-color: var(--color-bg-inverse-strong);
-  color: var(--color-text-on-inverse-muted);
+  background-color: var(--color-navy-deep);
+  color: var(--color-on-navy-muted);
 }
 
 .stat-tile__value {
-  color: var(--color-text-on-inverse);
+  color: var(--color-surface);
 }
 
 /* Mobile/tablet: горизонтальная прокрутка карточек «лесенкой»,
@@ -171,7 +171,7 @@
   height: 220px;
   padding: 20px;
   border-radius: var(--radius-lg);
-  background-color: var(--color-bg-muted);
+  background-color: var(--color-muted);
   scroll-snap-align: start;
 }
 
@@ -182,17 +182,17 @@
 
 .benefit__num {
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-  color: var(--color-accent-text);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-h3);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-teal-text);
 }
 
 .benefit__text {
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--color-text-secondary);
+  font-size: var(--text-small);
+  line-height: var(--lh-body);
+  color: var(--color-ink-muted);
 }
 
 /* ---------- Visa & relocation ---------- */
@@ -204,7 +204,7 @@
   flex-direction: column;
   gap: var(--space-xs);
   padding: 0 0 var(--space-lg) var(--space-lg);
-  border-left: 2px solid var(--color-border-strong);
+  border-left: 2px solid var(--color-navy);
 }
 
 /* Узел на линии (svg из Figma), −9 от внешнего края линии */
@@ -223,12 +223,12 @@
 }
 
 .visa-step__when {
-  color: var(--color-text-secondary);
+  color: var(--color-ink-muted);
 }
 
 .visa-step--last .visa-step__when,
 .visa-step--last .visa-step__num {
-  color: var(--color-accent-text);
+  color: var(--color-teal-text);
 }
 
 /* ---------- Requirements ---------- */
@@ -253,7 +253,7 @@
 }
 
 .checklist {
-  border-top: 1px solid var(--color-border-line);
+  border-top: 1px solid var(--color-line);
 }
 
 .checklist__item {
@@ -261,7 +261,7 @@
   align-items: center;
   gap: var(--space-md);
   padding-block: var(--space-md);
-  border-bottom: 1px solid var(--color-border-line);
+  border-bottom: 1px solid var(--color-line);
 }
 
 .checklist__tick {
@@ -272,18 +272,18 @@
   width: 28px;
   height: 28px;
   border-radius: var(--radius-full);
-  background-color: var(--color-bg-muted);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
-  color: var(--color-accent-text);
+  background-color: var(--color-muted);
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
+  color: var(--color-teal-text);
 }
 
 /* ---------- Apply — тёмный финал страницы ---------- */
 
 .apply {
-  background-color: var(--color-bg-inverse-strong);
-  color: var(--color-text-on-inverse);
+  background-color: var(--color-navy-deep);
+  color: var(--color-surface);
 }
 
 .apply__inner {
@@ -302,7 +302,7 @@
 .apply .eyebrow,
 .apply__lead,
 .apply__call {
-  color: var(--color-text-on-inverse-muted);
+  color: var(--color-on-navy-muted);
 }
 
 /* Heading/H1 56 → Display/96 */
@@ -311,15 +311,15 @@
   flex-direction: column;
   gap: var(--space-lg);
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
+  font-weight: var(--weight-bold);
+  font-size: var(--text-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
 }
 
 .apply__title-indent {
-  padding-left: 32px;
-  color: var(--color-accent-default);
+  padding-left: var(--space-xl);
+  color: var(--color-teal);
 }
 
 .apply__actions {
@@ -335,7 +335,7 @@
 }
 
 .apply__call a:hover {
-  color: var(--color-accent-default);
+  color: var(--color-teal);
 }
 
 /* Превью чата с ботом */
@@ -346,28 +346,28 @@
   gap: var(--space-sm);
   padding: var(--space-lg);
   border-radius: var(--radius-lg);
-  background-color: var(--color-bg-inverse);
+  background-color: var(--color-navy);
 }
 
 .chat__name {
-  color: var(--color-text-on-inverse-muted);
+  color: var(--color-on-navy-muted);
 }
 
 .chat__msg {
   max-width: 100%;
-  padding: 10px 14px;
-  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-lg) var(--radius-sm);
-  background-color: var(--color-bg-canvas);
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--color-text-primary);
+  padding: 10px var(--space-md);
+  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-lg) var(--radius-md);
+  background-color: var(--color-canvas);
+  font-size: var(--text-small);
+  line-height: var(--lh-body);
+  color: var(--color-navy);
 }
 
 .chat__msg--driver {
   align-self: flex-end;
-  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-sm) var(--radius-lg);
-  background-color: var(--color-bg-inverse-raised);
-  color: var(--color-text-on-inverse);
+  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-md) var(--radius-lg);
+  background-color: var(--color-navy-raised);
+  color: var(--color-surface);
 }
 
 /* ---------- Other roles ---------- */
@@ -390,7 +390,7 @@
   align-items: flex-start;
   gap: var(--space-md);
   padding-top: var(--space-md);
-  border-top: 1px solid var(--color-border-line);
+  border-top: 1px solid var(--color-line);
 }
 
 .roles__email {
@@ -404,7 +404,7 @@
 }
 
 .roles__email a:hover {
-  color: var(--color-accent-text);
+  color: var(--color-teal-text);
 }
 
 /* ---------- Driver FAQ: вопросы с зазором, без верхней линии ---------- */
@@ -438,7 +438,7 @@
   }
 
   .chat {
-    max-width: 400px;
+    max-width: var(--measure-sm);
   }
 }
 
@@ -464,9 +464,9 @@
 
   /* Visa: горизонтальный таймлайн, 4 колонки */
   .visa-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-lg); }
-  .visa-step { padding: 28px 0 0; border-left: 0; border-top: 2px solid var(--color-border-strong); }
+  .visa-step { padding: 28px 0 0; border-left: 0; border-top: 2px solid var(--color-navy); }
   .visa-step::before { left: 0; top: -11px; }
-  .visa-step--last { border-top-color: var(--color-accent-default); }
+  .visa-step--last { border-top-color: var(--color-teal); }
 
   /* Requirements: фото | список */
   .req { flex-direction: row; align-items: center; gap: var(--space-xl); }
@@ -488,7 +488,7 @@
 
   .careers-hero__copy {
     flex-shrink: 0;
-    width: 568px;
+    width: var(--measure-lg);
     gap: var(--space-lg);
   }
 
@@ -541,7 +541,7 @@
 
   .offer__stage {
     flex-shrink: 0;
-    width: 568px;
+    width: var(--measure-lg);
     height: 560px;
     padding-right: var(--space-lg);
   }
@@ -571,7 +571,7 @@
     gap: var(--space-xs);
     height: auto;
     padding: 20px 0 0;
-    border-top: 1px solid var(--color-border-line);
+    border-top: 1px solid var(--color-line);
     border-radius: 0;
     background-color: transparent;
   }
@@ -582,14 +582,14 @@
 
   .benefit__num {
     font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1.4;
+    font-weight: var(--weight-bold);
+    font-size: var(--text-data);
+    line-height: var(--lh-label);
     letter-spacing: 0;
   }
 
   .benefit__text {
-    font-size: 16px;
+    font-size: var(--text-body);
   }
 
   /* Visa: горизонтальная линия сверху, 4 колонки */
@@ -602,7 +602,7 @@
   .visa-step {
     padding: 28px 0 0;
     border-left: 0;
-    border-top: 2px solid var(--color-border-strong);
+    border-top: 2px solid var(--color-navy);
   }
 
   .visa-step::before {
@@ -611,7 +611,7 @@
   }
 
   .visa-step--last {
-    border-top-color: var(--color-accent-default);
+    border-top-color: var(--color-teal);
   }
 
   /* Requirements: фото | список */
@@ -647,7 +647,7 @@
 
   .apply__title {
     font-size: 96px;
-    line-height: 1;
+    line-height: var(--lh-tight);
     letter-spacing: -0.02em;
   }
 

@@ -66,13 +66,13 @@
 .svc-hero__stage::before {
   inset: 0 auto 0 0;
   width: 80px;
-  background-image: linear-gradient(to right, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+  background-image: linear-gradient(to right, var(--color-canvas), var(--color-canvas-clear));
 }
 
 .svc-hero__stage::after {
   inset: 0 0 auto 0;
   height: 70px;
-  background-image: linear-gradient(to bottom, var(--color-bg-canvas), var(--color-bg-canvas-clear));
+  background-image: linear-gradient(to bottom, var(--color-canvas), var(--color-canvas-clear));
 }
 
 .svc-hero__chip {
@@ -87,7 +87,7 @@
 .svc-index {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--color-border-line);
+  border-top: 1px solid var(--color-line);
 }
 
 .svc-index__link {
@@ -95,16 +95,16 @@
   align-items: center;
   gap: var(--space-xs);
   padding-block: var(--space-md);
-  border-bottom: 1px solid var(--color-border-line);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
+  border-bottom: 1px solid var(--color-line);
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
   white-space: nowrap;
   transition: color var(--duration) var(--ease);
 }
 
 .svc-index__link:hover {
-  color: var(--color-accent-text);
+  color: var(--color-teal-text);
 }
 
 @media screen and (min-width: 768px) {
@@ -126,7 +126,7 @@
   .svc-hero__inner {
     gap: 40px;
     padding-top: var(--space-3xl);
-    padding-bottom: var(--space-4xl);
+    padding-bottom: var(--section-desktop);
   }
 
   .svc-hero__main {
@@ -136,7 +136,7 @@
 
   .svc-hero__copy {
     flex-shrink: 0;
-    width: 568px;
+    width: var(--measure-lg);
     gap: var(--space-lg);
   }
 
@@ -191,11 +191,11 @@
   flex-direction: column;
   gap: 2px;
   padding-block: 10px;
-  border-top: 1px solid var(--color-border-line);
+  border-top: 1px solid var(--color-line);
 }
 
 .specs__row dt {
-  color: var(--color-text-secondary);
+  color: var(--color-ink-muted);
 }
 
 @media screen and (min-width: 768px) {
@@ -218,7 +218,7 @@
 
   .svc-chapter__photo {
     flex-shrink: 0;
-    width: 568px;
+    width: var(--measure-lg);
     border-radius: var(--radius-xl);
   }
 
@@ -247,18 +247,18 @@
 
 .svc-fleet {
   padding-top: var(--space-xl);
-  background-color: var(--color-bg-inverse-strong);
-  color: var(--color-text-on-inverse-soft);
+  background-color: var(--color-navy-deep);
+  color: var(--color-muted);
 }
 
 .svc-fleet .eyebrow,
 .svc-fleet__lead,
 .svc-stats dd {
-  color: var(--color-text-on-inverse-muted);
+  color: var(--color-on-navy-muted);
 }
 
 .svc-fleet .section-title__line--indent {
-  color: var(--color-accent-on-inverse);
+  color: var(--color-teal);
 }
 
 .svc-fleet__inner {
@@ -285,7 +285,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-lg) 0;
   padding-top: var(--space-lg);
-  border-top: 1px solid var(--color-border-on-inverse);
+  border-top: 1px solid var(--color-navy-raised);
 }
 
 .svc-stats__item {
@@ -377,8 +377,8 @@
   gap: var(--space-2xs);
   padding: var(--space-md) 20px;
   border-radius: var(--radius-md);
-  background-color: var(--color-bg-canvas);
-  box-shadow: var(--shadow-chip);
+  background-color: var(--color-canvas);
+  box-shadow: var(--shadow-raised);
   white-space: nowrap;
 }
 
@@ -386,7 +386,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  color: var(--color-text-secondary);
+  color: var(--color-ink-muted);
 }
 
 /* Зелёная точка «в пути, по графику» */
@@ -395,8 +395,8 @@
   flex-shrink: 0;
   width: 8px;
   height: 8px;
-  border-radius: 50%;
-  background-color: var(--color-status-on-time);
+  border-radius: var(--radius-full);
+  background-color: var(--color-success);
 }
 
 .svc-safety__chips {
@@ -425,7 +425,7 @@
   flex-direction: column;
   gap: var(--space-xs);
   padding-top: var(--space-md);
-  border-top: 1px solid var(--color-border-line);
+  border-top: 1px solid var(--color-line);
 }
 
 @media screen and (min-width: 768px) {
@@ -501,7 +501,7 @@
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  background-color: var(--color-bg-canvas);
+  background-color: var(--color-canvas);
 }
 
 .corridor img {
@@ -511,9 +511,9 @@
 
 .corridor__city {
   position: absolute;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
   white-space: nowrap;
 }
 
@@ -590,7 +590,7 @@
   justify-content: space-between;
   gap: var(--space-md);
   padding-block: var(--space-sm);
-  border-bottom: 1px solid var(--color-border-line);
+  border-bottom: 1px solid var(--color-line);
 }
 
 /* Mobile: 5-й маршрут скрыт, как в Figma (после правила tr, иначе перебьёт) */
@@ -600,14 +600,14 @@
 
 .transit-table td {
   padding: 0;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
   text-align: left;
 }
 
 .transit-table__days {
-  font-weight: 600;
-  line-height: 1.2;
+  font-weight: var(--weight-semibold);
+  line-height: var(--lh-ui);
   white-space: nowrap;
 }
 
@@ -641,14 +641,14 @@
   /* Обычная таблица в карточке */
   .transit-table {
     overflow: hidden;
-    border: 1px solid var(--color-border-line);
+    border: 1px solid var(--color-line);
     border-radius: var(--radius-xl);
-    background-color: var(--color-bg-surface);
+    background-color: var(--color-surface);
   }
 
   .transit-table thead {
     display: table-header-group;
-    background-color: var(--color-bg-canvas);
+    background-color: var(--color-canvas);
   }
 
   .transit-table tbody {
@@ -662,7 +662,7 @@
   }
 
   .transit-table tbody tr {
-    border-top: 1px solid var(--color-border-line);
+    border-top: 1px solid var(--color-line);
   }
 
   .transit-table__km {
@@ -681,11 +681,11 @@
   }
 
   .transit-table th {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.2;
+    font-size: var(--text-body);
+    font-weight: var(--weight-semibold);
+    line-height: var(--lh-ui);
     text-align: left;
-    color: var(--color-text-secondary);
+    color: var(--color-ink-muted);
   }
 }
 
@@ -728,7 +728,7 @@
   flex-direction: column;
   gap: var(--space-2xs);
   padding-top: var(--space-md);
-  border-top: 1px solid var(--color-border-line);
+  border-top: 1px solid var(--color-line);
 }
 
 .sales-contact a {
@@ -736,16 +736,16 @@
 }
 
 .sales-contact a:hover {
-  color: var(--color-accent-text);
+  color: var(--color-teal-text);
 }
 
 .faq__show-all {
   position: relative;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  line-height: var(--lh-ui);
   white-space: pre;
-  color: var(--color-accent-text);
+  color: var(--color-teal-text);
 }
 
 /* Зона нажатия 44 px — невидимая, вёрстку не сдвигает */
@@ -756,7 +756,7 @@
 }
 
 .faq__show-all:hover {
-  color: var(--color-text-primary);
+  color: var(--color-navy);
 }
 
 @media screen and (min-width: 1200px) {

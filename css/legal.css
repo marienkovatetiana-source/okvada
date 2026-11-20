@@ -45,12 +45,12 @@
   gap: var(--space-xs);
   padding: var(--space-lg);
   border-radius: var(--radius-lg);
-  background-color: var(--color-bg-inverse-strong);
-  color: var(--color-text-on-inverse-muted);
+  background-color: var(--color-navy-deep);
+  color: var(--color-on-navy-muted);
 }
 
 .doc-toc__label {
-  color: var(--color-text-on-inverse-muted);
+  color: var(--color-on-navy-muted);
 }
 
 /* Desktop: список ссылок; mobile: нативный select */
@@ -67,21 +67,21 @@
   padding: 0 var(--space-lg) 0 0;
   border: 0;
   background-color: transparent;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
-  color: var(--color-text-on-inverse-soft);
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
+  color: var(--color-muted);
   appearance: none;
   cursor: pointer;
 }
 
 /* Пункты списка — тёмного цвета, иначе в системном списке их не видно */
 .doc-toc__select option {
-  color: var(--color-text-primary);
+  color: var(--color-navy);
 }
 
 .doc-toc__select select:focus-visible {
-  outline: 2px solid var(--color-accent-on-inverse);
+  outline: 2px solid var(--color-teal);
   outline-offset: 4px;
 }
 
@@ -102,8 +102,8 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: var(--text-small);
+  line-height: var(--lh-label);
   pointer-events: none;
 }
 
@@ -113,31 +113,31 @@
   align-items: flex-start;
   gap: var(--space-sm);
   padding-block: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
-  color: var(--color-text-on-inverse-muted);
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  line-height: var(--lh-label);
+  color: var(--color-on-navy-muted);
   transition: color var(--duration) var(--ease);
 }
 
 .doc-toc__num {
   font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.4;
+  font-size: var(--text-data);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-label);
 }
 
 .doc-toc__link:hover,
 .doc-toc__link.is-active {
-  color: var(--color-text-on-inverse-soft);
+  color: var(--color-muted);
 }
 
 .doc-toc__link.is-active .doc-toc__num {
-  color: var(--color-accent-on-inverse);
+  color: var(--color-teal);
 }
 
 .doc-toc__link:focus-visible {
-  outline: 2px solid var(--color-accent-on-inverse);
+  outline: 2px solid var(--color-teal);
   outline-offset: 2px;
 }
 
@@ -148,7 +148,7 @@
   flex-direction: column;
   gap: var(--space-xs);
   padding-block: 20px;
-  border-top: 1px solid var(--color-border-line);
+  border-top: 1px solid var(--color-line);
   /* под sticky-шапкой при переходе по якорю */
   scroll-margin-top: var(--header-h);
 }
@@ -161,9 +161,9 @@
 
 .clause__title {
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.15;
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-lead);
+  line-height: var(--lh-heading);
 }
 
 /* ---------- Desktop ---------- */
@@ -176,7 +176,7 @@
   .doc-toc__list { display: flex; flex-direction: column; gap: var(--space-xs); }
   .doc-toc__select { display: none; }
   .doc__content { flex: 1 1 0; min-width: 0; }
-  .clause { flex-direction: row; gap: var(--space-md); padding-block: 24px; }
+  .clause { flex-direction: row; gap: var(--space-md); padding-block: var(--space-lg); }
   .clause__text { flex: 1 1 0; min-width: 0; }
 }
 
@@ -228,8 +228,8 @@
   }
 
   .clause__title {
-    font-size: 24px;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
+    font-size: var(--text-h3);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--tracking-tight);
   }
 }
