@@ -1691,6 +1691,11 @@ button.arrow-circle::after {
   height: 20px;
 }
 
+/* Mobile: зазор текст — иконка 8 (как в макете, иначе вопросы переносятся иначе) */
+@media screen and (max-width: 767px) {
+  .faq__btn { gap: var(--space-xs); }
+}
+
 .faq__minus,
 .faq__btn[aria-expanded="true"] .faq__plus {
   display: none;

@@ -4,20 +4,16 @@
    Mobile-first: base 375 → 768 (tablet) → 1200 (desktop)
    ========================================================= */
 
-/* Отступы секций Services: 48 mobile / 96 desktop */
+/* Отступы секций Services — токены: mobile 32 / 48, tablet 64 / 64, desktop 96 / 96 */
 .svc-section {
-  padding-block: var(--space-2xl);
+  padding-top: var(--section-top);
+  padding-bottom: var(--section-bottom);
 }
 
 .svc-section[id] {
   scroll-margin-top: var(--header-h);
 }
 
-@media screen and (min-width: 1200px) {
-  .svc-section {
-    padding-block: var(--space-4xl);
-  }
-}
 
 /* =========================================================
    Page hero
@@ -28,7 +24,7 @@
   flex-direction: column;
   gap: var(--space-lg);
   padding-top: var(--space-xl);
-  padding-bottom: var(--space-lg);
+  padding-bottom: var(--space-2xl);
 }
 
 .svc-hero__main {
@@ -354,7 +350,7 @@
 .svc-safety {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  gap: var(--space-xl);
 }
 
 .svc-safety__photo {
@@ -479,6 +475,11 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+}
+
+/* Mobile: заголовок → карта 32 (section/heading-mobile) */
+@media screen and (max-width: 767px) {
+  .svc-transit__title { margin-bottom: 20px; }
 }
 
 .svc-transit__body {
@@ -711,7 +712,7 @@
 .svc-faq {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  gap: var(--space-xl);
 }
 
 .svc-faq__intro {
@@ -737,12 +738,19 @@
 }
 
 .faq__show-all {
-  min-height: 44px;
+  position: relative;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.2;
   white-space: pre;
   color: var(--color-accent-text);
+}
+
+/* Зона нажатия 44 px — невидимая, вёрстку не сдвигает */
+.faq__show-all::after {
+  content: "";
+  position: absolute;
+  inset: -12px 0;
 }
 
 .faq__show-all:hover {
