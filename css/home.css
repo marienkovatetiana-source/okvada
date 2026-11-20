@@ -480,7 +480,7 @@
   background-color: var(--color-navy);
   color: var(--color-surface);
   scroll-snap-align: start;
-  transition: transform 400ms var(--ease), box-shadow 400ms var(--ease);
+  transition: transform var(--duration-slow) var(--ease), box-shadow var(--duration-slow) var(--ease);
 }
 
 .case:nth-child(even) {
@@ -497,7 +497,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 700ms var(--ease);
+  transition: transform var(--duration-slower) var(--ease);
 }
 
 .case__overlay {
@@ -565,7 +565,7 @@
 }
 
 .case:hover .case__photo img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .case:hover .arrow-circle--on-dark,
@@ -796,7 +796,7 @@
   object-fit: cover;
   opacity: 0;
   transform: scale(1.04);
-  transition: opacity 600ms var(--ease), transform 1200ms var(--ease);
+  transition: opacity var(--duration-slower) var(--ease), transform var(--duration-slower) var(--ease);
 }
 
 .adv__photo img.is-active {
@@ -932,7 +932,7 @@
 }
 
 .adv__panel {
-  transition: opacity 300ms var(--ease), transform 300ms var(--ease);
+  transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease);
 }
 
 .adv__panel-title span {
@@ -1143,7 +1143,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 700ms var(--ease);
+  transition: transform var(--duration-slower) var(--ease);
 }
 
 .service-row:hover .service-row__photo img {
@@ -1390,7 +1390,7 @@
 
 .live-strip__status {
   color: var(--color-surface);
-  transition: opacity 400ms var(--ease);
+  transition: opacity var(--duration-slow) var(--ease);
 }
 
 .live-strip__status.is-fading {

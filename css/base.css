@@ -308,7 +308,7 @@ button {
 .reveal-ready .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+  transition: opacity var(--duration-slower) var(--ease), transform var(--duration-slower) var(--ease);
 }
 
 .reveal-ready .reveal.is-visible {
