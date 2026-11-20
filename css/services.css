@@ -232,6 +232,19 @@
   }
 }
 
+/* Tablet: глава услуги — заголовок сверху, фото | текст */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .svc-chapter {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    grid-template-areas: "title title" "photo text";
+    gap: var(--space-lg);
+  }
+  .svc-chapter__title { grid-area: title; }
+  .svc-chapter__photo { grid-area: photo; height: 420px; border-radius: var(--radius-xl); }
+  .svc-chapter__text { grid-area: text; }
+}
+
 /* =========================================================
    03 · Fleet — тёмная секция
    ========================================================= */
@@ -324,6 +337,14 @@
     height: 520px;
     border-radius: var(--radius-xl);
   }
+}
+
+/* Tablet: Fleet — заголовок | лид */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .svc-fleet__head { flex-direction: row; align-items: flex-end; gap: var(--space-2xl); }
+  .svc-fleet__head .section-title { flex: 1 1 0; min-width: 0; }
+  .svc-fleet__lead { flex-shrink: 0; width: 320px; }
+  .svc-fleet__photo { height: 440px; border-radius: var(--radius-xl); }
 }
 
 /* =========================================================
@@ -663,6 +684,11 @@
     text-align: left;
     color: var(--color-text-secondary);
   }
+}
+
+/* Tablet: карта по центру над таблицей */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .corridor--desktop { align-self: center; }
 }
 
 @media screen and (min-width: 1200px) {
