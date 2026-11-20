@@ -193,6 +193,19 @@
 
 /* ---------- Desktop ---------- */
 
+/* Tablet: основной блок | менеджер, карточки «пока ждёте» в ряд */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .ty { gap: var(--space-2xl); }
+  .ty__top { flex-direction: row; align-items: flex-start; gap: var(--space-xl); }
+  .ty__main { flex: 1 1 0; min-width: 0; }
+  .ty-summary { border-radius: var(--radius-xl); }
+  .ty-manager { flex: 0 0 280px; padding: var(--space-lg); border-radius: var(--radius-2xl); }
+  .ty-manager__photo { height: 200px; border-radius: var(--radius-xl); }
+  .ty-wait__cards { flex-direction: row; gap: var(--space-lg); }
+  .ty-card { flex: 1 1 0; min-width: 0; }
+  .ty-card__photo { height: 180px; border-radius: var(--radius-xl); }
+}
+
 @media screen and (min-width: 1200px) {
   .ty {
     gap: var(--space-3xl);

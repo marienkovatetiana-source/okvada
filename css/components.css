@@ -839,6 +839,23 @@ button.arrow-circle::after {
   gap: var(--space-sm);
 }
 
+/* Tablet: футер как на десктопе, компания сверху, колонки ссылок в ряд */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer { padding-block: var(--space-2xl); }
+  .footer__inner { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-xl); }
+  .footer__top, .footer__meta { display: none; }
+  .footer__company { display: flex; flex-direction: column; gap: var(--space-sm); max-width: 420px; font-size: 14px; line-height: 1.5; color: var(--color-text-on-inverse-muted); }
+  .footer__company .footer__brand { color: var(--color-text-on-inverse); }
+  .footer__cols { display: flex; gap: var(--space-3xl); border: 0; }
+  .footer__col { border: 0; }
+  .footer__toggle { height: auto; margin-bottom: var(--space-sm); pointer-events: none; }
+  .footer__toggle .icon { display: none; }
+  .footer__panel { display: block; }
+  .footer__list { display: flex; flex-direction: column; gap: var(--space-sm); }
+  .footer__list a { display: inline; min-height: 0; padding: 0; font-size: 14px; white-space: nowrap; }
+  .footer__list li:last-child a { margin: 0; }
+}
+
 @media screen and (min-width: 1200px) {
   .footer {
     padding-block: var(--space-3xl);

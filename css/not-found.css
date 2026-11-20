@@ -117,6 +117,14 @@
 
 /* ---------- Desktop ---------- */
 
+/* Tablet: фото | текст */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .nf { flex-direction: row; align-items: center; gap: var(--space-2xl); }
+  .nf__content { flex: 1 1 0; }
+  .nf__code { font-size: 120px; line-height: 0.9; letter-spacing: -0.03em; }
+  .nf__photo { order: 0; flex: 0 0 auto; width: 42%; height: auto; aspect-ratio: 1; padding: 0 0 var(--space-lg) var(--space-lg); border-radius: var(--radius-xl); }
+}
+
 @media screen and (min-width: 1200px) {
   .nf {
     flex-direction: row;
