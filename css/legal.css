@@ -127,9 +127,12 @@
   line-height: var(--lh-label);
 }
 
-.doc-toc__link:hover,
 .doc-toc__link.is-active {
   color: var(--color-muted);
+}
+
+.doc-toc__link:hover {
+  color: var(--color-teal);
 }
 
 .doc-toc__link.is-active .doc-toc__num {

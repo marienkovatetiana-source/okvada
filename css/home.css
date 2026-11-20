@@ -76,13 +76,21 @@
   background-image: linear-gradient(180deg, var(--color-deep-clear) 0%, color-mix(in srgb, var(--color-navy-deep) 55%, transparent) 100%);
 }
 
+.hero__wordwrap {
+  position: absolute;
+  inset: 0;
+  container-type: inline-size;
+  pointer-events: none;
+}
+
 .hero__word {
   position: absolute;
   left: 50%;
-  top: 820px;
+  /* 820 px на 375: top держит низ слова на месте при росте шрифта (0.62 × размер шрифта) */
+  top: calc(894.4px - 19.84cqw);
   font-family: var(--font-heading);
   font-weight: 900;
-  font-size: 120px;
+  font-size: 32cqw;
   line-height: 0.76;
   letter-spacing: -0.05em;
   color: var(--color-canvas);
@@ -98,7 +106,7 @@
 
 .hero__copy {
   position: relative;
-  z-index: 2;
+  z-index: var(--z-raised);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -117,7 +125,7 @@
 /* Mobile: live-плашка маршрута */
 .hero__live {
   position: absolute;
-  z-index: 2;
+  z-index: var(--z-raised);
   top: 510px;
   right: max(var(--gutter), env(safe-area-inset-right, 0px));
   display: flex;
@@ -193,7 +201,7 @@
     max-width: var(--measure-sm);
   }
   .hero__word {
-    font-size: min(31.1vw, 448px);
+    font-size: 31.1cqw;
     letter-spacing: -0.05em;
   }
 }
@@ -207,7 +215,7 @@
   .hero__fade-left { width: 220px; }
   .hero__fade-top { height: 140px; }
   .hero__band { top: 520px; height: 240px; border-radius: 0 0 28px 28px; }
-  .hero__word { top: calc(760px - 0.62 * min(31.1vw, 448px)); }
+  .hero__word { top: calc(760px - 19.282cqw); }
   .hero__copy { gap: var(--space-lg); padding-top: 140px; }
   .hero__live { top: 420px; right: var(--gutter); }
 }
@@ -249,14 +257,12 @@
   }
 
   .hero__word {
-    left: 40.5px;
+    left: 2.8125cqw; /* 40.5 px при 1440 */
     top: 637px;
     transform: none;
   }
 
   .hero__wordwrap {
-    position: absolute;
-    inset: 0;
     max-width: var(--container);
     margin-inline: auto;
   }
@@ -273,7 +279,7 @@
   .mini-map {
     display: block;
     position: absolute;
-    z-index: 2;
+    z-index: var(--z-raised);
     top: 481px;
     left: calc(1064px / 1440px * 100%);
     left: 73.89%;
@@ -804,7 +810,7 @@
 
 .media-toggle {
   position: absolute;
-  z-index: 1;
+  z-index: var(--z-raised);
   left: 50%;
   top: 50%;
   display: flex;
@@ -1625,5 +1631,58 @@
 
   .careers__cta {
     align-self: flex-start;
+  }
+}
+
+/* ---------- What we carry: стопка карточек (desktop ≥ 1200, без reduced-motion) ----------
+   Карточки закрепляются (sticky) с шагом по top и наезжают друг на друга при скролле;
+   при появлении карточка «раскрывается» (scroll-driven animation, если браузер умеет). */
+
+@media screen and (min-width: 1200px) and (prefers-reduced-motion: no-preference) {
+  .services__rows {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .service-row,
+  .service-row:last-child {
+    position: sticky;
+    top: calc(var(--header-h) + var(--space-lg));
+    padding: var(--space-xl);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-2xl);
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-raised);
+  }
+
+  .service-row + .service-row {
+    top: calc(var(--header-h) + var(--space-lg) + var(--space-xl));
+  }
+
+  /* Запас скролла внизу: вторая карточка успевает закрепиться, первая выглядывает на 32 px */
+  .services__rows::after {
+    content: "";
+    height: var(--space-xl);
+  }
+
+  @supports (animation-timeline: view()) {
+    .service-row {
+      animation: card-open linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+  }
+
+  @keyframes card-open {
+    from {
+      opacity: 0.4;
+      transform: translateY(48px) scale(0.96);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
   }
 }

@@ -319,3 +319,16 @@ if (faq) {
     });
   }
 }
+
+/* ---------- Перекрытие секций: высота закреплённой секции для CSS ---------- */
+const overlapSections = document.querySelectorAll('[data-overlap]');
+
+if (overlapSections.length && 'ResizeObserver' in window) {
+  const overlapObserver = new ResizeObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.style.setProperty('--stick-h', `${entry.target.offsetHeight}px`);
+    });
+  });
+
+  overlapSections.forEach((section) => overlapObserver.observe(section));
+}

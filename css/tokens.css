@@ -112,6 +112,15 @@
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
   --duration: 250ms;
 
+  /* ---------- Слои (z-index) ---------- */
+  --z-raised: 1;     /* плашки поверх фото (chip), текст hero над фото, Media toggle */
+  --z-dropdown: 10;  /* выпадающее меню языка внутри шапки */
+  --z-header: 50;    /* липкая шапка */
+  --z-float: 60;     /* над шапкой: полоса safe area и кнопка Back to top */
+  --z-cookie: 65;    /* cookie-баннер */
+  --z-overlay: 70;   /* затемнение под мобильным меню и sheet */
+  --z-modal: 80;     /* мобильное меню и cookie-настройки (sheet) */
+
   /* ---------- Header ---------- */
   --header-h: 69px;
 }

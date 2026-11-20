@@ -79,7 +79,7 @@
   position: absolute;
   right: var(--space-md);
   bottom: var(--space-md);
-  z-index: 1;
+  z-index: var(--z-raised);
 }
 
 /* Оглавление страницы: 01–05 */

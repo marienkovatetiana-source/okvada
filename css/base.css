@@ -30,7 +30,7 @@ body::before {
   position: fixed;
   inset: 0 0 auto;
   height: env(safe-area-inset-top, 0px);
-  z-index: 60;
+  z-index: var(--z-float);
   background-color: var(--color-canvas);
 }
 
@@ -327,5 +327,30 @@ button {
     animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 1ms !important;
+  }
+}
+
+/* =========================================================
+   Перекрытие секций (desktop ≥ 1200, только без reduced-motion)
+   Секция с data-overlap «приклеивается» (position: sticky) и стоит на месте,
+   пока следующая секция наезжает на неё. Высоту секции в --stick-h пишет
+   js/main.js: если секция выше экрана, она держится нижним краем (top отрицательный),
+   чтобы её низ можно было увидеть до перекрытия.
+   ========================================================= */
+
+@media screen and (min-width: 1200px) and (prefers-reduced-motion: no-preference) {
+  main > [data-overlap] {
+    position: sticky;
+    top: min(var(--header-h), calc(100svh - var(--stick-h, 0px)));
+    z-index: 0;
+  }
+
+  main > section:not([data-overlap]) {
+    position: relative;
+    z-index: 1;
+  }
+
+  main > [data-overlap] + section {
+    box-shadow: var(--shadow-up);
   }
 }
