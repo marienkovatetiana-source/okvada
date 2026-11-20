@@ -471,6 +471,15 @@
 
 /* ---------- Desktop ---------- */
 
+/* Tablet: менеджер слева (узкая колонка), форма справа */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-form-section { flex-direction: row; align-items: flex-start; gap: var(--space-xl); }
+  .contact-form-section__main { flex: 1 1 0; min-width: 0; gap: var(--space-xl); }
+  .manager { order: 0; flex-shrink: 0; width: 300px; padding: var(--space-lg); border-radius: var(--radius-2xl); }
+  .manager__photo { border-radius: var(--radius-xl); }
+  .lead-form { border-radius: var(--radius-xl); }
+}
+
 @media screen and (min-width: 1200px) {
   .contact-hero__inner {
     gap: 40px;
