@@ -1554,6 +1554,14 @@ button.arrow-circle::after {
   color: var(--color-accent-default);
 }
 
+.cert__text { min-width: 0; }
+
+/* Узкие телефоны (320): статус может переноситься, строка не выпирает */
+@media screen and (max-width: 359px) {
+  .cert { flex-wrap: wrap; }
+  .cert__status { white-space: normal; }
+}
+
 .cert--all {
   background-color: var(--color-accent-default);
   color: var(--color-text-on-accent);
