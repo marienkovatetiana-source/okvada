@@ -125,8 +125,8 @@
 @media screen and (min-width: 1200px) {
   .svc-hero__inner {
     gap: 40px;
-    padding-top: var(--space-4xl);
-    padding-bottom: var(--space-2xl);
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-4xl);
   }
 
   .svc-hero__main {
@@ -310,7 +310,7 @@
 
 @media screen and (min-width: 1200px) {
   .svc-fleet {
-    padding-top: var(--space-3xl);
+    padding-top: var(--section-desktop);
   }
 
   .svc-fleet__head {
@@ -337,6 +337,8 @@
 
 /* Tablet: Fleet — заголовок | лид */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .svc-hero__inner { padding-top: var(--space-3xl); padding-bottom: var(--space-3xl); }
+  .svc-fleet { padding-top: var(--section-top); }
   .svc-fleet__head { flex-direction: row; align-items: flex-end; gap: var(--space-2xl); }
   .svc-fleet__head .section-title { flex: 1 1 0; min-width: 0; }
   .svc-fleet__lead { flex-shrink: 0; width: 320px; }
@@ -444,7 +446,7 @@
 
 @media screen and (min-width: 1200px) {
   .svc-safety {
-    gap: var(--space-2xl);
+    gap: var(--section-heading-desktop);
   }
 
   .svc-safety__photo {
