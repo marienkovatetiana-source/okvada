@@ -107,9 +107,13 @@
   --header-h: 69px;
 }
 
+/* Tablet 768–1199: упрощённая десктопная раскладка */
 @media screen and (min-width: 768px) {
   :root {
-    --gutter: 32px;
+    --gutter: 48px;
+    --section-top: 64px;
+    --section-bottom: 64px;
+    --section-heading: 48px;
   }
 }
 

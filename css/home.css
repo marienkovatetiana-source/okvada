@@ -180,6 +180,20 @@
   }
 }
 
+/* Tablet: hero как на десктопе, фото справа, без мини-карты (остаётся live-плашка) */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero { height: 760px; }
+  .hero__stage { top: 72px; left: auto; right: 0; width: 52%; height: 688px; }
+  .hero__title { font-size: 52px; }
+  .hero__photo--blur { left: -100px; right: 100px; filter: blur(12px); }
+  .hero__fade-left { width: 220px; }
+  .hero__fade-top { height: 140px; }
+  .hero__band { top: 520px; height: 240px; border-radius: 0 0 28px 28px; }
+  .hero__word { top: calc(760px - 0.62 * min(31.1vw, 448px)); }
+  .hero__copy { gap: 24px; padding-top: 140px; }
+  .hero__live { top: 420px; right: var(--gutter); }
+}
+
 @media screen and (min-width: 1200px) {
   .hero {
     height: 980px;

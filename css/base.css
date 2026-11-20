@@ -232,6 +232,16 @@ button {
   .t-body-l { font-size: 20px; }
 }
 
+/* Tablet 768–1199: промежуточные размеры текста */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .t-display { font-size: 60px; line-height: 1.02; }
+  .t-display-72 { font-size: 56px; }
+  .t-h1 { font-size: 48px; }
+  .t-h2 { font-size: 36px; font-weight: 700; line-height: 1.05; }
+  .t-body-l { font-size: 18px; }
+  .page-hero { padding-top: var(--space-3xl); }
+}
+
 /* ---------- Label: 8 px teal dot + Label/Eyebrow ---------- */
 
 .eyebrow {
@@ -276,6 +286,11 @@ button {
 
 .section-title--tight {
   gap: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .section-title__line--indent { padding-left: 64px; }
+  .section-title--short-indent .section-title__line--indent { padding-left: 32px; }
 }
 
 @media screen and (min-width: 1200px) {
