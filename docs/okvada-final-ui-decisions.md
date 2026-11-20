@@ -74,3 +74,4 @@ Low-fi detached snapshots (grey bars) — document the early stage; UI is the so
 - Sections fade in on scroll; images have fixed aspect ratio and load lazily below the fold, so nothing jumps. No count-up numbers, no copy or elements beyond the mockup.
 - Back to top: fades in after one screen of scroll, smooth scroll to the top on click, hidden while the cookie banner is open. Switches to Filled over the dark block and the footer.
 - Kept on purpose: pulsing dots on live pills, live status cross-fade every 4 s (Geography), photo zoom on hover (Cases, Services), card lift on hover (Cases).
+- Перекрытие секций и стопка карточек «What we carry» (только desktop ≥ 1200, без reduced-motion; решение 20 Nov, детали — `docs/components.md`).
