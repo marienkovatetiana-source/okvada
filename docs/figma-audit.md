@@ -40,3 +40,21 @@
 - Проверено: скриншоты на 768 / 900 / 1100 / 1920 по основным секциям; прогон 14 ширин (320–1920) × 10 страниц — горизонтального скролла нет.
 - Не проверено: все секции на 1024 и 1199 глазами (смотрел в основном 768 и 900); Safari, Firefox, реальные устройства; сверка desktop 1440 и states с Figma; расхождения mobile 375 из п. 1 (Services FAQ, Careers Apply/FAQ, Legal) не правились.
 - Скрипты проверки лежат вне репозитория (puppeteer + системный Chrome); при необходимости перенесу в `scripts/`.
+
+## 6. Сверка mobile 375 (20 Nov, второй проход)
+Метод: каждая секция кода (puppeteer, 375) сравнивалась с PNG секции из Figma (04 · UI, mobile) — картинка «макет | код» и оценка различия. Сверены все 10 страниц и футер.
+
+Найдено и исправлено:
+- **Home · Careers teaser**: в макете кнопка «Open positions» — залитый navy Pill по ширине текста (и на mobile, и на desktop); в коде была outline на всю ширину → исправлено.
+- **Home · About**: лишние ~8 px сверху (eyebrow строчный, в блоке) → `.about__head` стал flex-колонкой.
+- **Services**: секции использовали старые отступы 48/48 → теперь токены (32/48 mobile, 64/64 tablet, 96/96 desktop); hero снизу 48; Safety и FAQ: заголовок → контент 32; Transit: заголовок → карта 32; «Show all questions» без раздутой высоты (зона нажатия 44 px — невидимая); текст ответа в FAQ как в макете («Invoice after delivery, payment within 30 days.»).
+- **FAQ (Services, Careers)**: на mobile зазор текст — иконка 0, как в макете (иначе длинные вопросы переносятся иначе).
+
+Итоговые высоты (код / макет): Home hero 910/910, About 968/964, Cases 853/852, Proof 1148/1147, Careers teaser 631/628; Services hero 934/936, FTL/LTL 866/868, Trailer 806/808, Safety 981/980, Transit 689/688, FAQ 828/827; About, Careers (кроме Apply), Contact, Thank you, Terms, Privacy, 404 — в пределах 3 px.
+
+Осознанные расхождения (не правил):
+- **Careers · Apply** (+19 px): в макете строка чата «Great. Which countries have you driven in?» вылезает за край пузыря, в коде она переносится — корректное поведение.
+- **Legal** (+23 px): строка «Information according to § 5 DDG · Last updated 1 Oct 2026» в макете обрезана, в коде переносится на вторую строку.
+- About: ещё ~4 px, Home Cases/Why/Proof — без правок (оценка различия < 4).
+
+Не проверено: изменение About eyebrow и токенов Services на desktop 1440 и tablet глазами против Figma; States (cookie, меню, ошибки формы) на mobile; сверка desktop 1440 целиком.
