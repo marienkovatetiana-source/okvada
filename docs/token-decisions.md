@@ -293,3 +293,6 @@
 - Префиксы `-webkit-user-select` и `-webkit-appearance`.
 - `animation-timeline: view()` уже под `@supports`, `text-wrap: balance` — улучшение без запасного варианта.
 Не проверено в живом Safari и Firefox (здесь их нет).
+
+## Картинки: WebP и srcset (21 Nov)
+Новые фото (`fleet-drivers`, `fleet-truck`, `terminal-loading`, `services-trailer`) лежат в двух размерах: `*-sm.webp` (960 px, мобильный и обычные экраны) и `*-lg.webp` (до 1600 px, ретина и десктоп ×2), качество 0.8. В разметке `src` — малый файл, `srcset` с дескрипторами `960w` / `1600w` и `sizes` под реальную ширину блока; `width` и `height` — размеры большого файла (пропорции те же). Остальные фото (case-1…3, about-team, hero-truck и др.) пока в jpg, их оптимизируем после замены.
