@@ -1088,6 +1088,12 @@ button.arrow-circle::after {
     justify-content: center;
   }
 
+  /* Ссылка «Settings» стоит по центру ряда кнопок, а не у верхнего края (перебиваем align-self у .text-btn) */
+  .cookie-banner__settings--desktop {
+    align-self: center;
+    margin-right: var(--space-xs);
+  }
+
   .cookie-banner__settings--mobile {
     display: none;
   }
