@@ -39,7 +39,7 @@ Figma (06ISviKP4JoWAxecNOgJUb, страница 04 · UI) остаётся ис�
 ### 2.3. Продакшн-пробелы (макетом не покрыты, нужны для публикации)
 | Область | Что сейчас | Что нужно |
 |---|---|---|
-| SEO | `<title>` и `description` есть | canonical, Open Graph / Twitter, favicon + apple-touch-icon, `robots.txt`, `sitemap.xml`, JSON-LD (Organization / LocalBusiness), hreflang после появления DE, `noindex` на thank-you |
+| SEO | ~~сделано 21 Nov (см. token-decisions.md)~~; осталось: hreflang после появления DE. Было: canonical, Open Graph / Twitter, favicon + apple-touch-icon, `robots.txt`, `sitemap.xml`, JSON-LD (Organization / LocalBusiness), hreflang после появления DE, `noindex` на thank-you |
 | Формы | демо без отправки | реальная отправка (WP: Contact Form 7 / Fluent Forms или свой endpoint), антиспам, письмо менеджеру, e-mail-подтверждение, хранение согласия; форма Apply на Careers — проверить, что она есть и что делает |
 | Языки | переключатель EN / DE есть, DE-текстов нет | решить: DE делаем или убираем переключатель; если делаем — структура строк под WP (WPML / Polylang) |
 | Cookie / аналитика | баннер и настройки, `localStorage` | подключить Analytics только после согласия; зафиксировать события (CTA, отправка формы, звонок/почта) — можно через product-tracking skills |

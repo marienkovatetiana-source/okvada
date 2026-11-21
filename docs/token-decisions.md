@@ -277,3 +277,10 @@
 
 ## Шрифты (21 Nov)
 Шрифты лежат локально в `assets/fonts/` (woff2, подмножество latin: покрывает EN и DE, включая ä ö ü ß). `@font-face` с `font-display: swap` — в `css/fonts.css`, подключён на всех страницах. Barlow 600/700/900 — по файлу на вес; Inter — один вариативный файл на 400–600; JetBrains Mono 700. Preload: Inter, Barlow 700, Barlow 900. Подмножество latin-ext не включено (нужно только для польского, чешского и т. п.); добавить, если появятся такие языки. Запросов к Google Fonts нет.
+
+## SEO (21 Nov)
+- На всех страницах: favicon (`assets/favicon.svg` — знак логотипа без слова, `assets/favicon-32.png`), `assets/apple-touch-icon.png` (знак на белом, 180), canonical, Open Graph и Twitter (`assets/og-image.png`, логотип на белом 1200×630).
+- Thank you и 404: `noindex, follow`, без canonical и OG; thank-you закрыт и в `robots.txt`, обоих нет в `sitemap.xml`.
+- JSON-LD: Organization на Home; два LocalBusiness (Kaunas, Rhauderfehn) на Contact. Данные только с сайта (адреса, `info@okvada.com`, +370 600 45 210, Mon–Fri 8–18, код 306070987, VAT LT100016279613).
+- Адрес: GitHub Pages (`https://marienkovatetiana-source.github.io/okvada/`), сайт остаётся кейсом в портфолио (решение дизайнера, 21 Nov). Он стоит в canonical, og:url, og:image, JSON-LD, `robots.txt`, `sitemap.xml`; при переезде на свой домен заменить везде.
+- `robots.txt` и `sitemap.xml` лежат в корне репозитория (Pages отдаёт корень); в `dist` Vite их не копирует — при деплое сборки положить рядом.
