@@ -436,10 +436,11 @@ button.arrow-circle::after {
     font-weight: var(--weight-medium);
     line-height: var(--lh-label);
     color: var(--color-navy);
-    transition: color var(--duration) var(--ease);
+    transition: color var(--duration) var(--ease),
+      transform var(--duration) var(--ease);
   }
 
-  /* Подчёркивание растёт слева направо при наведении */
+  /* Подчёркивание — только у активного пункта */
   .nav__link::after {
     content: "";
     position: absolute;
@@ -453,15 +454,18 @@ button.arrow-circle::after {
     transition: transform var(--duration) var(--ease);
   }
 
-  .nav__link:hover::after,
   .nav__link.is-active::after {
     transform: scaleX(1);
   }
 
-  /* Hover = активный пункт: текст teal-text, линия teal 2 px (у активного остаётся) */
+  /* Активный пункт: текст teal-text + линия teal 2 px. Hover отличается: текст teal-text и лёгкое увеличение, без линии */
   .nav__link:hover,
   .nav__link.is-active {
     color: var(--color-teal-text);
+  }
+
+  .nav__link:not(.is-active):hover {
+    transform: scale(1.05);
   }
 
   .header__actions {
