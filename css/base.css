@@ -341,6 +341,7 @@ button {
 @media screen and (min-width: 1200px) and (prefers-reduced-motion: no-preference) {
   main > [data-overlap] {
     position: sticky;
+    top: var(--header-h);
     top: min(var(--header-h), calc(100svh - var(--stick-h, 0px)));
     z-index: 0;
   }

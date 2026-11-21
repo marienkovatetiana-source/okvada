@@ -284,3 +284,12 @@
 - JSON-LD: Organization на Home; два LocalBusiness (Kaunas, Rhauderfehn) на Contact. Данные только с сайта (адреса, `info@okvada.com`, +370 600 45 210, Mon–Fri 8–18, код 306070987, VAT LT100016279613).
 - Адрес: GitHub Pages (`https://marienkovatetiana-source.github.io/okvada/`), сайт остаётся кейсом в портфолио (решение дизайнера, 21 Nov). Он стоит в canonical, og:url, og:image, JSON-LD, `robots.txt`, `sitemap.xml`; при переезде на свой домен заменить везде.
 - `robots.txt` и `sitemap.xml` лежат в корне репозитория (Pages отдаёт корень); в `dist` Vite их не копирует — при деплое сборки положить рядом.
+
+## Запасные варианты для Safari и Firefox (21 Nov)
+Современные браузеры видят прежний вид; старые (Safari до 16.2, Firefox до 113) получают запасные значения:
+- `color-mix`: перед каждым использованием стоит строка с готовым rgba-токеном (`--color-canvas-85`, `--color-deep-35/55/97`); `color-mix` идёт следующей строкой и перекрывает её там, где поддерживается.
+- `cqw` в слове «okvada» (hero Home): блоки `@supports not (width: 1cqw)` с размерами в `vw`, не больше значения при ширине 1440. Ширину hero они считают равной ширине окна, поэтому слегка расходятся с cqw из-за полосы прокрутки.
+- `100svh` в перекрытии секций: перед ним строка `top: var(--header-h)`.
+- Префиксы `-webkit-user-select` и `-webkit-appearance`.
+- `animation-timeline: view()` уже под `@supports`, `text-wrap: balance` — улучшение без запасного варианта.
+Не проверено в живом Safari и Firefox (здесь их нет).

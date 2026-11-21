@@ -162,6 +162,7 @@
 
 .field__select select {
   padding-right: var(--size-hit);
+  -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
 }

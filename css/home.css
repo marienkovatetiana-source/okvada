@@ -54,6 +54,7 @@
   bottom: 0;
   left: 0;
   width: 120px;
+  background-image: linear-gradient(90deg, var(--color-canvas) 0%, var(--color-canvas-85) 25%, var(--color-canvas-clear) 100%);
   background-image: linear-gradient(90deg, var(--color-canvas) 0%, color-mix(in srgb, var(--color-canvas) 85%, transparent) 25%, var(--color-canvas-clear) 100%);
 }
 
@@ -73,6 +74,7 @@
   top: 710px;
   height: 200px;
   border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
+  background-image: linear-gradient(180deg, var(--color-deep-clear) 0%, var(--color-deep-55) 100%);
   background-image: linear-gradient(180deg, var(--color-deep-clear) 0%, color-mix(in srgb, var(--color-navy-deep) 55%, transparent) 100%);
 }
 
@@ -96,7 +98,16 @@
   color: var(--color-canvas);
   white-space: nowrap;
   transform: translateX(-50%);
+  -webkit-user-select: none;
   user-select: none;
+}
+
+/* Без единиц cqw (Safari до 16, Firefox до 110): ширина hero ≈ ширине окна, не больше 1440 */
+@supports not (width: 1cqw) {
+  .hero__word {
+    top: calc(894.4px - min(19.84vw, 285.7px));
+    font-size: min(32vw, 460.8px);
+  }
 }
 
 .hero__inner {
@@ -204,6 +215,10 @@
     font-size: 31.1cqw;
     letter-spacing: -0.05em;
   }
+
+  @supports not (width: 1cqw) {
+    .hero__word { font-size: min(31.1vw, 447.8px); }
+  }
 }
 
 /* Tablet: hero как на десктопе, фото справа, без мини-карты (остаётся live-плашка) */
@@ -216,6 +231,9 @@
   .hero__fade-top { height: 140px; }
   .hero__band { top: 520px; height: 240px; border-radius: 0 0 28px 28px; }
   .hero__word { top: calc(760px - 19.282cqw); }
+  @supports not (width: 1cqw) {
+    .hero__word { top: calc(760px - min(19.282vw, 277.7px)); }
+  }
   .hero__copy { gap: var(--space-lg); padding-top: 140px; }
   .hero__live { top: 420px; right: var(--gutter); }
 }
@@ -260,6 +278,10 @@
     left: 2.8125cqw; /* 40.5 px при 1440 */
     top: 637px;
     transform: none;
+  }
+
+  @supports not (width: 1cqw) {
+    .hero__word { left: min(2.8125vw, 40.5px); }
   }
 
   .hero__wordwrap {
@@ -501,6 +523,7 @@
 }
 
 .case__overlay {
+  background-image: linear-gradient(180deg, var(--color-deep-35) 0%, var(--color-deep-55) 45%, var(--color-deep-97) 100%);
   background-image: linear-gradient(180deg, color-mix(in srgb, var(--color-navy-deep) 35%, transparent) 0%, color-mix(in srgb, var(--color-navy-deep) 55%, transparent) 45%, color-mix(in srgb, var(--color-navy-deep) 97%, transparent) 100%);
 }
 
@@ -917,6 +940,7 @@
 }
 
 .adv__arrows .arrow-circle {
+  background-color: var(--color-canvas-85);
   background-color: color-mix(in srgb, var(--color-canvas) 85%, transparent);
 }
 

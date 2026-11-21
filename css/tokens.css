@@ -26,6 +26,11 @@
   --color-canvas-clear: rgba(245, 247, 250, 0); /* конец градиента-растушёвки у фото */
   --color-muted-clear: rgba(238, 242, 247, 0);  /* то же для muted */
   --color-deep-clear: rgba(6, 26, 48, 0);       /* то же для navy-deep (затемнение hero) */
+  /* Запасные цвета для браузеров без color-mix (Safari до 16.2, Firefox до 113): те же значения, что даёт color-mix */
+  --color-canvas-85: rgba(245, 247, 250, 0.85);
+  --color-deep-35: rgba(6, 26, 48, 0.35);
+  --color-deep-55: rgba(6, 26, 48, 0.55);
+  --color-deep-97: rgba(6, 26, 48, 0.97);
 
   /* ---------- Type ---------- */
   --font-heading: "Barlow", "Arial Narrow", Arial, sans-serif;

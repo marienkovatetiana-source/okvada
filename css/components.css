@@ -721,6 +721,7 @@ button.arrow-circle::after {
   background-color: var(--color-surface);
   font-size: var(--text-body);
   line-height: var(--lh-body);
+  -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
   transition: border-color var(--duration) var(--ease);

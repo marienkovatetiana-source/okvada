@@ -71,6 +71,7 @@
   font-weight: var(--weight-medium);
   line-height: var(--lh-label);
   color: var(--color-muted);
+  -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
 }
